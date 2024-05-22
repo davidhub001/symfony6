@@ -69,31 +69,25 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
         // line 11
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide1.jpg"), "html", null, true);
         yield "\" alt=\"First slide\">
-            <div class=\"carousel-caption d-none d-md-block\">
-                <h1>test</h1>
-                <p>test</p>
-            </div>
-        </div>
+            ";
+        // line 16
+        yield "        </div>
         <div class=\"carousel-item\">
             <img class=\"d-block w-100 height500\" src=\"";
         // line 18
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide2.jpg"), "html", null, true);
         yield "\" alt=\"Second slide\">
-            <div class=\"carousel-caption d-none d-md-block\">
-                <h5>test</h5>
-                <p>test</p>
-            </div>
-        </div>
+            ";
+        // line 23
+        yield "        </div>
         <div class=\"carousel-item\">
             <img class=\"d-block w-100 height500\" src=\"";
         // line 25
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide3.jpg"), "html", null, true);
         yield "\" alt=\"Third slide\">
-            <div class=\"carousel-caption d-none d-md-block\">
-                <h5>test</h5>
-                <p>test</p>
-            </div>
-        </div>
+            ";
+        // line 30
+        yield "        </div>
     </div>
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
         <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
@@ -132,7 +126,7 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  90 => 25,  80 => 18,  70 => 11,  60 => 3,  53 => 2,  36 => 1,);
+        return array (  90 => 30,  86 => 25,  82 => 23,  78 => 18,  74 => 16,  70 => 11,  60 => 3,  53 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -148,24 +142,24 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
     <div class=\"carousel-inner\">
         <div class=\"carousel-item active\">
             <img class=\"d-block w-100 height500\" src=\"{{ asset('assets/images/slide1.jpg') }}\" alt=\"First slide\">
-            <div class=\"carousel-caption d-none d-md-block\">
+            {# <div class=\"carousel-caption d-none d-md-block\">
                 <h1>test</h1>
                 <p>test</p>
-            </div>
+            </div> #}
         </div>
         <div class=\"carousel-item\">
             <img class=\"d-block w-100 height500\" src=\"{{ asset('assets/images/slide2.jpg') }}\" alt=\"Second slide\">
-            <div class=\"carousel-caption d-none d-md-block\">
+            {# <div class=\"carousel-caption d-none d-md-block\">
                 <h5>test</h5>
                 <p>test</p>
-            </div>
+            </div> #}
         </div>
         <div class=\"carousel-item\">
             <img class=\"d-block w-100 height500\" src=\"{{ asset('assets/images/slide3.jpg') }}\" alt=\"Third slide\">
-            <div class=\"carousel-caption d-none d-md-block\">
+            {# <div class=\"carousel-caption d-none d-md-block\">
                 <h5>test</h5>
                 <p>test</p>
-            </div>
+            </div> #}
         </div>
     </div>
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
