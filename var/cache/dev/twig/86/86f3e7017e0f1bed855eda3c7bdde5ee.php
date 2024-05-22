@@ -99,6 +99,55 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
         <span class=\"sr-only\">Next</span>
     </a>
 </div>
+<div class=\"container p-5\">
+    <div class=\"row\">
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"";
+        // line 45
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/merou.jpg"), "html", null, true);
+        yield "\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"";
+        // line 53
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/merou.jpg"), "html", null, true);
+        yield "\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"";
+        // line 61
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/merou.jpg"), "html", null, true);
+        yield "\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"";
+        // line 69
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/merou.jpg"), "html", null, true);
+        yield "\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -127,7 +176,7 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  91 => 31,  87 => 26,  83 => 24,  79 => 19,  75 => 17,  71 => 12,  60 => 3,  53 => 2,  36 => 1,);
+        return array (  140 => 69,  129 => 61,  118 => 53,  107 => 45,  91 => 31,  87 => 26,  83 => 24,  79 => 19,  75 => 17,  71 => 12,  60 => 3,  53 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,6 +222,43 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
         <span class=\"sr-only\">Next</span>
     </a>
 </div>
+<div class=\"container p-5\">
+    <div class=\"row\">
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"{{ asset('assets/images/merou.jpg') }}\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"{{ asset('assets/images/merou.jpg') }}\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"{{ asset('assets/images/merou.jpg') }}\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+        <div class=\"card m-2\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src=\"{{ asset('assets/images/merou.jpg') }}\" alt=\"Card image cap\">
+            <div class=\"card-body\">
+                <h5 class=\"card-title\">Card title</h5>
+                <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 ", "front/index.html.twig", "/var/www/myhost/symfony6/templates/front/index.html.twig");
     }
