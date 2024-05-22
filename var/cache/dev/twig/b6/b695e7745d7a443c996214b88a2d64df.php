@@ -96,6 +96,6 @@ class __TwigTemplate_f835e18f0cf9393192731b062f73fa61 extends Template
 {% block content %}
     page contact
 {% endblock %}
-", "front/contact.html.twig", "/var/www/myhost/admin_app_sf/templates/front/contact.html.twig");
+", "front/contact.html.twig", "/var/www/myhost/symfony6/templates/front/contact.html.twig");
     }
 }

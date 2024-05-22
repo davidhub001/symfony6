@@ -176,6 +176,6 @@ class __TwigTemplate_22bbe61708702037dc62565e0f6e878d extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/var/www/myhost/admin_app_sf/templates/base.html.twig");
+", "base.html.twig", "/var/www/myhost/symfony6/templates/base.html.twig");
     }
 }

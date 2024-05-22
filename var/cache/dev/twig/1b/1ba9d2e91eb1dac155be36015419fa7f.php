@@ -61,6 +61,6 @@ class __TwigTemplate_a9162a15eb5103e01485cb09ca6f14c2 extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "front/nav.html.twig", "/var/www/myhost/admin_app_sf/templates/front/nav.html.twig");
+        return new Source("", "front/nav.html.twig", "/var/www/myhost/symfony6/templates/front/nav.html.twig");
     }
 }

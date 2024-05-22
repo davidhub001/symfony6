@@ -178,6 +178,6 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
     </a>
 </div>
 {% endblock %}
-", "front/index.html.twig", "/var/www/myhost/admin_app_sf/templates/front/index.html.twig");
+", "front/index.html.twig", "/var/www/myhost/symfony6/templates/front/index.html.twig");
     }
 }

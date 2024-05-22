@@ -157,6 +157,6 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
     </footer>
 </body>
 </html>
-", "front/base.html.twig", "/var/www/myhost/admin_app_sf/templates/front/base.html.twig");
+", "front/base.html.twig", "/var/www/myhost/symfony6/templates/front/base.html.twig");
     }
 }
