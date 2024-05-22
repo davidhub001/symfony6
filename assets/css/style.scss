@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'MaPolice'; /* Nom de la police */
+    src: url('font/DMSerifDisplay-Regular.ttf') format('truetype');/* Format WOFF2 */
+    font-weight: normal; /* Poids de la police */
+    font-style: normal; /* Style de la police */
+}
+@import url('bootstrap/bootstrap.min.css');
+
+.height500{
+    height: 500px;
+    @media (min-width:1160px) {
+        height: 700px;
+    }
+    @media (min-width:1310px) {
+        height: 800px;
+    }
+}
