@@ -89,25 +89,34 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
         yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
         // line 40
         yield "    </div>
-
     <footer>
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-lg-4\">&nbsp;</div>
+                <div class=\"col-lg-4 text-center\"><i class=\"bi bi-facebook\"></i><i class=\"bi bi-linkedin\"></i><i class=\"bi bi-youtube\"></i></div>
+                <div class=\"col-lg-4\">&nbsp;</div>
+            </div>
+            <div class=\"copyright text-center\">
+                Copyright&copy;2024
+            </div>
+        </div>
+    </footer>
         <script src=\"";
-        // line 43
+        // line 53
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery/jquery.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 44
+        // line 54
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap/bootstrap.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 45
+        // line 55
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap/bootstrap.bundle.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 46
+        // line 56
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/script.js"), "html", null, true);
         yield "\"></script>
-    </footer>
 </body>
 </html>
 ";
@@ -165,7 +174,7 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  135 => 39,  121 => 5,  108 => 46,  104 => 45,  100 => 44,  96 => 43,  91 => 40,  89 => 39,  82 => 34,  79 => 29,  74 => 21,  68 => 18,  53 => 6,  49 => 5,  43 => 1,);
+        return array (  144 => 39,  130 => 5,  118 => 56,  114 => 55,  110 => 54,  106 => 53,  91 => 40,  89 => 39,  82 => 34,  79 => 29,  74 => 21,  68 => 18,  53 => 6,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -210,13 +219,22 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
     <div id=\"content\">
         {% block content %}{% endblock %}
     </div>
-
     <footer>
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-lg-4\">&nbsp;</div>
+                <div class=\"col-lg-4 text-center\"><i class=\"bi bi-facebook\"></i><i class=\"bi bi-linkedin\"></i><i class=\"bi bi-youtube\"></i></div>
+                <div class=\"col-lg-4\">&nbsp;</div>
+            </div>
+            <div class=\"copyright text-center\">
+                Copyright&copy;2024
+            </div>
+        </div>
+    </footer>
         <script src=\"{{ asset('assets/js/jquery/jquery.js') }}\"></script>
         <script src=\"{{ asset('assets/js/bootstrap/bootstrap.min.js') }}\"></script>
         <script src=\"{{ asset('assets/js/bootstrap/bootstrap.bundle.min.js') }}\"></script>
         <script src=\"{{ asset('assets/js/script.js') }}\"></script>
-    </footer>
 </body>
 </html>
 ", "front/base.html.twig", "/var/www/myhost/symfony6/templates/front/base.html.twig");
