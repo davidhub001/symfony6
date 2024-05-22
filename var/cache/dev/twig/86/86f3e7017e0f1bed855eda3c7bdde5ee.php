@@ -1,0 +1,251 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* front/index.html.twig */
+class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'content' => [$this, 'block_content'],
+        ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "front/base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "front/index.html.twig"));
+
+        $this->parent = $this->loadTemplate("front/base.html.twig", "front/index.html.twig", 1);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 2
+    public function block_content($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+
+        // line 3
+        yield "<div id=\"carouselExampleIndicators\" class=\"carousel slide height500\" data-ride=\"carousel\">
+    <ol class=\"carousel-indicators\">
+        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>
+        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>
+        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>
+    </ol>
+    <div class=\"carousel-inner\">
+        <div class=\"carousel-item active\">
+            <img class=\"d-block w-100 height500\" src=\"";
+        // line 11
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide1.jpg"), "html", null, true);
+        yield "\" alt=\"First slide\">
+            <div class=\"carousel-caption d-none d-md-block\">
+                <h1>test</h1>
+                <p>test</p>
+            </div>
+        </div>
+        <div class=\"carousel-item\">
+            <img class=\"d-block w-100 height500\" src=\"";
+        // line 18
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide2.jpg"), "html", null, true);
+        yield "\" alt=\"Second slide\">
+            <div class=\"carousel-caption d-none d-md-block\">
+                <h5>test</h5>
+                <p>test</p>
+            </div>
+        </div>
+        <div class=\"carousel-item\">
+            <img class=\"d-block w-100 height500\" src=\"";
+        // line 25
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide3.jpg"), "html", null, true);
+        yield "\" alt=\"Third slide\">
+            <div class=\"carousel-caption d-none d-md-block\">
+                <h5>test</h5>
+                <p>test</p>
+            </div>
+        </div>
+    </div>
+    <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
+        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+        <span class=\"sr-only\">Previous</span>
+    </a>
+    <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">
+        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+        <span class=\"sr-only\">Next</span>
+    </a>
+</div>
+
+<div class=\"container position-relative\">
+        <div class=\"row gy-4 mt-5\">
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"100\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-easel\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Lorem Ipsum</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"200\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-gem\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Sed ut perspiciatis</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"300\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-geo-alt\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Magni Dolores</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"500\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-command\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Nemo Enim</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        return; yield '';
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName()
+    {
+        return "front/index.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo()
+    {
+        return array (  90 => 25,  80 => 18,  70 => 11,  60 => 3,  53 => 2,  36 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("{% extends 'front/base.html.twig' %}
+{% block content %}
+<div id=\"carouselExampleIndicators\" class=\"carousel slide height500\" data-ride=\"carousel\">
+    <ol class=\"carousel-indicators\">
+        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>
+        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>
+        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>
+    </ol>
+    <div class=\"carousel-inner\">
+        <div class=\"carousel-item active\">
+            <img class=\"d-block w-100 height500\" src=\"{{ asset('assets/images/slide1.jpg') }}\" alt=\"First slide\">
+            <div class=\"carousel-caption d-none d-md-block\">
+                <h1>test</h1>
+                <p>test</p>
+            </div>
+        </div>
+        <div class=\"carousel-item\">
+            <img class=\"d-block w-100 height500\" src=\"{{ asset('assets/images/slide2.jpg') }}\" alt=\"Second slide\">
+            <div class=\"carousel-caption d-none d-md-block\">
+                <h5>test</h5>
+                <p>test</p>
+            </div>
+        </div>
+        <div class=\"carousel-item\">
+            <img class=\"d-block w-100 height500\" src=\"{{ asset('assets/images/slide3.jpg') }}\" alt=\"Third slide\">
+            <div class=\"carousel-caption d-none d-md-block\">
+                <h5>test</h5>
+                <p>test</p>
+            </div>
+        </div>
+    </div>
+    <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
+        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+        <span class=\"sr-only\">Previous</span>
+    </a>
+    <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">
+        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+        <span class=\"sr-only\">Next</span>
+    </a>
+</div>
+
+<div class=\"container position-relative\">
+        <div class=\"row gy-4 mt-5\">
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"100\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-easel\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Lorem Ipsum</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"200\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-gem\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Sed ut perspiciatis</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"300\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-geo-alt\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Magni Dolores</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class=\"col-xl-3 col-md-6 aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"500\">
+            <div class=\"icon-box\">
+              <div class=\"icon\"><i class=\"bi bi-command\"></i></div>
+              <h4 class=\"title\"><a href=\"\" class=\"stretched-link\">Nemo Enim</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+        </div>
+      </div>
+{% endblock %}
+", "front/index.html.twig", "/var/www/myhost/admin_app_sf/templates/front/index.html.twig");
+    }
+}
