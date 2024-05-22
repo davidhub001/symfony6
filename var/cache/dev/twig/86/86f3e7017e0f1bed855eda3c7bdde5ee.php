@@ -57,32 +57,7 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
-        yield "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-  <div class=\"container-fluid\">
-    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarTogglerDemo01\" aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler-icon\"></span>
-    </button>
-    <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">
-      <a class=\"navbar-brand\" href=\"#\"><img class=\"logo\" src=\"https://www.logogenie.fr/images/exemples/fr/logo-lotus.png\"></a>
-      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
-        <li class=\"nav-item\">
-          <a class=\"nav-link active\" aria-current=\"page\" href=\"\">Accueil</a>
-        </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link\" aria-current=\"page\" href=\"";
-        // line 15
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("contact"), "html", null, true);
-        yield "\">Contact</a>
-        </li>
-        ";
-        // line 23
-        yield "      </ul>
-      ";
-        // line 28
-        yield "    </div>
-  </div>
-</nav>
-
+        yield "
 <div id=\"carouselExampleIndicators\" class=\"carousel slide height500\" data-ride=\"carousel\">
     <ol class=\"carousel-indicators\">
         <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>
@@ -92,27 +67,27 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
     <div class=\"carousel-inner\">
         <div class=\"carousel-item active\">
             <img class=\"d-block w-100 height500\" src=\"";
-        // line 40
+        // line 12
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide1.jpg"), "html", null, true);
         yield "\" alt=\"First slide\">
             ";
-        // line 45
+        // line 17
         yield "        </div>
         <div class=\"carousel-item\">
             <img class=\"d-block w-100 height500\" src=\"";
-        // line 47
+        // line 19
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide2.jpg"), "html", null, true);
         yield "\" alt=\"Second slide\">
             ";
-        // line 52
+        // line 24
         yield "        </div>
         <div class=\"carousel-item\">
             <img class=\"d-block w-100 height500\" src=\"";
-        // line 54
+        // line 26
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/slide3.jpg"), "html", null, true);
         yield "\" alt=\"Third slide\">
             ";
-        // line 59
+        // line 31
         yield "        </div>
     </div>
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
@@ -152,41 +127,13 @@ class __TwigTemplate_ba2f56fe1375a12b9c959f3cc57928a4 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  116 => 59,  112 => 54,  108 => 52,  104 => 47,  100 => 45,  96 => 40,  82 => 28,  79 => 23,  74 => 15,  60 => 3,  53 => 2,  36 => 1,);
+        return array (  91 => 31,  87 => 26,  83 => 24,  79 => 19,  75 => 17,  71 => 12,  60 => 3,  53 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'front/base.html.twig' %}
 {% block content %}
-<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-  <div class=\"container-fluid\">
-    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarTogglerDemo01\" aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler-icon\"></span>
-    </button>
-    <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">
-      <a class=\"navbar-brand\" href=\"#\"><img class=\"logo\" src=\"https://www.logogenie.fr/images/exemples/fr/logo-lotus.png\"></a>
-      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
-        <li class=\"nav-item\">
-          <a class=\"nav-link active\" aria-current=\"page\" href=\"\">Accueil</a>
-        </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link\" aria-current=\"page\" href=\"{{asset('contact')}}\">Contact</a>
-        </li>
-        {# <li class=\"nav-item\">
-          <a class=\"nav-link\" href=\"#\">Link</a>
-        </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link disabled\">Disabled</a>
-        </li> #}
-      </ul>
-      {# <form class=\"d-flex\">
-        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>
-      </form> #}
-    </div>
-  </div>
-</nav>
 
 <div id=\"carouselExampleIndicators\" class=\"carousel slide height500\" data-ride=\"carousel\">
     <ol class=\"carousel-indicators\">

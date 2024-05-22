@@ -54,31 +54,57 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
         yield "\" rel=\"stylesheet\">
 </head>
 <body>
-    <header>
-    </header>
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+    <div class=\"container-fluid\">
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarTogglerDemo01\" aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">
+        <a class=\"navbar-brand\" href=\"#\"><img class=\"logo\" src=\"https://www.logogenie.fr/images/exemples/fr/logo-lotus.png\"></a>
+        <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+            <li class=\"nav-item\">
+            <a class=\"nav-link active\" aria-current=\"page\" href=\"";
+        // line 18
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("accueil"), "html", null, true);
+        yield "\">Accueil</a>
+            </li>
+            <li class=\"nav-item\">
+            <a class=\"nav-link\" aria-current=\"page\" href=\"";
+        // line 21
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("contact"), "html", null, true);
+        yield "\">Contact</a>
+            </li>
+            ";
+        // line 29
+        yield "        </ul>
+        ";
+        // line 34
+        yield "        </div>
+    </div>
+    </nav>
 
     <div id=\"content\">
         ";
-        // line 13
+        // line 39
         yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
-        // line 14
+        // line 40
         yield "    </div>
 
     <footer>
         <script src=\"";
-        // line 17
+        // line 43
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery/jquery.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 18
+        // line 44
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap/bootstrap.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 19
+        // line 45
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap/bootstrap.bundle.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 20
+        // line 46
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/script.js"), "html", null, true);
         yield "\"></script>
     </footer>
@@ -105,7 +131,7 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
         return; yield '';
     }
 
-    // line 13
+    // line 39
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -139,7 +165,7 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  109 => 13,  95 => 5,  82 => 20,  78 => 19,  74 => 18,  70 => 17,  65 => 14,  63 => 13,  53 => 6,  49 => 5,  43 => 1,);
+        return array (  135 => 39,  121 => 5,  108 => 46,  104 => 45,  100 => 44,  96 => 43,  91 => 40,  89 => 39,  82 => 34,  79 => 29,  74 => 21,  68 => 18,  53 => 6,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -152,8 +178,34 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
     <link href=\"{{ asset('assets/css/style.css') }}\" rel=\"stylesheet\">
 </head>
 <body>
-    <header>
-    </header>
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+    <div class=\"container-fluid\">
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarTogglerDemo01\" aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">
+        <a class=\"navbar-brand\" href=\"#\"><img class=\"logo\" src=\"https://www.logogenie.fr/images/exemples/fr/logo-lotus.png\"></a>
+        <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+            <li class=\"nav-item\">
+            <a class=\"nav-link active\" aria-current=\"page\" href=\"{{asset('accueil')}}\">Accueil</a>
+            </li>
+            <li class=\"nav-item\">
+            <a class=\"nav-link\" aria-current=\"page\" href=\"{{asset('contact')}}\">Contact</a>
+            </li>
+            {# <li class=\"nav-item\">
+            <a class=\"nav-link\" href=\"#\">Link</a>
+            </li>
+            <li class=\"nav-item\">
+            <a class=\"nav-link disabled\">Disabled</a>
+            </li> #}
+        </ul>
+        {# <form class=\"d-flex\">
+            <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
+            <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>
+        </form> #}
+        </div>
+    </div>
+    </nav>
 
     <div id=\"content\">
         {% block content %}{% endblock %}
