@@ -5,3 +5,7 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+    
+front_index:
+    path: /front
+    controller: App\Controller\FrontController::index
