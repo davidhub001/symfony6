@@ -73,6 +73,14 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
         // line 18
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap/bootstrap.min.js"), "html", null, true);
         yield "\"></script>
+        <script src=\"";
+        // line 19
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap/bootstrap.bundle.min.js"), "html", null, true);
+        yield "\"></script>
+        <script src=\"";
+        // line 20
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/script.js"), "html", null, true);
+        yield "\"></script>
     </footer>
 </body>
 </html>
@@ -131,7 +139,7 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  101 => 13,  87 => 5,  74 => 18,  70 => 17,  65 => 14,  63 => 13,  53 => 6,  49 => 5,  43 => 1,);
+        return array (  109 => 13,  95 => 5,  82 => 20,  78 => 19,  74 => 18,  70 => 17,  65 => 14,  63 => 13,  53 => 6,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -154,6 +162,8 @@ class __TwigTemplate_10114c43cb8eefccf3d96d58adefd02e extends Template
     <footer>
         <script src=\"{{ asset('assets/js/jquery/jquery.js') }}\"></script>
         <script src=\"{{ asset('assets/js/bootstrap/bootstrap.min.js') }}\"></script>
+        <script src=\"{{ asset('assets/js/bootstrap/bootstrap.bundle.min.js') }}\"></script>
+        <script src=\"{{ asset('assets/js/script.js') }}\"></script>
     </footer>
 </body>
 </html>
