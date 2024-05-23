@@ -15,3 +15,6 @@ accueil_index:
 contact:
     path: /contact
     controller: App\Controller\FrontController::contact
+test:
+    path: /test
+    controller: App\Controller\FrontController::test

@@ -89,9 +89,13 @@
     <service id="App\Controller\FrontController" class="App\Controller\FrontController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Service\OptionService"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\FrontController"/>
       </call>
+    </service>
+    <service id="App\Service\OptionService" class="App\Service\OptionService" autowire="true" autoconfigure="true">
+      <argument type="service" id="cache.app"/>
     </service>
     <service id="controller_resolver" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver">
       <tag name="monolog.logger" channel="request"/>
@@ -441,6 +445,7 @@
         <argument key="cache.serializer" type="service" id="cache.serializer" on-invalid="ignore_uninitialized"/>
         <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
         <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
+        <argument key="app.cache.my_pool" type="service" id="app.cache.my_pool" on-invalid="ignore_uninitialized"/>
         <argument key="session_listener" type="service" id="session_listener" on-invalid="ignore_uninitialized"/>
       </argument>
       <argument type="collection">
@@ -460,6 +465,9 @@
           <argument>reset</argument>
         </argument>
         <argument key="cache.property_info" type="collection">
+          <argument>reset</argument>
+        </argument>
+        <argument key="app.cache.my_pool" type="collection">
           <argument>reset</argument>
         </argument>
         <argument key="session_listener" type="collection">
@@ -598,6 +606,7 @@
         <argument>cache.serializer</argument>
         <argument>cache.annotations</argument>
         <argument>cache.property_info</argument>
+        <argument>app.cache.my_pool</argument>
       </argument>
       <call method="setName">
         <argument>cache:pool:clear</argument>
@@ -628,6 +637,7 @@
         <argument>cache.serializer</argument>
         <argument>cache.annotations</argument>
         <argument>cache.property_info</argument>
+        <argument>app.cache.my_pool</argument>
       </argument>
       <call method="setName">
         <argument>cache:pool:delete</argument>
@@ -646,6 +656,7 @@
         <argument>cache.serializer</argument>
         <argument>cache.annotations</argument>
         <argument>cache.property_info</argument>
+        <argument>app.cache.my_pool</argument>
       </argument>
       <call method="setName">
         <argument>cache:pool:list</argument>
@@ -1020,6 +1031,7 @@
       <tag name="cache.pool.clearer"/>
       <argument type="collection">
         <argument key="cache.app" type="service" id="cache.app" on-invalid="ignore_uninitialized"/>
+        <argument key="app.cache.my_pool" type="service" id="app.cache.my_pool" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
     <service id="cache.system_clearer" class="Symfony\Component\HttpKernel\CacheClearer\Psr6CacheClearer" public="true">
@@ -1042,6 +1054,7 @@
         <argument key="cache.serializer" type="service" id="cache.serializer" on-invalid="ignore_uninitialized"/>
         <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
         <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
+        <argument key="app.cache.my_pool" type="service" id="app.cache.my_pool" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
     <service id="assets.packages" class="Symfony\Component\Asset\Packages">
@@ -1275,6 +1288,20 @@
         <argument key="lazy">true</argument>
       </argument>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createConnection"/>
+    </service>
+    <service id=".app.cache.my_pool.taggable" class="Symfony\Component\Cache\Adapter\TagAwareAdapter">
+      <argument type="service" id="app.cache.my_pool"/>
+    </service>
+    <service id="app.cache.my_pool" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
+      <tag name="cache.pool"/>
+      <tag name="kernel.reset" method="reset"/>
+      <argument>cjUANmqFYe</argument>
+      <argument>0</argument>
+      <argument>/var/www/myhost/symfony6/var/cache/dev/pools/app</argument>
+      <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
+      <call method="setLogger">
+        <argument type="service" id="logger" on-invalid="ignore"/>
+      </call>
     </service>
     <service id="session.factory" class="Symfony\Component\HttpFoundation\Session\SessionFactory">
       <argument type="service" id="request_stack"/>
@@ -2678,6 +2705,9 @@
     <service id="cache.default_redis_provider" alias=".cache_connection.GD_MSZC"/>
     <service id="cache.default_memcached_provider" alias=".cache_connection.JKE6keX"/>
     <service id="cache.default_doctrine_dbal_provider" alias="database_connection"/>
+    <service id="Symfony\Contracts\Cache\TagAwareCacheInterface $appCacheMyPool" alias=".app.cache.my_pool.taggable"/>
+    <service id="Symfony\Contracts\Cache\CacheInterface $appCacheMyPool" alias="app.cache.my_pool"/>
+    <service id="Psr\Cache\CacheItemPoolInterface $appCacheMyPool" alias="app.cache.my_pool"/>
     <service id="SessionHandlerInterface" alias="session.handler.native_file"/>
     <service id="session.storage.factory" alias="session.storage.factory.native"/>
     <service id="session.handler" alias="session.handler.native_file"/>
