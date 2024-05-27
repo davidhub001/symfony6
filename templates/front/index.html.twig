@@ -5,5 +5,50 @@
 {% block content %}
     {% include 'front/carousel.html.twig' %}
 
-    {% include 'front/gallery.html.twig'%}
+    {% include 'front/card.html.twig'%}
+
+    {% include 'front/band-hero.html.twig' with {'image':'slide3.jpg',
+                                                'titre':'test',
+                                                'description':'test',
+                                                'url':'#'}  %}
+    {% include 'front/discover.html.twig'%}
+    {% include 'front/service.html.twig'%}
+
+    {% include 'front/band-hero.html.twig' with {'image':'slide2.jpg',
+                                                'titre':'test',
+                                                'description':'test',
+                                                'url':'#'}  %}
+
+    {% include 'front/tour-card.html.twig' with 
+            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+    %}
+    {% include 'front/tour-card.html.twig' with 
+            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+    %}
+    {% include 'front/tour-card.html.twig' with 
+            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+    %}
+    {% include 'front/tour-card.html.twig' with 
+            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+    %}
+
+    {% include 'front/band-hero.html.twig' with {'image':'slide1.jpg',
+                                                'titre':'test',
+                                                'description':'test',
+                                                'url':'#'}  %}
+    
+    {% include 'front/gallery.html.twig' with {'data': [
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+            {'image': 'merou.jpg'},
+    ]} %}
+
+
 {% endblock %}

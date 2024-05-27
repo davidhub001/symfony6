@@ -88,3 +88,202 @@ footer{
     z-index: 1000;
     width: 100%;
 }
+.image-scale {
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:hover img {
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+.section-discover{
+    .section-container {
+        padding: 50px 0;
+    }
+    .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .section-text {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+// eto
+  .services-section {
+    padding: 50px 0;
+    text-align: center;
+    .service-card {
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        transition: box-shadow 0.3s ease-in-out;
+        &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #20c997;
+        }
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .service-description {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+    }
+    
+  }
+  
+
+// atreto
+
+.tour-card {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 30px;
+    img {
+        width: 100%;
+        max-width: 300px;
+        object-fit: cover;
+    }
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .tour-card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .tour-price {
+        position: relative;
+        background-color: #20c997;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 0 0 0 8px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        align-self: flex-start;
+    }
+    .tour-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .tour-reviews {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+    .tour-description {
+        margin: 20px 0;
+        font-size: 1rem;
+        color: #6c757d;
+    }
+  }
+  
+
+// 
+
+.hero-section {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    &.content {
+        max-width: 600px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        transition: opacity 0.5s ease;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .btn-custom {
+        background-color: #17a2b8;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 5px;
+        &:hover {
+            background-color: #138496;
+        }
+    }
+}
+
+
+// gallerie::after
+.gallery-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    .gallery-row {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none; /* Firefox */
+        .gallery-item {
+            flex: 0 0 auto;
+            margin-right: 15px;
+            img {
+                height: 200px;
+                width: auto;
+                display: block;
+            }
+        }
+    }
+    .gallery-row::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+   
+    .gallery-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        &.gallery-nav-prev {
+            left: 0;
+        }
+        &.gallery-nav-next {
+            right: 0;
+        }
+    }
+    
+}
