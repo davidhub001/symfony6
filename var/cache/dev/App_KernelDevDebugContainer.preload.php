@@ -138,3 +138,22 @@ $classes[] = 'Symfony\Component\HttpKernel\UriSigner';
 $classes[] = 'Symfony\Component\HttpKernel\EventListener\ValidateRequestListener';
 
 $preloaded = Preloader::preload($classes);
+require_once __DIR__.'/twig/08/083c834df7a279eadd36887dbdfa0a55.php';
+require_once __DIR__.'/twig/d3/d3a1a013fa4bc66a927c195280e8221e.php';
+require_once __DIR__.'/twig/6d/6d2cf0ecaf771d89715ae104043ac5ae.php';
+require_once __DIR__.'/twig/86/86f3e7017e0f1bed855eda3c7bdde5ee.php';
+require_once __DIR__.'/twig/a9/a95627578c8da33985f6216ab7938baa.php';
+require_once __DIR__.'/twig/1b/1ba9d2e91eb1dac155be36015419fa7f.php';
+require_once __DIR__.'/twig/ad/adc2973248365d256a54a11ef34562f8.php';
+require_once __DIR__.'/twig/b8/b86d35c4eec3055bdc2dbe404f3aa253.php';
+require_once __DIR__.'/twig/b6/b695e7745d7a443c996214b88a2d64df.php';
+require_once __DIR__.'/twig/a2/a2ebc36dbf4bc1338d8fd9bc10479b14.php';
+require_once __DIR__.'/twig/50/50441b07644c8c2c96096b123a7afe76.php';
+require_once __DIR__.'/twig/f6/f6bb5baf5c2e40462e9a81141bc1e040.php';
+require_once __DIR__.'/twig/f1/f14c5a738e5ab070e6a5d3ea00afb10f.php';
+require_once __DIR__.'/twig/eb/eb7130da20e3035a5ec146a5f40b0a73.php';
+
+$classes = [];
+$classes[] = 'Symfony\\Component\\Routing\\Generator\\CompiledUrlGenerator';
+$classes[] = 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableCompiledUrlMatcher';
+$preloaded = Preloader::preload($classes, $preloaded);
