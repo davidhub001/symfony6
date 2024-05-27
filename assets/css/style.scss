@@ -241,11 +241,8 @@ footer{
         }
     }
 }
-
-
 // gallerie::after
 .gallery-container {
-    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -286,4 +283,10 @@ footer{
         }
     }
     
+}
+
+.ombre-back{
+    background-color: #f5f6f7!important;
+    padding-left: 15px;
+    padding-right: 15px;
 }
