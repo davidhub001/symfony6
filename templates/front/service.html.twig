@@ -1,59 +1,16 @@
 <div class="services-section ombre-back">
-    <h2 class="mb-5">Our Services</h2>
+    <h2 class="mb-5">Autres Services</h2>
     <div class="row">
+{% for srv in data %}
       <div class="col-md-4">
         <div class="service-card">
           <div class="service-icon">
-            <i class="fas fa-sliders-h"></i>
+            <i class="{{srv.icon}}"></i>
           </div>
-          <h3 class="service-title">Personalized Matching</h3>
-          <p class="service-description">Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          <h3 class="service-title">{{srv.titre}}</h3>
+          <p class="service-description">{{srv.description}}</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-globe-americas"></i>
-          </div>
-          <h3 class="service-title">Wide Variety of Tours</h3>
-          <p class="service-description">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-star"></i>
-          </div>
-          <h3 class="service-title">Highly Qualified Service</h3>
-          <p class="service-description">Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h3 class="service-title">24/7 Support</h3>
-          <p class="service-description">You can always get professional support from our staff 24/7 and ask any question you have.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-hotel"></i>
-          </div>
-          <h3 class="service-title">Handpicked Hotels</h3>
-          <p class="service-description">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-tags"></i>
-          </div>
-          <h3 class="service-title">Best Price Guarantee</h3>
-          <p class="service-description">If you find tours that are cheaper than ours, we will compensate the difference.</p>
-        </div>
-      </div>
+{% endfor %}
     </div>
-  </div>
+</div>

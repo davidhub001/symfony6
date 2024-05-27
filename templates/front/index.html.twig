@@ -3,7 +3,13 @@
     {% include 'front/nav.html.twig' %}
 {% endblock %}
 {% block content %}
-    {% include 'front/carousel.html.twig' %}
+    {% include 'front/carousel.html.twig' with {
+            'data':[
+                    {'image':'slide1.jpg','titre':'', 'description':'','active':'active'},
+                    {'image':'slide2.jpg','titre':'', 'description':'','active':''},
+                    {'image':'slide3.jpg','titre':'', 'description':'','active':''},
+            ]
+    } %}
 
     {% include 'front/card1.html.twig' with {
         'top':'-100px',
@@ -27,7 +33,14 @@
                                                 'description':'test',
                                                 'url':'#'}  %}
     {% include 'front/discover.html.twig'%}
-    {% include 'front/service.html.twig'%}
+    {% include 'front/service.html.twig' with {
+            'data':[
+                    {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
+                    {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
+                    {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
+            ]
+    }
+    %}
 
     {% include 'front/band-hero.html.twig' with {'image':'band2.jpg',
                                                 'titre':'test',
@@ -40,13 +53,7 @@
     {% include 'front/tour-card.html.twig' with 
             {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
     %}
-    {% include 'front/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
-    %}
-    {% include 'front/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
-    %}
-
+    
     {% include 'front/band-hero.html.twig' with {'image':'slide1.jpg',
                                                 'titre':'test',
                                                 'description':'test',
