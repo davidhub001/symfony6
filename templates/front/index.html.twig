@@ -5,7 +5,22 @@
 {% block content %}
     {% include 'front/carousel.html.twig' %}
 
+    {% include 'front/card1.html.twig' with {
+        'top':'-100px',
+        'data': [
+                {'image':'merou.jpg', 'titre':'test'},
+                {'image':'image_card.jpg', 'titre':'test'},
+                {'image':'image_card_2.jpg', 'titre':'test'},
+        ]
+    } %}
+
+    {% include 'front/band-hero.html.twig' with {'image':'band.jpg',
+                                                'titre':'test',
+                                                'description':'test',
+                                                'url':'#'}  %}
+
     {% include 'front/card.html.twig'%}
+
 
     {% include 'front/band-hero.html.twig' with {'image':'slide3.jpg',
                                                 'titre':'test',
@@ -14,7 +29,7 @@
     {% include 'front/discover.html.twig'%}
     {% include 'front/service.html.twig'%}
 
-    {% include 'front/band-hero.html.twig' with {'image':'slide2.jpg',
+    {% include 'front/band-hero.html.twig' with {'image':'band2.jpg',
                                                 'titre':'test',
                                                 'description':'test',
                                                 'url':'#'}  %}
@@ -38,15 +53,13 @@
                                                 'url':'#'}  %}
     
     {% include 'front/gallery.html.twig' with {'data': [
+            {'image': 'image_card.jpg'},
+            {'image': 'image_card_2.jpg'},
+            {'image': 'image_card3.jpg'},
             {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
-            {'image': 'merou.jpg'},
+            {'image': 'image_card.jpg'},
+            {'image': 'image_card_2.jpg'},
+            {'image': 'image_card3.jpg'},
             {'image': 'merou.jpg'},
     ]} %}
 

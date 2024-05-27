@@ -1,0 +1,10 @@
+<div class="container card1 pause_top" style="top:{{top}}">
+    <div class="row">
+        {% for card in data %}
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5 pr-2 pl-2">
+                <img src="{{ asset('assets/images/') }}{{card.image}}"/>
+                <span class="titre">{{card.titre}}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
