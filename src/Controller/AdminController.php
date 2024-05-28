@@ -12,8 +12,11 @@ use App\Form\LoginFormType;
 
 class AdminController extends AbstractController
 {
-    public function index(Request $request, SessionInterface $session): Response
+    public function login(Request $request, SessionInterface $session): Response
     {
+        if($session->get('user')){
+            return $this->redirectToRoute('dashboard');
+        }
         $form = $this->createForm(LoginFormType::class);
         $form->handleRequest($request);
 
@@ -24,7 +27,7 @@ class AdminController extends AbstractController
                     'username' => $data['username'],
                     'password' => $data['password']
                 ]);
-                return $this->redirectToRoute('dashbord');
+                return $this->redirectToRoute('dashboard');
             }
             return $this->redirectToRoute('admin');
         }
@@ -32,8 +35,18 @@ class AdminController extends AbstractController
             'form' => $form->createView()
         ]);
     }
-    public function dashbord(): Response
+    public function logout(SessionInterface $session): Response
     {
-        return $this->render('admin/dashbord.html.twig');
+        $session->remove('user');
+        return  $this->redirectToRoute('admin');
+    }
+    public function dashboard(SessionInterface $session): Response
+    {
+        if($session->get('user')){
+            return $this->render('admin/dashboard.html.twig');
+        }else{
+            return $this->redirectToRoute('admin');
+        }
+        return $this->render('admin/dashboard.html.twig');
     }
 }
