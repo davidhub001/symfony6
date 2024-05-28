@@ -40,10 +40,11 @@ class AdminController extends AbstractController
         $session->remove('user');
         return  $this->redirectToRoute('admin');
     }
-    public function dashboard(SessionInterface $session): Response
+    public function dashboard(Request $request, SessionInterface $session): Response
     {
         if($session->get('user')){
-            return $this->render('admin/dashboard.html.twig');
+            $page = $request->query->get('page','default');
+            return $this->render('admin/dashboard.html.twig',['page' => $page]);
         }else{
             return $this->redirectToRoute('admin');
         }

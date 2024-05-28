@@ -318,3 +318,25 @@ footer{
         padding: 5px;
     }
 }
+.dashboard{
+    height: 100vh;
+    width: 100%;
+    .sidebar{
+        background-color: #343a40;
+        color: white;
+        a{
+            color: #fff;
+            @media (max-width: 576px) {
+                span{
+                    display: none;
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            flex: 0 0 0%;
+
+        }
+       
+    }
+    
+}
