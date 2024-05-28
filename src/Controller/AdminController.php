@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use App\Form\LoginFormType;
+use App\Form\BankimgFormType;
 
 class AdminController extends AbstractController
 {
@@ -44,10 +45,27 @@ class AdminController extends AbstractController
     {
         if($session->get('user')){
             $page = $request->query->get('page','default');
-            return $this->render('admin/dashboard.html.twig',['page' => $page]);
+            switch ($page) {
+                case 'bank_images':
+                        $form = $this->createForm(BankimgFormType::class);
+                        $form->handleRequest($request);
+                        if ($form->isSubmitted() && $form->isValid()) {
+                            $data = $form->getData();
+                            // var_dump($data);
+                        }
+                        return $this->render('admin/dashboard.html.twig',['page' => $page, 'form' =>  $form->createView()]);
+                    break;
+                
+                default:
+                    # code...
+                    return $this->render('admin/dashboard.html.twig',['page'=>'null']);
+                    break;
+            }
+            
+
         }else{
             return $this->redirectToRoute('admin');
         }
-        return $this->render('admin/dashboard.html.twig');
+        return $this->render('admin/dashboard.html.twig',['page'=>'null']);
     }
 }
