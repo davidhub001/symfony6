@@ -19,7 +19,7 @@ function sendMail($to, $subject, $message, $from) {
 }
 
 // Example usage
-$to = 'andrisondavidmail.com';
+$to = 'andrisondavidmail@gmail.com';
 $subject = 'Test Email';
 $message = '
 <html>
