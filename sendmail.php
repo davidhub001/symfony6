@@ -32,7 +32,7 @@ $message = '
 </body>
 </html>
 ';
-$from = 'your-email@example.com';
+$from = 'david@example.com';
 
 sendMail($to, $subject, $message, $from);
 
