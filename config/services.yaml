@@ -22,3 +22,9 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+parameters:
+    admin: 'admin2'
+    password: 'david123+'
+    images_directory: '%kernel.project_dir%/assets/images'
+    type_images: 'simple|slide|card|band|carousel'
+    url_image: 'assets/images/'

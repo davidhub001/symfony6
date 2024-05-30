@@ -35,7 +35,7 @@ final class PersistentRememberMeHandler extends AbstractRememberMeHandler
     private $tokenProvider;
     private $tokenVerifier;
 
-    public function __construct(TokenProviderInterface $tokenProvider, string $secret, UserProviderInterface $userProvider, RequestStack $requestStack, array $options, LoggerInterface $logger = null, TokenVerifierInterface $tokenVerifier = null)
+    public function __construct(TokenProviderInterface $tokenProvider, string $secret, UserProviderInterface $userProvider, RequestStack $requestStack, array $options, ?LoggerInterface $logger = null, ?TokenVerifierInterface $tokenVerifier = null)
     {
         parent::__construct($userProvider, $requestStack, $options, $logger);
 
@@ -54,7 +54,7 @@ final class PersistentRememberMeHandler extends AbstractRememberMeHandler
         $series = random_bytes(66);
         $tokenValue = strtr(base64_encode(substr($series, 33)), '+/=', '-_~');
         $series = strtr(base64_encode(substr($series, 0, 33)), '+/=', '-_~');
-        $token = new PersistentToken(\get_class($user), $user->getUserIdentifier(), $series, $tokenValue, new \DateTime());
+        $token = new PersistentToken(\get_class($user), method_exists($user, 'getUserIdentifier') ? $user->getUserIdentifier() : $user->getUsername(), $series, $tokenValue, new \DateTime());
 
         $this->tokenProvider->createNewToken($token);
         $this->createCookie(RememberMeDetails::fromPersistentToken($token, time() + $this->options['lifetime']));

@@ -10,6 +10,8 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use App\Form\LoginFormType;
 use App\Form\BankimgFormType;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\Finder\Finder;
 
 class AdminController extends AbstractController
 {
@@ -23,7 +25,7 @@ class AdminController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            if($data['username'] == 'admin' && md5($data['password']) == md5('david123+')){
+            if($data['username'] == $this->getParameter('admin') && md5($data['password']) == md5($this->getParameter('password'))){
                 $session->set('user', [
                     'username' => $data['username'],
                     'password' => $data['password']
@@ -41,7 +43,7 @@ class AdminController extends AbstractController
         $session->remove('user');
         return  $this->redirectToRoute('admin');
     }
-    public function dashboard(Request $request, SessionInterface $session): Response
+    public function dashboard(Request $request, SessionInterface $session, SluggerInterface $slugger): Response
     {
         if($session->get('user')){
             $page = $request->query->get('page','default');
@@ -50,10 +52,31 @@ class AdminController extends AbstractController
                         $form = $this->createForm(BankimgFormType::class);
                         $form->handleRequest($request);
                         if ($form->isSubmitted() && $form->isValid()) {
-                            $data = $form->getData();
-                            // var_dump($data);
+                            $imageFile = $form->get('image')->getData();
+                            if($imageFile){
+                                    $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+                                    $safeFilename = $slugger->slug($originalFilename);
+                                    $newFilename = $safeFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
+                                    $imageFile->move(
+                                        $this->getParameter('images_directory'),
+                                        $newFilename
+                                    );
+                            }
                         }
-                        return $this->render('admin/dashboard.html.twig',['page' => $page, 'form' =>  $form->createView()]);
+                        // Créez une instance de Finder
+                        $finder = new Finder();
+                        // Utilisez le Finder pour parcourir le répertoire
+                        $files = $finder->files()->in($this->getParameter('images_directory'));
+                        // Parcourez les fichiers et affichez-les
+                        $type_images = explode('|', $this->getParameter('type_images'));
+                        $images = [];
+                        foreach ($files as $file) {
+                            array_push($images, ['titre' => $file->getFilename(),'path'=>'assets/images/']);
+                        }
+                        return $this->render('admin/dashboard.html.twig',['page' => $page, 
+                                                                        'form' =>  $form->createView(), 
+                                                                        'images' => $images,
+                                                                        'type_images' => $type_images]);
                     break;
                 
                 default:

@@ -13,7 +13,6 @@ namespace Symfony\Component\Security\Http\Authentication;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Http\HttpUtils;
 use Symfony\Component\Security\Http\ParameterBagUtils;
@@ -33,6 +32,8 @@ class DefaultAuthenticationSuccessHandler implements AuthenticationSuccessHandle
     protected $httpUtils;
     protected $logger;
     protected $options;
+    /** @deprecated since Symfony 5.2, use $firewallName instead */
+    protected $providerKey;
     protected $firewallName;
     protected $defaultOptions = [
         'always_use_default_target_path' => false,
@@ -45,7 +46,7 @@ class DefaultAuthenticationSuccessHandler implements AuthenticationSuccessHandle
     /**
      * @param array $options Options for processing a successful authentication attempt
      */
-    public function __construct(HttpUtils $httpUtils, array $options = [], LoggerInterface $logger = null)
+    public function __construct(HttpUtils $httpUtils, array $options = [], ?LoggerInterface $logger = null)
     {
         $this->httpUtils = $httpUtils;
         $this->logger = $logger;
@@ -55,15 +56,17 @@ class DefaultAuthenticationSuccessHandler implements AuthenticationSuccessHandle
     /**
      * {@inheritdoc}
      */
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token): Response
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token)
     {
         return $this->httpUtils->createRedirectResponse($request, $this->determineTargetUrl($request));
     }
 
     /**
      * Gets the options.
+     *
+     * @return array
      */
-    public function getOptions(): array
+    public function getOptions()
     {
         return $this->options;
     }
@@ -73,20 +76,55 @@ class DefaultAuthenticationSuccessHandler implements AuthenticationSuccessHandle
         $this->options = array_merge($this->defaultOptions, $options);
     }
 
+    /**
+     * Get the provider key.
+     *
+     * @return string
+     *
+     * @deprecated since Symfony 5.2, use getFirewallName() instead
+     */
+    public function getProviderKey()
+    {
+        if (1 !== \func_num_args() || true !== func_get_arg(0)) {
+            trigger_deprecation('symfony/security-core', '5.2', 'Method "%s()" is deprecated, use "getFirewallName()" instead.', __METHOD__);
+        }
+
+        if ($this->providerKey !== $this->firewallName) {
+            trigger_deprecation('symfony/security-core', '5.2', 'The "%1$s::$providerKey" property is deprecated, use "%1$s::$firewallName" instead.', __CLASS__);
+
+            return $this->providerKey;
+        }
+
+        return $this->firewallName;
+    }
+
+    public function setProviderKey(string $providerKey)
+    {
+        if (2 !== \func_num_args() || true !== func_get_arg(1)) {
+            trigger_deprecation('symfony/security-http', '5.2', 'Method "%s" is deprecated, use "setFirewallName()" instead.', __METHOD__);
+        }
+
+        $this->providerKey = $providerKey;
+    }
+
     public function getFirewallName(): ?string
     {
-        return $this->firewallName;
+        return $this->getProviderKey(true);
     }
 
     public function setFirewallName(string $firewallName): void
     {
+        $this->setProviderKey($firewallName, true);
+
         $this->firewallName = $firewallName;
     }
 
     /**
      * Builds the target URL according to the defined options.
+     *
+     * @return string
      */
-    protected function determineTargetUrl(Request $request): string
+    protected function determineTargetUrl(Request $request)
     {
         if ($this->options['always_use_default_target_path']) {
             return $this->options['default_target_path'];

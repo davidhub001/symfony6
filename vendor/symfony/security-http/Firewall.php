@@ -38,7 +38,7 @@ class Firewall implements EventSubscriberInterface
     /**
      * @var \SplObjectStorage<Request, ExceptionListener>
      */
-    private \SplObjectStorage $exceptionListeners;
+    private $exceptionListeners;
 
     public function __construct(FirewallMapInterface $map, EventDispatcherInterface $dispatcher)
     {

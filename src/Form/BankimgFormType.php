@@ -15,14 +15,14 @@ class BankimgFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('titre', TextType::class, [
-                'label' => 'Titre',
-                'attr' => ['class' => 'form-control'],
-            ])
-            ->add('description', TextareaType::class, [
-                'label' => 'Description',
-                'attr' => ['class' => 'form-control'],
-            ])
+            // ->add('titre', TextType::class, [
+            //     'label' => 'Titre',
+            //     'attr' => ['class' => 'form-control'],
+            // ])
+            // ->add('description', TextareaType::class, [
+            //     'label' => 'Description',
+            //     'attr' => ['class' => 'form-control'],
+            // ])
             ->add('image', FileType::class, [
                 'label' => 'Image',
                 'attr' => ['class' => 'form-control'],

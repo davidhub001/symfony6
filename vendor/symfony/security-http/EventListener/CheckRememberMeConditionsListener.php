@@ -35,10 +35,10 @@ use Symfony\Component\Security\Http\ParameterBagUtils;
  */
 class CheckRememberMeConditionsListener implements EventSubscriberInterface
 {
-    private array $options;
+    private $options;
     private $logger;
 
-    public function __construct(array $options = [], LoggerInterface $logger = null)
+    public function __construct(array $options = [], ?LoggerInterface $logger = null)
     {
         $this->options = $options + ['always_remember_me' => false, 'remember_me_parameter' => '_remember_me'];
         $this->logger = $logger;

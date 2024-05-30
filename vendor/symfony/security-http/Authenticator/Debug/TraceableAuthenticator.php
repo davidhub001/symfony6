@@ -15,9 +15,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Component\Security\Guard\Authenticator\GuardBridgeAuthenticator;
 use Symfony\Component\Security\Http\Authenticator\AuthenticatorInterface;
 use Symfony\Component\Security\Http\Authenticator\InteractiveAuthenticatorInterface;
-use Symfony\Component\Security\Http\Authenticator\Passport\Passport;
+use Symfony\Component\Security\Http\Authenticator\Passport\PassportInterface;
 use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface;
 use Symfony\Component\Security\Http\EntryPoint\Exception\NotAnEntryPointException;
 use Symfony\Component\VarDumper\Caster\ClassStub;
@@ -30,8 +31,8 @@ use Symfony\Component\VarDumper\Caster\ClassStub;
 final class TraceableAuthenticator implements AuthenticatorInterface, InteractiveAuthenticatorInterface, AuthenticationEntryPointInterface
 {
     private $authenticator;
-    private $passport = null;
-    private ?float $duration = null;
+    private $passport;
+    private $duration;
     private $stub;
 
     public function __construct(AuthenticatorInterface $authenticator)
@@ -41,11 +42,13 @@ final class TraceableAuthenticator implements AuthenticatorInterface, Interactiv
 
     public function getInfo(): array
     {
+        $class = \get_class($this->authenticator instanceof GuardBridgeAuthenticator ? $this->authenticator->getGuardAuthenticator() : $this->authenticator);
+
         return [
             'supports' => true,
             'passport' => $this->passport,
             'duration' => $this->duration,
-            'stub' => $this->stub ?? $this->stub = class_exists(ClassStub::class) ? new ClassStub(\get_class($this->authenticator)) : \get_class($this->authenticator),
+            'stub' => $this->stub ?? $this->stub = class_exists(ClassStub::class) ? new ClassStub($class) : $class,
         ];
     }
 
@@ -54,7 +57,7 @@ final class TraceableAuthenticator implements AuthenticatorInterface, Interactiv
         return $this->authenticator->supports($request);
     }
 
-    public function authenticate(Request $request): Passport
+    public function authenticate(Request $request): PassportInterface
     {
         $startTime = microtime(true);
         $this->passport = $this->authenticator->authenticate($request);
@@ -63,9 +66,14 @@ final class TraceableAuthenticator implements AuthenticatorInterface, Interactiv
         return $this->passport;
     }
 
-    public function createToken(Passport $passport, string $firewallName): TokenInterface
+    public function createToken(PassportInterface $passport, string $firewallName): TokenInterface
     {
-        return $this->authenticator->createToken($passport, $firewallName);
+        return method_exists($this->authenticator, 'createToken') ? $this->authenticator->createToken($passport, $firewallName) : $this->authenticator->createAuthenticatedToken($passport, $firewallName);
+    }
+
+    public function createAuthenticatedToken(PassportInterface $passport, string $firewallName): TokenInterface
+    {
+        return $this->authenticator->createAuthenticatedToken($passport, $firewallName);
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
@@ -78,7 +86,7 @@ final class TraceableAuthenticator implements AuthenticatorInterface, Interactiv
         return $this->authenticator->onAuthenticationFailure($request, $exception);
     }
 
-    public function start(Request $request, AuthenticationException $authException = null): Response
+    public function start(Request $request, ?AuthenticationException $authException = null): Response
     {
         if (!$this->authenticator instanceof AuthenticationEntryPointInterface) {
             throw new NotAnEntryPointException();
@@ -92,9 +100,6 @@ final class TraceableAuthenticator implements AuthenticatorInterface, Interactiv
         return $this->authenticator instanceof InteractiveAuthenticatorInterface && $this->authenticator->isInteractive();
     }
 
-    /**
-     * @internal
-     */
     public function getAuthenticator(): AuthenticatorInterface
     {
         return $this->authenticator;

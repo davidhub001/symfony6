@@ -44,15 +44,15 @@ class SwitchUserListener extends AbstractListener
     private $tokenStorage;
     private $provider;
     private $userChecker;
-    private string $firewallName;
+    private $firewallName;
     private $accessDecisionManager;
-    private string $usernameParameter;
-    private string $role;
+    private $usernameParameter;
+    private $role;
     private $logger;
     private $dispatcher;
-    private bool $stateless;
+    private $stateless;
 
-    public function __construct(TokenStorageInterface $tokenStorage, UserProviderInterface $provider, UserCheckerInterface $userChecker, string $firewallName, AccessDecisionManagerInterface $accessDecisionManager, LoggerInterface $logger = null, string $usernameParameter = '_switch_user', string $role = 'ROLE_ALLOWED_TO_SWITCH', EventDispatcherInterface $dispatcher = null, bool $stateless = false)
+    public function __construct(TokenStorageInterface $tokenStorage, UserProviderInterface $provider, UserCheckerInterface $userChecker, string $firewallName, AccessDecisionManagerInterface $accessDecisionManager, ?LoggerInterface $logger = null, string $usernameParameter = '_switch_user', string $role = 'ROLE_ALLOWED_TO_SWITCH', ?EventDispatcherInterface $dispatcher = null, bool $stateless = false)
     {
         if ('' === $firewallName) {
             throw new \InvalidArgumentException('$firewallName must not be empty.');
@@ -140,7 +140,8 @@ class SwitchUserListener extends AbstractListener
         $originalToken = $this->getOriginalToken($token);
 
         if (null !== $originalToken) {
-            if ($token->getUserIdentifier() === $username) {
+            // @deprecated since Symfony 5.3, change to $token->getUserIdentifier() in 6.0
+            if ((method_exists($token, 'getUserIdentifier') ? $token->getUserIdentifier() : $token->getUsername()) === $username) {
                 return $token;
             }
 
@@ -148,20 +149,27 @@ class SwitchUserListener extends AbstractListener
             $token = $this->attemptExitUser($request);
         }
 
-        $currentUsername = $token->getUserIdentifier();
+        // @deprecated since Symfony 5.3, change to $token->getUserIdentifier() in 6.0
+        $currentUsername = method_exists($token, 'getUserIdentifier') ? $token->getUserIdentifier() : $token->getUsername();
         $nonExistentUsername = '_'.md5(random_bytes(8).$username);
 
         // To protect against user enumeration via timing measurements
         // we always load both successfully and unsuccessfully
+        $methodName = 'loadUserByIdentifier';
+        if (!method_exists($this->provider, $methodName)) {
+            trigger_deprecation('symfony/security-core', '5.3', 'Not implementing method "loadUserByIdentifier()" in user provider "%s" is deprecated. This method will replace "loadUserByUsername()" in Symfony 6.0.', get_debug_type($this->provider));
+
+            $methodName = 'loadUserByUsername';
+        }
         try {
-            $user = $this->provider->loadUserByIdentifier($username);
+            $user = $this->provider->$methodName($username);
 
             try {
-                $this->provider->loadUserByIdentifier($nonExistentUsername);
+                $this->provider->$methodName($nonExistentUsername);
             } catch (\Exception $e) {
             }
         } catch (AuthenticationException $e) {
-            $this->provider->loadUserByIdentifier($currentUsername);
+            $this->provider->$methodName($currentUsername);
 
             throw $e;
         }

@@ -30,6 +30,7 @@ use Symfony\Component\Security\Http\Authenticator\Passport\Badge\RememberMeBadge
 use Symfony\Component\Security\Http\Authenticator\Passport\Badge\UserBadge;
 use Symfony\Component\Security\Http\Authenticator\Passport\Credentials\PasswordCredentials;
 use Symfony\Component\Security\Http\Authenticator\Passport\Passport;
+use Symfony\Component\Security\Http\Authenticator\Passport\PassportInterface;
 use Symfony\Component\Security\Http\HttpUtils;
 use Symfony\Component\Security\Http\ParameterBagUtils;
 
@@ -45,7 +46,7 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
     private $userProvider;
     private $successHandler;
     private $failureHandler;
-    private array $options;
+    private $options;
     private $httpKernel;
 
     public function __construct(HttpUtils $httpUtils, UserProviderInterface $userProvider, AuthenticationSuccessHandlerInterface $successHandler, AuthenticationFailureHandlerInterface $failureHandler, array $options)
@@ -82,8 +83,16 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
     {
         $credentials = $this->getCredentials($request);
 
+        // @deprecated since Symfony 5.3, change to $this->userProvider->loadUserByIdentifier() in 6.0
+        $method = 'loadUserByIdentifier';
+        if (!method_exists($this->userProvider, 'loadUserByIdentifier')) {
+            trigger_deprecation('symfony/security-core', '5.3', 'Not implementing method "loadUserByIdentifier()" in user provider "%s" is deprecated. This method will replace "loadUserByUsername()" in Symfony 6.0.', get_debug_type($this->userProvider));
+
+            $method = 'loadUserByUsername';
+        }
+
         $passport = new Passport(
-            new UserBadge($credentials['username'], [$this->userProvider, 'loadUserByIdentifier']),
+            new UserBadge($credentials['username'], [$this->userProvider, $method]),
             new PasswordCredentials($credentials['password']),
             [new RememberMeBadge()]
         );
@@ -96,6 +105,16 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         return $passport;
+    }
+
+    /**
+     * @deprecated since Symfony 5.4, use {@link createToken()} instead
+     */
+    public function createAuthenticatedToken(PassportInterface $passport, string $firewallName): TokenInterface
+    {
+        trigger_deprecation('symfony/security-http', '5.4', 'Method "%s()" is deprecated, use "%s::createToken()" instead.', __METHOD__, __CLASS__);
+
+        return $this->createToken($passport, $firewallName);
     }
 
     public function createToken(Passport $passport, string $firewallName): TokenInterface
@@ -126,7 +145,7 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
             $credentials['password'] = ParameterBagUtils::getRequestParameterValue($request, $this->options['password_parameter']) ?? '';
         }
 
-        if (!\is_string($credentials['username']) && !$credentials['username'] instanceof \Stringable) {
+        if (!\is_string($credentials['username']) && (!\is_object($credentials['username']) || !method_exists($credentials['username'], '__toString'))) {
             throw new BadRequestHttpException(sprintf('The key "%s" must be a string, "%s" given.', $this->options['username_parameter'], \gettype($credentials['username'])));
         }
 
@@ -138,6 +157,14 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
 
         $request->getSession()->set(Security::LAST_USERNAME, $credentials['username']);
 
+        if (!\is_string($credentials['password']) && (!\is_object($credentials['password']) || !method_exists($credentials['password'], '__toString'))) {
+            throw new BadRequestHttpException(sprintf('The key "%s" must be a string, "%s" given.', $this->options['password_parameter'], \gettype($credentials['password'])));
+        }
+
+        if (!\is_string($credentials['csrf_token'] ?? '') && (!\is_object($credentials['csrf_token']) || !method_exists($credentials['csrf_token'], '__toString'))) {
+            throw new BadRequestHttpException(sprintf('The key "%s" must be a string, "%s" given.', $this->options['csrf_parameter'], \gettype($credentials['csrf_token'])));
+        }
+
         return $credentials;
     }
 
@@ -146,7 +173,7 @@ class FormLoginAuthenticator extends AbstractLoginFormAuthenticator
         $this->httpKernel = $httpKernel;
     }
 
-    public function start(Request $request, AuthenticationException $authException = null): Response
+    public function start(Request $request, ?AuthenticationException $authException = null): Response
     {
         if (!$this->options['use_forward']) {
             return parent::start($request, $authException);
