@@ -20,17 +20,21 @@
                 <img src="{{image.path}}{{image.titre}}" class="w-100 p-4">
             </div>
             <div class="modal-footer" style="    justify-content: space-evenly;">
-                <div>
-                    <input type="text" placeholder="titre" class="w-100 mb-1 form-control" value="{{image.titre}}">
-                    <select type="text" class="w-100 mb-1 form-control">
-                        {% for type in type_images %}
-                            <option>{{type}}</option>
-                        {% endfor %}
-                    </select>
-                    <textarea class="w-100 mb-1 form-control" placeholder="description"></textarea>
-                </div>
-                <button class="btn" data-dismiss="modal"><i class="bi bi-trash" ></i></button>
-                <button class="btn" data-dismiss="modal"><i class="bi bi-check-lg" ></i></button>
+                
+                <form name="bankimg_form" method="post" enctype="multipart/form-data">
+                    <div>
+                        <input type="text" placeholder="titre" class="w-100 mb-1 form-control" value="{{image.titre}}">
+                        <select type="text" class="w-100 mb-1 form-control">
+                            {% for type in type_images %}
+                                <option>{{type}}</option>
+                            {% endfor %}
+                        </select>
+                        <textarea class="w-100 mb-1 form-control" placeholder="description"></textarea>
+                    </div>
+                    <button class="btn" data-dismiss="modal" type="submit" name="delete_image"><i class="bi bi-trash" ></i></button>
+                    <button class="btn" data-dismiss="modal" type="submit" name="save_image"><i class="bi bi-check-lg" ></i></button>
+                </form>
+                
             </div>
             </div>
         </div>

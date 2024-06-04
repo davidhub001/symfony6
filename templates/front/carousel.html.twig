@@ -10,7 +10,7 @@
             {% for carousel in data %}
                 <div class="carousel-item {{carousel.active}}">
                     <img class="d-block w-100 height500" src="{{ asset('assets/images/') }}{{carousel.image}}" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-text">
                         <h1>{{carousel.titre}}</h1>
                         <p>{{carousel.description}}</p>
                     </div>
