@@ -6,8 +6,15 @@
 }
 @import url('bootstrap/bootstrap.min.css');
 @import url('bootstrap-icons/font/bootstrap-icons.min.css');
-
+.animate_opacity{
+    opacity: 0;
+}
 .carousel{
+    .carousel-item{
+        img{
+            filter: brightness(70%);
+        }
+    }
     .carousel-text{
         position: absolute;
         right: 100%;
@@ -23,6 +30,22 @@
         }
         h2{
             font-size: 15px;
+        }
+    }
+    .text-fixe{
+        position: absolute;
+        top: 74px;
+        background-color: #6c757d3d;
+        width: 93%;
+        height: 67%;
+        margin: 50px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 13%;
+        h1{
+            font-size: 6em;
+            font-weight: bold;
         }
     }
 }
@@ -106,6 +129,9 @@ footer{
     position: fixed;
     z-index: 1000;
     width: 100%;
+    a{
+        font-weight: bold;
+    }
 }
 .image-scale {
     width: 100%;

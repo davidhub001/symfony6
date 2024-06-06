@@ -5,10 +5,11 @@
 {% block content %}
     {% include 'front/carousel.html.twig' with {
             'data':[
-                    {'image':'slide1.jpg','titre':'echopechemada', 'description':'test','active':'active'},
-                    {'image':'slide2.jpg','titre':'echopechemada', 'description':'test','active':''},
-                    {'image':'slide3.jpg','titre':'echopechemada', 'description':'test','active':''},
-            ]
+                    {'image':'slide1.jpg','titre':'', 'description':'','active':'active'},
+                    {'image':'slide2.jpg','titre':'', 'description':'','active':''},
+                    {'image':'slide3.jpg','titre':'', 'description':'','active':''},
+            ],
+            'text_fixe': 'echopechemada'
     } %}
 
     {% include 'front/card1.html.twig' with {

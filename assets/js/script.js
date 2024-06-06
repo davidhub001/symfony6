@@ -4,7 +4,9 @@ $(document).ready(function() {
             console.log("Toggle completed");
         });
     });
-    
+    $(".animate_opacity").animate({
+        opacity:'1'
+    },'slow');
 });
 
 function scrollGallery(direction) {
