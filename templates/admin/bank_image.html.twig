@@ -23,16 +23,19 @@
                 
                 <form name="bankimg_form" method="post" enctype="multipart/form-data">
                     <div>
-                        <input type="text" placeholder="titre" class="w-100 mb-1 form-control" value="{{image.titre}}">
-                        <select type="text" class="w-100 mb-1 form-control">
+                        <input type="text" placeholder="titre" class="w-100 mb-1 form-control" value="{{image.titre}}" name="titre{{ loop.index }}">
+                        <select type="text" class="w-100 mb-1 form-control" name="type{{ loop.index }}">
                             {% for type in type_images %}
                                 <option>{{type}}</option>
                             {% endfor %}
                         </select>
-                        <textarea class="w-100 mb-1 form-control" placeholder="description"></textarea>
+                        <textarea class="w-100 mb-1 form-control" placeholder="description" name="description{{ loop.index }}"></textarea>
+                        <label>Qualité :</label><span name="compressionValue{{ loop.index }}">50%</span>
+                        <input type="range" name="rangeInput" edit-range="{{ loop.index }}"min="0" max="100" value="50">
+                        </fieldset>
                     </div>
                     <button class="btn" data-dismiss="modal" type="submit" name="delete_image"><i class="bi bi-trash" ></i></button>
-                    <button class="btn" data-dismiss="modal" type="submit" name="save_image"><i class="bi bi-check-lg" ></i></button>
+                    <button class="btn" data-dismiss="modal" type="submit" name="save_image" onclick="Ajax_editimage({{ loop.index }})"><i class="bi bi-check-lg" ></i></button>
                 </form>
                 
             </div>

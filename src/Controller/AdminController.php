@@ -51,6 +51,7 @@ class AdminController extends AbstractController
                 case 'bank_images':
                         $form = $this->createForm(BankimgFormType::class);
                         $form->handleRequest($request);
+
                         if ($form->isSubmitted() && $form->isValid()) {
                             $imageFile = $form->get('image')->getData();
                             if($imageFile){
@@ -81,6 +82,8 @@ class AdminController extends AbstractController
                 
                 default:
                     # code...
+                    // $new = new Myservice();
+                    // var_dump($new->compressImage());
                     return $this->render('admin/dashboard.html.twig',['page'=>'null']);
                     break;
             }

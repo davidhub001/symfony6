@@ -24,3 +24,6 @@ dashboard:
 logout:
     path: /logout
     controller: App\Controller\AdminController::logout
+apidatadev:
+    path: /api-data-dev
+    controller: App\Controller\ApiController::updateimage

@@ -19,7 +19,8 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
-
+    App\service\MyService:
+        autowire: true
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 parameters:
@@ -28,3 +29,4 @@ parameters:
     images_directory: '%kernel.project_dir%/assets/images'
     type_images: 'simple|slide|card|band|carousel'
     url_image: 'assets/images/'
+    api_updateimage: 'api-data-dev'
