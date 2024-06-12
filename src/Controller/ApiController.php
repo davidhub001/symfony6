@@ -19,9 +19,13 @@ class ApiController extends AbstractController
         ]);
     }
     public function updateimage(Request $request){
-        $data = json_decode($request->getContent(), true);
-        $response = array_merge($data);
-        
-        return new JsonResponse($response);
+        $data = (object)json_decode($request->getContent(), true);
+        $service = new MyService();
+        $source = $this->getParameter('images_directory').'/'.$data->titre;
+        $destination = $this->getParameter('images_directory').'/'.$data->titre;
+        $quality = $data->quality;
+        $convertjpg = true;
+        $service->compressImage($source, $destination, $quality, $convertjpg);
+        return new JsonResponse(['send'=>true]);
     }
 }

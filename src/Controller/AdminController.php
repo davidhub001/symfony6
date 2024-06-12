@@ -72,12 +72,20 @@ class AdminController extends AbstractController
                         $type_images = explode('|', $this->getParameter('type_images'));
                         $images = [];
                         foreach ($files as $file) {
-                            array_push($images, ['titre' => $file->getFilename(),'path'=>'assets/images/']);
+                            $taille = $file->getSize()/(1024*1024);
+                            if($taille < 1){
+                                $taille = $file->getSize()/1024;
+                                $unite = 'Ko';
+                            } else{
+                                $unite = 'Mo';
+                            }
+                            array_push($images, ['titre' => $file->getFilename(),'path'=>'assets/images/', 'size'=>round($taille,2).$unite]);
                         }
                         return $this->render('admin/dashboard.html.twig',['page' => $page, 
                                                                         'form' =>  $form->createView(), 
                                                                         'images' => $images,
-                                                                        'type_images' => $type_images]);
+                                                                        'type_images' => $type_images,
+                                                                        'api_url' => $this->getParameter('api_updateimage')]);
                     break;
                 
                 default:

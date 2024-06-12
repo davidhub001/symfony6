@@ -1,11 +1,20 @@
-<div class="container mt-5">
-    {{ form_start(form) }}
-    {{ form_end(form) }}
+<div class="mt-5">
+    <div class="w-50"> 
+        {{ form_start(form, {'attr': {'class': 'row ml-5 mr-5', 'style':'align-items: flex-end'}} ) }}
+        {{ form_end(form) }}
+    </div>
+    <div class="row">
+
     {% for image in images %}
         
-        <a href="#" data-toggle="modal" data-target="#exampleModalCenter{{ loop.index }}">
-            <img src="{{image.path}}{{image.titre}}" class="w-25 p-4">
-        </a>
+        <div class="card m-3" style="width: 18rem;" data-toggle="modal" data-target="#exampleModalCenter{{ loop.index }}">
+            <img  class="card-img-top" src="{{image.path}}{{image.titre}}" class="w-25 p-4">
+            
+            <div class="card-body">
+                <h5 class="card-title">{{image.titre}}</h5>
+                <p class="card-text"> {{image.size}}</p>
+            </div>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -18,6 +27,7 @@
             </div>
             <div class="modal-body">
                 <img src="{{image.path}}{{image.titre}}" class="w-100 p-4">
+
             </div>
             <div class="modal-footer" style="    justify-content: space-evenly;">
                 
@@ -30,12 +40,12 @@
                             {% endfor %}
                         </select>
                         <textarea class="w-100 mb-1 form-control" placeholder="description" name="description{{ loop.index }}"></textarea>
-                        <label>Qualité :</label><span name="compressionValue{{ loop.index }}">50%</span>
-                        <input type="range" name="rangeInput" edit-range="{{ loop.index }}"min="0" max="100" value="50">
+                        <label>Qualité :</label><span name="compressionValue{{ loop.index }}">100%</span>
+                        <input type="range" name="rangeInput" edit-range="{{ loop.index }}"min="0" max="100" value="100">
                         </fieldset>
                     </div>
                     <button class="btn" data-dismiss="modal" type="submit" name="delete_image"><i class="bi bi-trash" ></i></button>
-                    <button class="btn" data-dismiss="modal" type="submit" name="save_image" onclick="Ajax_editimage({{ loop.index }})"><i class="bi bi-check-lg" ></i></button>
+                    <button class="btn" data-dismiss="modal" type="submit" name="save_image" onclick="Ajax_editimage({{ loop.index }}, '{{ app.request.schemeAndHttpHost ~ app.request.basePath }}/{{api_url}}')"><i class="bi bi-check-lg" ></i></button>
                 </form>
                 
             </div>
@@ -43,5 +53,5 @@
         </div>
         </div>
     {% endfor %}
-   
+   </div>
 </div>

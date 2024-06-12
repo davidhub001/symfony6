@@ -31,13 +31,27 @@ function autoScroll() {
 
 setInterval(autoScroll, 3000); // Scrolls every 3 seconds
 
-function Ajax_editimage(id,url){
+function Ajax_editimage(id, url){
     var titre = $("input[name='titre"+id+"']").val();
     var type = $("select[name='type"+id+"']").val();
     var description = $("textarea[name='description"+id+"']").val();
-    var edit_range = $("input[edit-range="+id+"]").val();
-    console.log(titre)
-    console.log(type)
-    console.log(description)
-    console.log(edit_range)
+    var quality = $("input[edit-range="+id+"]").val();
+    $.ajax({
+        url: url, // URL de l'API ou du serveur
+        type: 'POST', // Type de requête (GET, POST, etc.)
+        data: JSON.stringify({ titre: titre, 
+                                type: type, 
+                                description: description,
+                                quality: quality}), // Données envoyées au serveur
+        contentType: 'application/json', // Type de contenu envoyé au serveur
+        dataType: 'json', // Type de données attendu de la réponse
+        success: function(response) {
+            console.log('Réponse du serveur:', response);
+            // Traitez la réponse ici
+        },
+        error: function(xhr, status, error) {
+            console.error('Erreur:', error);
+            // Gérez l'erreur ici
+        }
+    });
 }

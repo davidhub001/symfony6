@@ -24,7 +24,7 @@ class BankimgFormType extends AbstractType
             //     'attr' => ['class' => 'form-control'],
             // ])
             ->add('image', FileType::class, [
-                'label' => 'Image',
+                'label' => ' ',
                 'attr' => ['class' => 'form-control'],
                 'required' => false,
             ])
@@ -40,7 +40,6 @@ class BankimgFormType extends AbstractType
             //     'attr' => ['class' => 'form-check-input'],
             // ])
             ->add('save', SubmitType::class, [
-                'label' => 'Save',
                 'attr' => ['class' => 'btn btn-primary'],
             ]);
     }
