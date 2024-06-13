@@ -90,43 +90,44 @@ class __TwigTemplate_63ef9ac67e1fca8da53ccebbcc4ee44a extends Template
         yield "
     ";
         // line 29
-        yield from         $this->loadTemplate("front/card.html.twig", "front/index.html.twig", 29)->unwrap()->yield($context);
-        // line 30
-        yield "
+        yield from         $this->loadTemplate("front/card.html.twig", "front/index.html.twig", 29)->unwrap()->yield(CoreExtension::merge($context, ["data_card" => [["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"]]]));
+        // line 34
+        yield ",
+
 
     ";
-        // line 32
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 32)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide3.jpg", "titre" => "Activités en Plein Air", "description" => "Randonnées, observation de la faune et de la flore, et bien plus encore pour les amoureux de la nature", "url" => "#"]));
-        // line 36
-        yield "    ";
-        yield from         $this->loadTemplate("front/discover.html.twig", "front/index.html.twig", 36)->unwrap()->yield($context);
         // line 37
+        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 37)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide3.jpg", "titre" => "Activités en Plein Air", "description" => "Randonnées, observation de la faune et de la flore, et bien plus encore pour les amoureux de la nature", "url" => "#"]));
+        // line 41
         yield "    ";
-        yield from         $this->loadTemplate("front/service.html.twig", "front/index.html.twig", 37)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"]]]));
-        // line 45
-        yield "
-    ";
-        // line 46
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 46)->unwrap()->yield(CoreExtension::merge($context, ["image" => "band2.jpg", "titre" => "Pêche en Eau Douce et Salée", "description" => "Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux", "url" => "#"]));
+        yield from         $this->loadTemplate("front/discover.html.twig", "front/index.html.twig", 41)->unwrap()->yield($context);
+        // line 42
+        yield "    ";
+        yield from         $this->loadTemplate("front/service.html.twig", "front/index.html.twig", 42)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"]]]));
         // line 50
         yield "
     ";
         // line 51
-        yield from         $this->loadTemplate("front/tour-card.html.twig", "front/index.html.twig", 51)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar"]));
-        // line 54
-        yield "    ";
-        yield from         $this->loadTemplate("front/tour-card.html.twig", "front/index.html.twig", 54)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar"]));
-        // line 57
-        yield "    
+        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 51)->unwrap()->yield(CoreExtension::merge($context, ["image" => "band2.jpg", "titre" => "Pêche en Eau Douce et Salée", "description" => "Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux", "url" => "#"]));
+        // line 55
+        yield "
     ";
-        // line 58
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 58)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide1.jpg", "titre" => "Formation et Ateliers ", "description" => "Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.", "url" => "#"]));
+        // line 56
+        yield from         $this->loadTemplate("front/tour-card.html.twig", "front/index.html.twig", 56)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar"]));
+        // line 59
+        yield "    ";
+        yield from         $this->loadTemplate("front/tour-card.html.twig", "front/index.html.twig", 59)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar"]));
         // line 62
         yield "    
     ";
         // line 63
-        yield from         $this->loadTemplate("front/gallery.html.twig", "front/index.html.twig", 63)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"], ["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"]]]));
-        // line 73
+        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 63)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide1.jpg", "titre" => "Formation et Ateliers ", "description" => "Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.", "url" => "#"]));
+        // line 67
+        yield "    
+    ";
+        // line 68
+        yield from         $this->loadTemplate("front/gallery.html.twig", "front/index.html.twig", 68)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"], ["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"]]]));
+        // line 78
         yield "
 
 ";
@@ -157,7 +158,7 @@ class __TwigTemplate_63ef9ac67e1fca8da53ccebbcc4ee44a extends Template
      */
     public function getDebugInfo()
     {
-        return array (  130 => 73,  128 => 63,  125 => 62,  123 => 58,  120 => 57,  117 => 54,  115 => 51,  112 => 50,  110 => 46,  107 => 45,  104 => 37,  101 => 36,  99 => 32,  95 => 30,  93 => 29,  90 => 28,  88 => 24,  85 => 23,  83 => 15,  80 => 14,  77 => 6,  70 => 5,  61 => 3,  54 => 2,  37 => 1,);
+        return array (  131 => 78,  129 => 68,  126 => 67,  124 => 63,  121 => 62,  118 => 59,  116 => 56,  113 => 55,  111 => 51,  108 => 50,  105 => 42,  102 => 41,  100 => 37,  95 => 34,  93 => 29,  90 => 28,  88 => 24,  85 => 23,  83 => 15,  80 => 14,  77 => 6,  70 => 5,  61 => 3,  54 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -190,7 +191,12 @@ class __TwigTemplate_63ef9ac67e1fca8da53ccebbcc4ee44a extends Template
                                                 'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
                                                 'url':'#'}  %}
 
-    {% include 'front/card.html.twig'%}
+    {% include 'front/card.html.twig' with { 'data_card':[
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'}
+    ]} %},
 
 
     {% include 'front/band-hero.html.twig' with {'image':'slide3.jpg',

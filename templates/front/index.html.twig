@@ -26,7 +26,12 @@
                                                 'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
                                                 'url':'#'}  %}
 
-    {% include 'front/card.html.twig'%}
+    {% include 'front/card.html.twig' with { 'data_card':[
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'}
+    ]} %},
 
 
     {% include 'front/band-hero.html.twig' with {'image':'slide3.jpg',

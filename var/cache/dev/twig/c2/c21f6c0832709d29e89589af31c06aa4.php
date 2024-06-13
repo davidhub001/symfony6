@@ -38,15 +38,15 @@ class __TwigTemplate_587d4531226a45b0f7a1a3aad8799018 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "front/card.html.twig"));
 
         // line 1
-        yield "<div class=\"container p-5\">
-    <div class=\"row\" style=\"justify-content:center\">
+        yield "<div class=\"container\">
+    <div class=\"row\">
         ";
         // line 3
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable((isset($context["data_card"]) || array_key_exists("data_card", $context) ? $context["data_card"] : (function () { throw new RuntimeError('Variable "data_card" does not exist.', 3, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["card"]) {
             // line 4
-            yield "            <div class=\"card col-lg-3 col-md-4 col-sm-4 col-xs-2 p-0 mr-1 mb-1\">
+            yield "            <div class=\"card col-lg-3 col-md-4 col-sm-4 col-xs-2 p-0 mr-3 mb-1\">
                 <div class=\"image-scale\">
                     <img class=\"card-img-top\" src=\"";
             // line 6
@@ -109,10 +109,10 @@ class __TwigTemplate_587d4531226a45b0f7a1a3aad8799018 extends Template
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"container p-5\">
-    <div class=\"row\" style=\"justify-content:center\">
+        return new Source("<div class=\"container\">
+    <div class=\"row\">
         {% for card in data_card %}
-            <div class=\"card col-lg-3 col-md-4 col-sm-4 col-xs-2 p-0 mr-1 mb-1\">
+            <div class=\"card col-lg-3 col-md-4 col-sm-4 col-xs-2 p-0 mr-3 mb-1\">
                 <div class=\"image-scale\">
                     <img class=\"card-img-top\" src=\"{{ asset('assets/images/') }}{{card.image}}\" alt=\"Card image cap\">
                 </div>
