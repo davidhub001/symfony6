@@ -3,7 +3,7 @@
     {% include 'front/nav.html.twig' %}
 {% endblock %}
 {% block content %}
-    {% include 'front/carousel.html.twig' with {
+    {% include 'front/modele/carousel.html.twig' with {
             'data':[
                     {'image':'slide1.jpg','titre':'', 'description':'','active':'active'},
                     {'image':'slide2.jpg','titre':'', 'description':'','active':''},
@@ -13,7 +13,7 @@
             'text_description' : 'test' 
     } %}
 
-    {% include 'front/card1.html.twig' with {
+    {% include 'front/modele/card1.html.twig' with {
         'top':'-100px',
         'data': [
                 {'image':'merou.jpg', 'titre':'Expertise Locale'},
@@ -22,12 +22,12 @@
         ]
     } %}
 
-    {% include 'front/band-hero.html.twig' with {'image':'band.jpg',
+    {% include 'front/modele/band-hero.html.twig' with {'image':'band.jpg',
                                                 'titre':'Visites Guidées',
                                                 'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
                                                 'url':'#'}  %}
 
-    {% include 'front/card.html.twig' with { 'data_card':[
+    {% include 'front/modele/card.html.twig' with { 'data_card':[
         {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
         {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
         {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
@@ -35,7 +35,7 @@
     ]} %},
 
 
-    {% include 'front/band-hero.html.twig' with {'image':'slide3.jpg',
+    {% include 'front/modele/band-hero.html.twig' with {'image':'slide3.jpg',
                                                 'titre':'Tout sur la Pêche',
                                                 'description':"L'équipage de votre unité connait très bien les pratiques de pêche les 
                                                 plus en pointe aujourd'hui !
@@ -43,7 +43,7 @@
                                                 nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
                                                 Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.",
                                                 'url':'#'}  %}
-    {% include 'front/discover.html.twig' with {
+    {% include 'front/modele/discover.html.twig' with {
             'titre':'',
             'image':'merou.jpg',
             'url':'#',
@@ -85,7 +85,7 @@
             ]
         }
     %}
-    {% include 'front/service.html.twig' with {
+    {% include 'front/modele/service.html.twig' with {
             'data':[
                     {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
                     {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
@@ -94,24 +94,27 @@
     }
     %}
 
-    {% include 'front/band-hero.html.twig' with {'image':'band2.jpg',
+    {% include 'front/modele/band-hero.html.twig' with {'image':'band2.jpg',
                                                 'titre':'Pêche en Eau Douce et Salée',
                                                 'description':'Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux',
                                                 'url':'#'}  %}
 
-    {% include 'front/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar','nobouton':true,'place_image':'gauche'}
     %}
-    {% include 'front/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar','nobouton':false,'place_image':'gauche'}
     %}
+
     
-    {% include 'front/band-hero.html.twig' with {'image':'slide1.jpg',
+    {% include 'front/modele/band-hero.html.twig' with {'image':'slide1.jpg',
                                                 'titre':'Formation et Ateliers ',
                                                 'description':'Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.',
                                                 'url':'#'}  %}
     
-    {% include 'front/gallery.html.twig' with {'data': [
+    {% include 'front/modele/gallery.html.twig' with {'data': [
             {'image': 'image_card.jpg'},
             {'image': 'image_card_2.jpg'},
             {'image': 'image_card3.jpg'},

@@ -222,6 +222,6 @@ class __TwigTemplate_d2b8ebbf496c4d15f7cead1367e4d227 extends Template
         <a href=\"#\" class=\"btn btn-outline-secondary\">Read More</a>
       </div>
     </div>
-</div>", "front/discover.html.twig", "/media/david/david/kandra/symfony6/templates/front/discover.html.twig");
+</div>", "front/discover.html.twig", "/var/www/myhost/symfony6/templates/front/discover.html.twig");
     }
 }

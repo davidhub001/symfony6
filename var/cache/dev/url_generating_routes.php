@@ -6,6 +6,7 @@ return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'front_index' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/']], [], [], []],
     'accueil_index' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/accueil']], [], [], []],
+    '1content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content1'], [], [['text', '/tout-sur-la-peche']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\FrontController::contact'], [], [['text', '/contact']], [], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::login'], [], [['text', '/admin-data-dev']], [], [], []],
     'dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::dashboard'], [], [['text', '/dashboard']], [], [], []],

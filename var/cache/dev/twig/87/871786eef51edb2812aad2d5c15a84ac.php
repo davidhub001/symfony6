@@ -165,6 +165,6 @@ class __TwigTemplate_958121c15d02dcb44d13d7427fde05ee extends Template
         <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
         <span class=\"sr-only\">Next</span>
     </a>
-</div>", "front/carousel.html.twig", "/media/david/david/kandra/symfony6/templates/front/carousel.html.twig");
+</div>", "front/carousel.html.twig", "/var/www/myhost/symfony6/templates/front/carousel.html.twig");
     }
 }
