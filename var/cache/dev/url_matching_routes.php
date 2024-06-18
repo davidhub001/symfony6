@@ -10,6 +10,7 @@ return [
     [ // $staticRoutes
         '/' => [[['_route' => 'front_index', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/accueil' => [[['_route' => 'accueil_index', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
+        '/tout-sur-la-peche' => [[['_route' => '1content_index', '_controller' => 'App\\Controller\\FrontController::content1'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\FrontController::contact'], null, null, null, false, false, null]],
         '/admin-data-dev' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::login'], null, null, null, false, false, null]],
         '/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\AdminController::dashboard'], null, null, null, false, false, null]],
