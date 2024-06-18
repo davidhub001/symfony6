@@ -109,6 +109,6 @@ class __TwigTemplate_2c3ad83a613ece652a52541f13b1df2d extends Template
     <button class=\"gallery-nav gallery-nav-next\" onclick=\"scrollGallery(1)\">&#8250;</button>
 </div>
 
-", "front/gallery.html.twig", "/var/www/myhost/symfony6/templates/front/gallery.html.twig");
+", "front/gallery.html.twig", "/media/david/david/kandra/symfony6/templates/front/gallery.html.twig");
     }
 }

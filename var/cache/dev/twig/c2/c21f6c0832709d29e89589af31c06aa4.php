@@ -124,6 +124,6 @@ class __TwigTemplate_587d4531226a45b0f7a1a3aad8799018 extends Template
             </div>
         {% endfor %}
     </div>
-</div>", "front/card.html.twig", "/var/www/myhost/symfony6/templates/front/card.html.twig");
+</div>", "front/card.html.twig", "/media/david/david/kandra/symfony6/templates/front/card.html.twig");
     }
 }

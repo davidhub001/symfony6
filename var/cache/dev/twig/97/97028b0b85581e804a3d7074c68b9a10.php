@@ -126,6 +126,6 @@ class __TwigTemplate_063f065e3a8beb3988495ef2947eb73a extends Template
 \t\t\t{{price}}
 \t\t</div>
 \t</div>
-</div>", "front/tour-card.html.twig", "/var/www/myhost/symfony6/templates/front/tour-card.html.twig");
+</div>", "front/tour-card.html.twig", "/media/david/david/kandra/symfony6/templates/front/tour-card.html.twig");
     }
 }

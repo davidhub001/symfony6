@@ -85,7 +85,10 @@ class __TwigTemplate_958121c15d02dcb44d13d7427fde05ee extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["text_fixe"]) || array_key_exists("text_fixe", $context) ? $context["text_fixe"] : (function () { throw new RuntimeError('Variable "text_fixe" does not exist.', 21, $this->source); })()), "html", null, true);
         yield "
                 </h1>
-                <span>Votre Destination de Pêche et de Tourisme d'Exception</span>
+                <span>";
+        // line 23
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["text_description"]) || array_key_exists("text_description", $context) ? $context["text_description"] : (function () { throw new RuntimeError('Variable "text_description" does not exist.', 23, $this->source); })()), "html", null, true);
+        yield "</span>
             </div>
     </div>
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
@@ -124,7 +127,7 @@ class __TwigTemplate_958121c15d02dcb44d13d7427fde05ee extends Template
      */
     public function getDebugInfo()
     {
-        return array (  85 => 21,  81 => 19,  71 => 15,  67 => 14,  61 => 12,  56 => 11,  52 => 10,  41 => 1,);
+        return array (  90 => 23,  85 => 21,  81 => 19,  71 => 15,  67 => 14,  61 => 12,  56 => 11,  52 => 10,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -151,7 +154,7 @@ class __TwigTemplate_958121c15d02dcb44d13d7427fde05ee extends Template
                 <h1>
                     {{text_fixe}}
                 </h1>
-                <span>Votre Destination de Pêche et de Tourisme d'Exception</span>
+                <span>{{text_description}}</span>
             </div>
     </div>
     <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
@@ -162,6 +165,6 @@ class __TwigTemplate_958121c15d02dcb44d13d7427fde05ee extends Template
         <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
         <span class=\"sr-only\">Next</span>
     </a>
-</div>", "front/carousel.html.twig", "/var/www/myhost/symfony6/templates/front/carousel.html.twig");
+</div>", "front/carousel.html.twig", "/media/david/david/kandra/symfony6/templates/front/carousel.html.twig");
     }
 }

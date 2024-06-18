@@ -92,6 +92,6 @@ class __TwigTemplate_c6c9f0da561726c9bc218029c91bdb17 extends Template
         <p>{{description}}</p>
         <a href=\"#\" class=\"btn-custom\">Voir</a>
     </div>
-</div>", "front/band-hero.html.twig", "/var/www/myhost/symfony6/templates/front/band-hero.html.twig");
+</div>", "front/band-hero.html.twig", "/media/david/david/kandra/symfony6/templates/front/band-hero.html.twig");
     }
 }

@@ -120,6 +120,6 @@ class __TwigTemplate_c42a3d8054dfa136789fa18aec2133a7 extends Template
       </div>
 {% endfor %}
     </div>
-</div>", "front/service.html.twig", "/var/www/myhost/symfony6/templates/front/service.html.twig");
+</div>", "front/service.html.twig", "/media/david/david/kandra/symfony6/templates/front/service.html.twig");
     }
 }

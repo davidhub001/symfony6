@@ -163,6 +163,6 @@ class __TwigTemplate_0aeb0cd3999af74497b00529cd1ab252 extends Template
     {% include 'front/footer.html.twig' %}
 </body>
 </html>
-", "front/base.html.twig", "/var/www/myhost/symfony6/templates/front/base.html.twig");
+", "front/base.html.twig", "/media/david/david/kandra/symfony6/templates/front/base.html.twig");
     }
 }

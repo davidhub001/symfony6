@@ -129,6 +129,6 @@ class __TwigTemplate_471b3260c54f342ade29079c58324f5b extends Template
     </form> #}
     </div>
     </div>
-</nav>", "front/nav.html.twig", "/var/www/myhost/symfony6/templates/front/nav.html.twig");
+</nav>", "front/nav.html.twig", "/media/david/david/kandra/symfony6/templates/front/nav.html.twig");
     }
 }

@@ -113,6 +113,6 @@ class __TwigTemplate_5f5580614b6938f99dd49e61eefd8d0f extends Template
 <script src=\"{{ asset('assets/js/jquery/jquery.js') }}\"></script>
 <script src=\"{{ asset('assets/js/bootstrap/bootstrap.min.js') }}\"></script>
 <script src=\"{{ asset('assets/js/bootstrap/bootstrap.bundle.min.js') }}\"></script>
-<script src=\"{{ asset('assets/js/script.js') }}\"></script>", "front/footer.html.twig", "/var/www/myhost/symfony6/templates/front/footer.html.twig");
+<script src=\"{{ asset('assets/js/script.js') }}\"></script>", "front/footer.html.twig", "/media/david/david/kandra/symfony6/templates/front/footer.html.twig");
     }
 }
