@@ -98,9 +98,10 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
         Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.
     </p>
     <h1>Tout sur la Pêche</h1>
+    
     ";
-        // line 17
-        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 17)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "droite", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "LOCATION DE MATÉRIELS DE PÊCHE", "description" => "
+        // line 18
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 18)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "droite", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "LOCATION DE MATÉRIELS DE PÊCHE", "description" => "
                 Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
                 Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
                 de montage, nous ne fournissons pas mais vous pouvez regarder nos préconisations.
@@ -108,9 +109,9 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
                 des matériels , les cannes et moulinets font l’objet d’une location journalière et nous 
                 demandons un caution en cas de casse.
             "]));
-        // line 32
+        // line 33
         yield "    ";
-        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 32)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "gauche", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "LES SORTIES PÊCHE ", "description" => "
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 33)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "gauche", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "LES SORTIES PÊCHE ", "description" => "
                 Tout séjour de pêche fait l’objet d’un programme qui vous sera proposé. Nous 
                 élaborons ce programme avec vous en fonction de vos envies et de votre budget.
                 Les sorties de pêche se font à la journée ou demi journée à votre convenance. Il ne 
@@ -120,19 +121,19 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
                 Dans tous les cas, aucun dépassement en carburant ne vous sera demandé, sauf, 
                 sortie hors programme, programme définit à l’avance avec vous et contractuel.
             "]));
-        // line 49
+        // line 50
         yield "
     ";
-        // line 50
-        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 50)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "droite", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "VOTRE EQUIPE A BORD ", "description" => "
+        // line 51
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 51)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "droite", "price" => "0Ar", "nobouton" => false, "image" => "image_card.jpg", "titre" => "VOTRE EQUIPE A BORD ", "description" => "
                 Vous serez accompagné par un skipper et un guide de pêche parlant français ayant 
                 une forte expérience et connaissance des techniques et des lieux de pêche. Cette 
                 équipe sera à votre disposition pour vous conseiller, vous assister au besoin, le tout 
                 dans une ambiance conviviale et décontractée.
             "]));
-        // line 63
+        // line 64
         yield "    ";
-        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 63)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "gauche", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "SÉCURITÉ A BORD", "description" => "
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 64)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "gauche", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "SÉCURITÉ A BORD", "description" => "
                 Sur notre bateau, nous veillons à votre sécurité.
                 L’utilisation de leurres de lancer volumineux et grassement armés (Popper) présente 
                 des risques majeurs de blessures, la prudence et l’observation des règles d’alternance 
@@ -142,9 +143,9 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
                 Pour un confort de pêche, nous n’embarquons que quatre pêcheurs par sortie. 
                 En aucun cas ce nombre de 4 sera dépassé.
             "]));
-        // line 80
+        // line 81
         yield "    ";
-        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 80)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "droite", "price" => "0Ar", "nobouton" => false, "image" => "merou.jpg", "titre" => "NO KILL / CATCH & REALES ", "description" => "
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 81)->unwrap()->yield(CoreExtension::merge($context, ["place_image" => "droite", "price" => "0Ar", "nobouton" => false, "image" => "image_card.jpg", "titre" => "NO KILL / CATCH & REALES ", "description" => "
                 Nous procédons à une pêche raisonnée, les relâchés sont de règle quand ils peuvent 
                 être réalisés dans de bonnes conditions. Notre équipe met tout en œuvre pour que 
                 ces conditions soient réalisées.
@@ -154,7 +155,7 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
                 Le but est de pouvoir continuer encore très longtemps notre passion de pêcheur 
                 sportif et de ne pas scier la branche sur laquelle nous sommes assis.
             "]));
-        // line 97
+        // line 98
         yield "    
     <h1>Liste non exhaustive des matériels à prévoir pour Madagascar :</h1>
     <h2>Petit matériel commun à toutes les techniques :</h2>
@@ -379,7 +380,7 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
      */
     public function getDebugInfo()
     {
-        return array (  158 => 97,  146 => 80,  134 => 63,  127 => 50,  124 => 49,  112 => 32,  103 => 17,  92 => 8,  85 => 7,  71 => 6,  62 => 3,  55 => 2,  38 => 1,);
+        return array (  159 => 98,  147 => 81,  135 => 64,  128 => 51,  125 => 50,  113 => 33,  104 => 18,  92 => 8,  85 => 7,  71 => 6,  62 => 3,  55 => 2,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -400,6 +401,7 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
         Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.
     </p>
     <h1>Tout sur la Pêche</h1>
+    
     {% include 'front/modele/tour-card.html.twig' with 
             {'place_image':'droite',
             'price':'0Ar',
@@ -437,7 +439,7 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
             {'place_image':'droite',
             'price':'0Ar',
             'nobouton':false, 
-            'image':'merou.jpg',
+            'image':'image_card.jpg',
             'titre':'VOTRE EQUIPE A BORD ', 
             'description':'
                 Vous serez accompagné par un skipper et un guide de pêche parlant français ayant 
@@ -467,7 +469,7 @@ class __TwigTemplate_2e31d215559ff3c770a1840794d7ec2d extends Template
             {'place_image':'droite',
             'price':'0Ar',
             'nobouton':false, 
-            'image':'merou.jpg',
+            'image':'image_card.jpg',
             'titre':'NO KILL / CATCH & REALES ', 
             'description':'
                 Nous procédons à une pêche raisonnée, les relâchés sont de règle quand ils peuvent 
