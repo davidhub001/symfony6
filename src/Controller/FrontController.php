@@ -25,12 +25,12 @@ class FrontController extends AbstractController
         return $this->render('front/contenu_brut/tout-sur-la-peche.html.twig');
     }
     public function content2():Response{
-        return $this->render('front/contenu_brut/infos-nosy-be.html');
+        return $this->render('front/contenu_brut/infos-nosy-be.html.twig');
     }
     public function content3():Response{
-        return $this->render('front/contenu_brut/jour-autour-de-nosy-be.html');
+        return $this->render('front/contenu_brut/jour-autour-de-nosy-be.html.twig');
     }
     public function content4():Response{
-        return $this->render('front/contenu_brut/jour-peche-mitsio.html');
+        return $this->render('front/contenu_brut/jour-peche-mitsio.html.twig');
     }
 }
