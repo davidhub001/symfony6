@@ -24,4 +24,13 @@ class FrontController extends AbstractController
     public function content1():Response{
         return $this->render('front/contenu_brut/tout-sur-la-peche.html.twig');
     }
+    public function content2():Response{
+        return $this->render('front/contenu_brut/infos-nosy-be.html');
+    }
+    public function content3():Response{
+        return $this->render('front/contenu_brut/jour-autour-de-nosy-be.html');
+    }
+    public function content4():Response{
+        return $this->render('front/contenu_brut/jour-peche-mitsio.html');
+    }
 }

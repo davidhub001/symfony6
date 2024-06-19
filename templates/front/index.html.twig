@@ -22,31 +22,42 @@
         ]
     } %}
 
-    {% include 'front/modele/band-hero.html.twig' with {'image':'band.jpg',
-                                                'titre':'Visites Guidées',
-                                                'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+        'image':'band.jpg',
+        'titre':'Visites Guidées',
+        'url':'#',
+        'bouton':false,
+        'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
+        }  %}
 
-    {% include 'front/modele/card.html.twig' with { 'data_card':[
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'}
-    ]} %},
+    {% include 'front/modele/card.html.twig' with {
+        'bouton':false,
+        'data_card':[
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'}
+        ]
+    } %},
 
 
-    {% include 'front/modele/band-hero.html.twig' with {'image':'slide3.jpg',
-                                                'titre':'Tout sur la Pêche',
-                                                'description':"L'équipage de votre unité connait très bien les pratiques de pêche les 
-                                                plus en pointe aujourd'hui !
-                                                Vous naviguerez avec un équipage professionnel
-                                                nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
-                                                Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.",
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+        'image':'slide3.jpg',
+        'titre':'Tout sur la Pêche',
+        'url':'#',
+        'bouton':true,
+        'description':"L'équipage de votre unité connait très bien les pratiques de pêche les 
+        plus en pointe aujourd'hui !
+        Vous naviguerez avec un équipage professionnel
+        nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
+        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.",
+        }  %}
     {% include 'front/modele/discover.html.twig' with {
             'titre':'',
             'image':'merou.jpg',
             'url':'#',
+            'bouton':false,
+            'img':false,
             'data':[
                     {'status':'active','titre':'LOCATION DE MATÉRIELS DE PÊCHE', 'description':'Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
                         Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
@@ -94,25 +105,42 @@
     }
     %}
 
-    {% include 'front/modele/band-hero.html.twig' with {'image':'band2.jpg',
-                                                'titre':'Pêche en Eau Douce et Salée',
-                                                'description':'Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux',
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+        'image':'band2.jpg',
+        'titre':'Pêche en Eau Douce et Salée',
+        'url':'#',
+        'bouton':true,
+        'description':'Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux',
+}  %}
 
 
     {% include 'front/modele/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar','nobouton':true,'place_image':'gauche'}
+            {'image':'merou.jpg',
+            'titre':'test',
+            'description':'test',
+            'price':'0Ar',
+            'bouton':false,
+            'position_img':'gauche'}
     %}
 
     {% include 'front/modele/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar','nobouton':false,'place_image':'gauche'}
+            {'image':'merou.jpg',
+            'titre':'test', 
+            'description':'test',
+            'price':'0Ar',
+            'bouton':false,
+            'position_img':'gauche'}
     %}
 
     
-    {% include 'front/modele/band-hero.html.twig' with {'image':'slide1.jpg',
-                                                'titre':'Formation et Ateliers ',
-                                                'description':'Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.',
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+                'image':'slide1.jpg',
+                'titre':'Formation et Ateliers ',
+                'url':'#',
+                'bouton':false,
+                'description':'Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.',
+                
+        }  %}
     
     {% include 'front/modele/gallery.html.twig' with {'data': [
             {'image': 'image_card.jpg'},

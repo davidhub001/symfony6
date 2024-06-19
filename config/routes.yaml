@@ -15,6 +15,15 @@ accueil_index:
 1content_index:
     path: /tout-sur-la-peche
     controller: App\Controller\FrontController::content1
+2content_index:
+    path: /infos-nosy-be
+    controller: App\Controller\FrontController::content2
+3content_index:
+    path: /peche-autour-de-nosy-be
+    controller: App\Controller\FrontController::content3
+4content_index:
+    path: /peche-jour-mitsio
+    controller: App\Controller\FrontController::content4
 contact:
     path: /contact
     controller: App\Controller\FrontController::contact

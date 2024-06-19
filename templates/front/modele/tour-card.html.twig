@@ -1,7 +1,7 @@
 <div class="container">
 	{# <h2 class="my-5 text-center">Hot Tours</h2> #}
 	<div class="tour-card">
-		{% if place_image == 'gauche' %}
+		{% if position_img == 'gauche' %}
 			<img src="{{ asset('assets/images/') }}{{image}}" alt="Tour Image">
 		{% endif %}
 		<div class="tour-card-body">
@@ -9,16 +9,16 @@
 				<h3 class="tour-title">{{titre}}</h3>
 				<p class="tour-description">{{description}}</p>
 			</div>
-			{% if nobouton %}
+			{% if bouton %}
 				<div>
 					<a href="#" class="btn btn-outline-primary">Voir</a>
 				</div>
 			{% endif %}
 		</div>
-		{% if place_image == 'droite' %}
+		{% if position_img == 'droite' %}
 			<img src="{{ asset('assets/images/') }}{{image}}" alt="Tour Image">
 		{% endif %}
-		{% if nobouton %}
+		{% if bouton %}
 			<div class="tour-price">
 				{{price}}
 			</div> 

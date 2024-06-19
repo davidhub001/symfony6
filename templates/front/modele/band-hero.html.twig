@@ -2,6 +2,8 @@
     <div class="content band-text-ombre">
         <h1>{{titre}}</h1>
         <p>{{description}}</p>
-        <a href="#" class="btn-custom">Voir</a>
+        {% if bouton %}
+            <a href="#" class="btn-custom">Voir</a>
+        {% endif %}
     </div>
 </div>

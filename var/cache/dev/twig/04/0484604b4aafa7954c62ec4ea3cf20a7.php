@@ -75,36 +75,36 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
 
         // line 6
         yield "    ";
-        yield from         $this->loadTemplate("front/carousel.html.twig", "front/index.html.twig", 6)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["image" => "slide1.jpg", "titre" => "", "description" => "", "active" => "active"], ["image" => "slide2.jpg", "titre" => "", "description" => "", "active" => ""], ["image" => "slide3.jpg", "titre" => "", "description" => "", "active" => ""]], "text_fixe" => "echopechemada", "text_description" => "test"]));
+        yield from         $this->loadTemplate("front/modele/carousel.html.twig", "front/index.html.twig", 6)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["image" => "slide1.jpg", "titre" => "", "description" => "", "active" => "active"], ["image" => "slide2.jpg", "titre" => "", "description" => "", "active" => ""], ["image" => "slide3.jpg", "titre" => "", "description" => "", "active" => ""]], "text_fixe" => "echopechemada", "text_description" => "test"]));
         // line 15
         yield "
     ";
         // line 16
-        yield from         $this->loadTemplate("front/card1.html.twig", "front/index.html.twig", 16)->unwrap()->yield(CoreExtension::merge($context, ["top" => "-100px", "data" => [["image" => "merou.jpg", "titre" => "Expertise Locale"], ["image" => "image_card.jpg", "titre" => "Engagement Écologique"], ["image" => "image_card_2.jpg", "titre" => "Expériences Personnalisées"]]]));
+        yield from         $this->loadTemplate("front/modele/card1.html.twig", "front/index.html.twig", 16)->unwrap()->yield(CoreExtension::merge($context, ["top" => "-100px", "data" => [["image" => "merou.jpg", "titre" => "Expertise Locale"], ["image" => "image_card.jpg", "titre" => "Engagement Écologique"], ["image" => "image_card_2.jpg", "titre" => "Expériences Personnalisées"]]]));
         // line 24
         yield "
     ";
         // line 25
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 25)->unwrap()->yield(CoreExtension::merge($context, ["image" => "band.jpg", "titre" => "Visites Guidées", "description" => "Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.", "url" => "#"]));
-        // line 29
+        yield from         $this->loadTemplate("front/modele/band-hero.html.twig", "front/index.html.twig", 25)->unwrap()->yield(CoreExtension::merge($context, ["image" => "band.jpg", "titre" => "Visites Guidées", "url" => "#", "bouton" => false, "description" => "Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques."]));
+        // line 32
         yield "
     ";
-        // line 30
-        yield from         $this->loadTemplate("front/card.html.twig", "front/index.html.twig", 30)->unwrap()->yield(CoreExtension::merge($context, ["data_card" => [["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"]]]));
-        // line 35
+        // line 33
+        yield from         $this->loadTemplate("front/modele/card.html.twig", "front/index.html.twig", 33)->unwrap()->yield(CoreExtension::merge($context, ["bouton" => false, "data_card" => [["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"], ["image" => "image_card.jpg", "titre" => "", "description" => "test", "url" => "#test"]]]));
+        // line 41
         yield ",
 
 
     ";
-        // line 38
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 38)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide3.jpg", "titre" => "Tout sur la Pêche", "description" => "L'équipage de votre unité connait très bien les pratiques de pêche les 
-                                                plus en pointe aujourd'hui !
-                                                Vous naviguerez avec un équipage professionnel
-                                                nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
-                                                Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.", "url" => "#"]));
-        // line 46
+        // line 44
+        yield from         $this->loadTemplate("front/modele/band-hero.html.twig", "front/index.html.twig", 44)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide3.jpg", "titre" => "Tout sur la Pêche", "url" => "#", "bouton" => true, "description" => "L'équipage de votre unité connait très bien les pratiques de pêche les 
+        plus en pointe aujourd'hui !
+        Vous naviguerez avec un équipage professionnel
+        nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
+        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche."]));
+        // line 55
         yield "    ";
-        yield from         $this->loadTemplate("front/discover.html.twig", "front/index.html.twig", 46)->unwrap()->yield(CoreExtension::merge($context, ["titre" => "", "image" => "merou.jpg", "url" => "#", "data" => [["status" => "active", "titre" => "LOCATION DE MATÉRIELS DE PÊCHE", "description" => "Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
+        yield from         $this->loadTemplate("front/modele/discover.html.twig", "front/index.html.twig", 55)->unwrap()->yield(CoreExtension::merge($context, ["titre" => "", "image" => "merou.jpg", "url" => "#", "bouton" => false, "img" => false, "data" => [["status" => "active", "titre" => "LOCATION DE MATÉRIELS DE PÊCHE", "description" => "Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
                         Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
                         de montage, nous ne fournissons pas mais vous pouvez regarder nos préconisations.
                         Pour nous assurer de vous fournir des équipements de qualité et un renouvellement 
@@ -134,33 +134,37 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
                         permet, seront systématiquement relâchées après photos.
                         Le but est de pouvoir continuer encore très longtemps notre passion de pêcheur 
                         sportif et de ne pas scier la branche sur laquelle nous sommes assis."]]]));
-        // line 88
+        // line 99
         yield "    ";
-        yield from         $this->loadTemplate("front/service.html.twig", "front/index.html.twig", 88)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"]]]));
-        // line 96
+        yield from         $this->loadTemplate("front/modele/service.html.twig", "front/index.html.twig", 99)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"], ["titre" => "test", "description" => "test", "icon" => "bi bi-facebook"]]]));
+        // line 107
         yield "
     ";
-        // line 97
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 97)->unwrap()->yield(CoreExtension::merge($context, ["image" => "band2.jpg", "titre" => "Pêche en Eau Douce et Salée", "description" => "Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux", "url" => "#"]));
-        // line 101
-        yield "
-    ";
-        // line 102
-        yield from         $this->loadTemplate("front/tour-card.html.twig", "front/index.html.twig", 102)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar"]));
-        // line 105
-        yield "    ";
-        yield from         $this->loadTemplate("front/tour-card.html.twig", "front/index.html.twig", 105)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar"]));
         // line 108
+        yield from         $this->loadTemplate("front/modele/band-hero.html.twig", "front/index.html.twig", 108)->unwrap()->yield(CoreExtension::merge($context, ["image" => "band2.jpg", "titre" => "Pêche en Eau Douce et Salée", "url" => "#", "bouton" => true, "description" => "Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux"]));
+        // line 115
+        yield "
+
+    ";
+        // line 117
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/index.html.twig", 117)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar", "bouton" => false, "position_img" => "gauche"]));
+        // line 125
+        yield "
+    ";
+        // line 126
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/index.html.twig", 126)->unwrap()->yield(CoreExtension::merge($context, ["image" => "merou.jpg", "titre" => "test", "description" => "test", "price" => "0Ar", "bouton" => false, "position_img" => "gauche"]));
+        // line 134
+        yield "
+    
+    ";
+        // line 136
+        yield from         $this->loadTemplate("front/modele/band-hero.html.twig", "front/index.html.twig", 136)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide1.jpg", "titre" => "Formation et Ateliers ", "url" => "#", "bouton" => false, "description" => "Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche."]));
+        // line 144
         yield "    
     ";
-        // line 109
-        yield from         $this->loadTemplate("front/band-hero.html.twig", "front/index.html.twig", 109)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide1.jpg", "titre" => "Formation et Ateliers ", "description" => "Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.", "url" => "#"]));
-        // line 113
-        yield "    
-    ";
-        // line 114
-        yield from         $this->loadTemplate("front/gallery.html.twig", "front/index.html.twig", 114)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"], ["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"]]]));
-        // line 124
+        // line 145
+        yield from         $this->loadTemplate("front/modele/gallery.html.twig", "front/index.html.twig", 145)->unwrap()->yield(CoreExtension::merge($context, ["data" => [["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"], ["image" => "image_card.jpg"], ["image" => "image_card_2.jpg"], ["image" => "image_card3.jpg"], ["image" => "merou.jpg"]]]));
+        // line 155
         yield "
 
 ";
@@ -191,7 +195,7 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  164 => 124,  162 => 114,  159 => 113,  157 => 109,  154 => 108,  151 => 105,  149 => 102,  146 => 101,  144 => 97,  141 => 96,  138 => 88,  106 => 46,  100 => 38,  95 => 35,  93 => 30,  90 => 29,  88 => 25,  85 => 24,  83 => 16,  80 => 15,  77 => 6,  70 => 5,  61 => 3,  54 => 2,  37 => 1,);
+        return array (  168 => 155,  166 => 145,  163 => 144,  161 => 136,  157 => 134,  155 => 126,  152 => 125,  150 => 117,  146 => 115,  144 => 108,  141 => 107,  138 => 99,  106 => 55,  100 => 44,  95 => 41,  93 => 33,  90 => 32,  88 => 25,  85 => 24,  83 => 16,  80 => 15,  77 => 6,  70 => 5,  61 => 3,  54 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -201,7 +205,7 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
     {% include 'front/nav.html.twig' %}
 {% endblock %}
 {% block content %}
-    {% include 'front/carousel.html.twig' with {
+    {% include 'front/modele/carousel.html.twig' with {
             'data':[
                     {'image':'slide1.jpg','titre':'', 'description':'','active':'active'},
                     {'image':'slide2.jpg','titre':'', 'description':'','active':''},
@@ -211,7 +215,7 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
             'text_description' : 'test' 
     } %}
 
-    {% include 'front/card1.html.twig' with {
+    {% include 'front/modele/card1.html.twig' with {
         'top':'-100px',
         'data': [
                 {'image':'merou.jpg', 'titre':'Expertise Locale'},
@@ -220,31 +224,42 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
         ]
     } %}
 
-    {% include 'front/band-hero.html.twig' with {'image':'band.jpg',
-                                                'titre':'Visites Guidées',
-                                                'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+        'image':'band.jpg',
+        'titre':'Visites Guidées',
+        'url':'#',
+        'bouton':false,
+        'description':'Découvrez les trésors cachés de notre région à travers des visites guidées culturelles et historiques.',
+        }  %}
 
-    {% include 'front/card.html.twig' with { 'data_card':[
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
-        {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'}
-    ]} %},
+    {% include 'front/modele/card.html.twig' with {
+        'bouton':false,
+        'data_card':[
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'},
+            {'image':'image_card.jpg','titre':'','description':'test', 'url':'#test'}
+        ]
+    } %},
 
 
-    {% include 'front/band-hero.html.twig' with {'image':'slide3.jpg',
-                                                'titre':'Tout sur la Pêche',
-                                                'description':\"L'équipage de votre unité connait très bien les pratiques de pêche les 
-                                                plus en pointe aujourd'hui !
-                                                Vous naviguerez avec un équipage professionnel
-                                                nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
-                                                Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.\",
-                                                'url':'#'}  %}
-    {% include 'front/discover.html.twig' with {
+    {% include 'front/modele/band-hero.html.twig' with {
+        'image':'slide3.jpg',
+        'titre':'Tout sur la Pêche',
+        'url':'#',
+        'bouton':true,
+        'description':\"L'équipage de votre unité connait très bien les pratiques de pêche les 
+        plus en pointe aujourd'hui !
+        Vous naviguerez avec un équipage professionnel
+        nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
+        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.\",
+        }  %}
+    {% include 'front/modele/discover.html.twig' with {
             'titre':'',
             'image':'merou.jpg',
             'url':'#',
+            'bouton':false,
+            'img':false,
             'data':[
                     {'status':'active','titre':'LOCATION DE MATÉRIELS DE PÊCHE', 'description':'Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
                         Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
@@ -283,7 +298,7 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
             ]
         }
     %}
-    {% include 'front/service.html.twig' with {
+    {% include 'front/modele/service.html.twig' with {
             'data':[
                     {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
                     {'titre':'test','description':'test', 'icon':'bi bi-facebook'},
@@ -292,24 +307,44 @@ class __TwigTemplate_de4bf527b61e3a4859a747d169b00648 extends Template
     }
     %}
 
-    {% include 'front/band-hero.html.twig' with {'image':'band2.jpg',
-                                                'titre':'Pêche en Eau Douce et Salée',
-                                                'description':'Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux',
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+        'image':'band2.jpg',
+        'titre':'Pêche en Eau Douce et Salée',
+        'url':'#',
+        'bouton':true,
+        'description':'Profitez de sorties de pêche dans les lacs, rivières et en mer, encadrées par nos experts locaux',
+}  %}
 
-    {% include 'front/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'image':'merou.jpg',
+            'titre':'test',
+            'description':'test',
+            'price':'0Ar',
+            'bouton':false,
+            'position_img':'gauche'}
     %}
-    {% include 'front/tour-card.html.twig' with 
-            {'image':'merou.jpg','titre':'test', 'description':'test','price':'0Ar'}
+
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'image':'merou.jpg',
+            'titre':'test', 
+            'description':'test',
+            'price':'0Ar',
+            'bouton':false,
+            'position_img':'gauche'}
     %}
+
     
-    {% include 'front/band-hero.html.twig' with {'image':'slide1.jpg',
-                                                'titre':'Formation et Ateliers ',
-                                                'description':'Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.',
-                                                'url':'#'}  %}
+    {% include 'front/modele/band-hero.html.twig' with {
+                'image':'slide1.jpg',
+                'titre':'Formation et Ateliers ',
+                'url':'#',
+                'bouton':false,
+                'description':'Pour les novices comme pour les pêcheurs aguerris, nous proposons des formations et des ateliers pour perfectionner vos techniques de pêche.',
+                
+        }  %}
     
-    {% include 'front/gallery.html.twig' with {'data': [
+    {% include 'front/modele/gallery.html.twig' with {'data': [
             {'image': 'image_card.jpg'},
             {'image': 'image_card_2.jpg'},
             {'image': 'image_card3.jpg'},

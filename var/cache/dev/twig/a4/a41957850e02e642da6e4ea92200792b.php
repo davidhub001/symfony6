@@ -89,55 +89,78 @@ class __TwigTemplate_72fffbe6dd28028a3955d093d86aaa25 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 8
-        yield "<div class=\"container\">
-    <p>
-        L'équipage de votre unité connait très bien les pratiques de pêche les 
+        yield "
+    ";
+        // line 9
+        yield from         $this->loadTemplate("front/modele/band-hero.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 9)->unwrap()->yield(CoreExtension::merge($context, ["image" => "slide1.jpg", "titre" => "Tout sur la Pêche", "url" => "#", "bouton" => false, "description" => "L'équipage de votre unité connait très bien les pratiques de pêche les 
         plus en pointe aujourd'hui !
         Vous naviguerez avec un équipage professionnel
         nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
-        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.
+        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche."]));
+        // line 21
+        yield "<div class=\"container\">
+    <p>
+        
     </p>
-    <h1>Tout sur la Pêche</h1>
-    <h2>LOCATION DE MATÉRIELS DE PÊCHE </h2>
-    Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
-    Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
-    de montage, nous ne fournissons pas mais vous pouvez regarder nos préconisations.
-    Pour nous assurer de vous fournir des équipements de qualité et un renouvellement 
-    des matériels , les cannes et moulinets font l’objet d’une location journalière et nous 
-    demandons un caution en cas de casse.
-    <h2>LES SORTIES PÊCHE </h2>
-    Tout séjour de pêche fait l’objet d’un programme qui vous sera proposé. Nous 
-    élaborons ce programme avec vous en fonction de vos envies et de votre budget.
-    Les sorties de pêche se font à la journée ou demi journée à votre convenance. Il ne 
-    sera pas rare, si la pêche est difficile, de se déplacer de spot en spot.
-    Notre objectif étant de vous faire attraper du poisson, nous ne regardons pas à la 
-    consommation d’essence et nous nous déplaçons autant que nécessaire.
-    Dans tous les cas, aucun dépassement en carburant ne vous sera demandé, sauf, 
-    sortie hors programme, programme définit à l’avance avec vous et contractuel.
-    <h2>VOTRE EQUIPE A BORD </h2>
-    Vous serez accompagné par un skipper et un guide de pêche parlant français ayant 
-    une forte expérience et connaissance des techniques et des lieux de pêche. Cette 
-    équipe sera à votre disposition pour vous conseiller, vous assister au besoin, le tout 
-    dans une ambiance conviviale et décontractée.
-    <h2>SÉCURITÉ A BORD </h2>
-    Sur notre bateau, nous veillons à votre sécurité.
-    L’utilisation de leurres de lancer volumineux et grassement armés (Popper) présente 
-    des risques majeurs de blessures, la prudence et l’observation des règles d’alternance 
-    au lancer sont de rigueur à bord.
-    Pour votre sécurité l’utilisation de lunettes de soleil et de gants sont obligatoires en 
-    action de pêche.
-    Pour un confort de pêche, nous n’embarquons que quatre pêcheurs par sortie. 
-    En aucun cas ce nombre de 4 sera dépassé.
-    <h2>NO KILL / CATCH & REALES </h2>
-    Nous procédons à une pêche raisonnée, les relâchés sont de règle quand ils peuvent 
-    être réalisés dans de bonnes conditions. Notre équipe met tout en œuvre pour que 
-    ces conditions soient réalisées.
-    Il est possible, lors de bivouac ou si vous souhaitez déguster une de vos prises de 
-    prélever quelques spécimens. Les plus grosses prises (reproducteurs), si leur état le 
-    permet, seront systématiquement relâchées après photos.
-    Le but est de pouvoir continuer encore très longtemps notre passion de pêcheur 
-    sportif et de ne pas scier la branche sur laquelle nous sommes assis.
-
+    <h1></h1>
+    ";
+        // line 26
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 26)->unwrap()->yield(CoreExtension::merge($context, ["position_img" => "droite", "price" => "0Ar", "bouton" => false, "image" => "merou.jpg", "titre" => "LOCATION DE MATÉRIELS DE PÊCHE", "description" => "
+                Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
+                Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
+                de montage, nous ne fournissons pas mais vous pouvez regarder nos préconisations.
+                Pour nous assurer de vous fournir des équipements de qualité et un renouvellement 
+                des matériels , les cannes et moulinets font l’objet d’une location journalière et nous 
+                demandons un caution en cas de casse.
+            "]));
+        // line 41
+        yield "    ";
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 41)->unwrap()->yield(CoreExtension::merge($context, ["position_img" => "gauche", "price" => "0Ar", "bouton" => false, "image" => "merou.jpg", "titre" => "LES SORTIES PÊCHE ", "description" => "
+                Tout séjour de pêche fait l’objet d’un programme qui vous sera proposé. Nous 
+                élaborons ce programme avec vous en fonction de vos envies et de votre budget.
+                Les sorties de pêche se font à la journée ou demi journée à votre convenance. Il ne 
+                sera pas rare, si la pêche est difficile, de se déplacer de spot en spot.
+                Notre objectif étant de vous faire attraper du poisson, nous ne regardons pas à la 
+                consommation d’essence et nous nous déplaçons autant que nécessaire.
+                Dans tous les cas, aucun dépassement en carburant ne vous sera demandé, sauf, 
+                sortie hors programme, programme définit à l’avance avec vous et contractuel.
+            "]));
+        // line 58
+        yield "
+    ";
+        // line 59
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 59)->unwrap()->yield(CoreExtension::merge($context, ["position_img" => "droite", "price" => "0Ar", "bouton" => false, "image" => "image_card.jpg", "titre" => "VOTRE EQUIPE A BORD ", "description" => "
+                Vous serez accompagné par un skipper et un guide de pêche parlant français ayant 
+                une forte expérience et connaissance des techniques et des lieux de pêche. Cette 
+                équipe sera à votre disposition pour vous conseiller, vous assister au besoin, le tout 
+                dans une ambiance conviviale et décontractée.
+            "]));
+        // line 72
+        yield "    ";
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 72)->unwrap()->yield(CoreExtension::merge($context, ["position_img" => "gauche", "price" => "0Ar", "bouton" => false, "image" => "merou.jpg", "titre" => "SÉCURITÉ A BORD", "description" => "
+                Sur notre bateau, nous veillons à votre sécurité.
+                L’utilisation de leurres de lancer volumineux et grassement armés (Popper) présente 
+                des risques majeurs de blessures, la prudence et l’observation des règles d’alternance 
+                au lancer sont de rigueur à bord.
+                Pour votre sécurité l’utilisation de lunettes de soleil et de gants sont obligatoires en 
+                action de pêche.
+                Pour un confort de pêche, nous n’embarquons que quatre pêcheurs par sortie. 
+                En aucun cas ce nombre de 4 sera dépassé.
+            "]));
+        // line 89
+        yield "    ";
+        yield from         $this->loadTemplate("front/modele/tour-card.html.twig", "front/contenu_brut/tout-sur-la-peche.html.twig", 89)->unwrap()->yield(CoreExtension::merge($context, ["position_img" => "droite", "price" => "0Ar", "bouton" => false, "image" => "image_card.jpg", "titre" => "NO KILL / CATCH & REALES ", "description" => "
+                Nous procédons à une pêche raisonnée, les relâchés sont de règle quand ils peuvent 
+                être réalisés dans de bonnes conditions. Notre équipe met tout en œuvre pour que 
+                ces conditions soient réalisées.
+                Il est possible, lors de bivouac ou si vous souhaitez déguster une de vos prises de 
+                prélever quelques spécimens. Les plus grosses prises (reproducteurs), si leur état le 
+                permet, seront systématiquement relâchées après photos.
+                Le but est de pouvoir continuer encore très longtemps notre passion de pêcheur 
+                sportif et de ne pas scier la branche sur laquelle nous sommes assis.
+            "]));
+        // line 106
+        yield "    
     <h1>Liste non exhaustive des matériels à prévoir pour Madagascar :</h1>
     <h2>Petit matériel commun à toutes les techniques :</h2>
     <ul>    
@@ -361,7 +384,7 @@ class __TwigTemplate_72fffbe6dd28028a3955d093d86aaa25 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  92 => 8,  85 => 7,  71 => 6,  62 => 3,  55 => 2,  38 => 1,);
+        return array (  163 => 106,  151 => 89,  139 => 72,  132 => 59,  129 => 58,  117 => 41,  108 => 26,  101 => 21,  95 => 9,  92 => 8,  85 => 7,  71 => 6,  62 => 3,  55 => 2,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -373,55 +396,105 @@ class __TwigTemplate_72fffbe6dd28028a3955d093d86aaa25 extends Template
 
 {% block title %} {% endblock %}
 {% block content %}
-<div class=\"container\">
-    <p>
-        L'équipage de votre unité connait très bien les pratiques de pêche les 
+
+    {% include 'front/modele/band-hero.html.twig' with {
+                'image':'slide1.jpg',
+                'titre':'Tout sur la Pêche',
+                'url':'#',
+                'bouton':false,
+                'description':\"L'équipage de votre unité connait très bien les pratiques de pêche les 
         plus en pointe aujourd'hui !
         Vous naviguerez avec un équipage professionnel
         nos unités de pêche sont situées à Ambatoloaka (Zone ouest de 
-        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.
+        Nosy Be) ce qui nous permet d'être rapidement sur les zones de pêche.\",
+                
+    }%}
+<div class=\"container\">
+    <p>
+        
     </p>
-    <h1>Tout sur la Pêche</h1>
-    <h2>LOCATION DE MATÉRIELS DE PÊCHE </h2>
-    Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
-    Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
-    de montage, nous ne fournissons pas mais vous pouvez regarder nos préconisations.
-    Pour nous assurer de vous fournir des équipements de qualité et un renouvellement 
-    des matériels , les cannes et moulinets font l’objet d’une location journalière et nous 
-    demandons un caution en cas de casse.
-    <h2>LES SORTIES PÊCHE </h2>
-    Tout séjour de pêche fait l’objet d’un programme qui vous sera proposé. Nous 
-    élaborons ce programme avec vous en fonction de vos envies et de votre budget.
-    Les sorties de pêche se font à la journée ou demi journée à votre convenance. Il ne 
-    sera pas rare, si la pêche est difficile, de se déplacer de spot en spot.
-    Notre objectif étant de vous faire attraper du poisson, nous ne regardons pas à la 
-    consommation d’essence et nous nous déplaçons autant que nécessaire.
-    Dans tous les cas, aucun dépassement en carburant ne vous sera demandé, sauf, 
-    sortie hors programme, programme définit à l’avance avec vous et contractuel.
-    <h2>VOTRE EQUIPE A BORD </h2>
-    Vous serez accompagné par un skipper et un guide de pêche parlant français ayant 
-    une forte expérience et connaissance des techniques et des lieux de pêche. Cette 
-    équipe sera à votre disposition pour vous conseiller, vous assister au besoin, le tout 
-    dans une ambiance conviviale et décontractée.
-    <h2>SÉCURITÉ A BORD </h2>
-    Sur notre bateau, nous veillons à votre sécurité.
-    L’utilisation de leurres de lancer volumineux et grassement armés (Popper) présente 
-    des risques majeurs de blessures, la prudence et l’observation des règles d’alternance 
-    au lancer sont de rigueur à bord.
-    Pour votre sécurité l’utilisation de lunettes de soleil et de gants sont obligatoires en 
-    action de pêche.
-    Pour un confort de pêche, nous n’embarquons que quatre pêcheurs par sortie. 
-    En aucun cas ce nombre de 4 sera dépassé.
-    <h2>NO KILL / CATCH & REALES </h2>
-    Nous procédons à une pêche raisonnée, les relâchés sont de règle quand ils peuvent 
-    être réalisés dans de bonnes conditions. Notre équipe met tout en œuvre pour que 
-    ces conditions soient réalisées.
-    Il est possible, lors de bivouac ou si vous souhaitez déguster une de vos prises de 
-    prélever quelques spécimens. Les plus grosses prises (reproducteurs), si leur état le 
-    permet, seront systématiquement relâchées après photos.
-    Le but est de pouvoir continuer encore très longtemps notre passion de pêcheur 
-    sportif et de ne pas scier la branche sur laquelle nous sommes assis.
+    <h1></h1>
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'position_img':'droite',
+            'price':'0Ar',
+            'bouton':false, 
+            'image':'merou.jpg',
+            'titre':'LOCATION DE MATÉRIELS DE PÊCHE', 
+            'description':'
+                Pour voyager léger, nous pouvons mettre à votre disposition du matériel de pêche. 
+                Ce matériel ne concerne que les cannes et moulinets, pour les leurres et accessoires 
+                de montage, nous ne fournissons pas mais vous pouvez regarder nos préconisations.
+                Pour nous assurer de vous fournir des équipements de qualité et un renouvellement 
+                des matériels , les cannes et moulinets font l’objet d’une location journalière et nous 
+                demandons un caution en cas de casse.
+            ' }
+    %}
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'position_img':'gauche',
+            'price':'0Ar',
+            'bouton':false, 
+            'image':'merou.jpg',
+            'titre':'LES SORTIES PÊCHE ', 
+            'description':'
+                Tout séjour de pêche fait l’objet d’un programme qui vous sera proposé. Nous 
+                élaborons ce programme avec vous en fonction de vos envies et de votre budget.
+                Les sorties de pêche se font à la journée ou demi journée à votre convenance. Il ne 
+                sera pas rare, si la pêche est difficile, de se déplacer de spot en spot.
+                Notre objectif étant de vous faire attraper du poisson, nous ne regardons pas à la 
+                consommation d’essence et nous nous déplaçons autant que nécessaire.
+                Dans tous les cas, aucun dépassement en carburant ne vous sera demandé, sauf, 
+                sortie hors programme, programme définit à l’avance avec vous et contractuel.
+            ' }
+    %}
 
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'position_img':'droite',
+            'price':'0Ar',
+            'bouton':false, 
+            'image':'image_card.jpg',
+            'titre':'VOTRE EQUIPE A BORD ', 
+            'description':'
+                Vous serez accompagné par un skipper et un guide de pêche parlant français ayant 
+                une forte expérience et connaissance des techniques et des lieux de pêche. Cette 
+                équipe sera à votre disposition pour vous conseiller, vous assister au besoin, le tout 
+                dans une ambiance conviviale et décontractée.
+            ' }
+    %}
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'position_img':'gauche',
+            'price':'0Ar',
+            'bouton':false, 
+            'image':'merou.jpg',
+            'titre':'SÉCURITÉ A BORD', 
+            'description':'
+                Sur notre bateau, nous veillons à votre sécurité.
+                L’utilisation de leurres de lancer volumineux et grassement armés (Popper) présente 
+                des risques majeurs de blessures, la prudence et l’observation des règles d’alternance 
+                au lancer sont de rigueur à bord.
+                Pour votre sécurité l’utilisation de lunettes de soleil et de gants sont obligatoires en 
+                action de pêche.
+                Pour un confort de pêche, nous n’embarquons que quatre pêcheurs par sortie. 
+                En aucun cas ce nombre de 4 sera dépassé.
+            ' }
+    %}
+    {% include 'front/modele/tour-card.html.twig' with 
+            {'position_img':'droite',
+            'price':'0Ar',
+            'bouton':false, 
+            'image':'image_card.jpg',
+            'titre':'NO KILL / CATCH & REALES ', 
+            'description':'
+                Nous procédons à une pêche raisonnée, les relâchés sont de règle quand ils peuvent 
+                être réalisés dans de bonnes conditions. Notre équipe met tout en œuvre pour que 
+                ces conditions soient réalisées.
+                Il est possible, lors de bivouac ou si vous souhaitez déguster une de vos prises de 
+                prélever quelques spécimens. Les plus grosses prises (reproducteurs), si leur état le 
+                permet, seront systématiquement relâchées après photos.
+                Le but est de pouvoir continuer encore très longtemps notre passion de pêcheur 
+                sportif et de ne pas scier la branche sur laquelle nous sommes assis.
+            ' }
+    %}
+    
     <h1>Liste non exhaustive des matériels à prévoir pour Madagascar :</h1>
     <h2>Petit matériel commun à toutes les techniques :</h2>
     <ul>    
