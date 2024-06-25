@@ -1,0 +1,7 @@
+<div class="{{class}}">
+    {% if image %}
+        <img src="{{ asset('assets/images/') }}{{image}}" class="img-fluid" alt="Beach">
+    {% else %}
+        {{content|raw}}
+    {% endif %}
+</div>

@@ -24,6 +24,9 @@ accueil_index:
 4content_index:
     path: /peche-jour-mitsio
     controller: App\Controller\FrontController::content4
+5content_index:
+    path: /sejour-avec-hotel-peche-mitsio-8jours
+    controller: App\Controller\FrontController::content5
 contact:
     path: /contact
     controller: App\Controller\FrontController::contact
