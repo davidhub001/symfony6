@@ -10,6 +10,7 @@ return [
     '2content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content2'], [], [['text', '/infos-nosy-be']], [], [], []],
     '3content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content3'], [], [['text', '/peche-autour-de-nosy-be']], [], [], []],
     '4content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content4'], [], [['text', '/peche-jour-mitsio']], [], [], []],
+    '5content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content5'], [], [['text', '/sejour-avec-hotel-peche-mitsio-8jours']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\FrontController::contact'], [], [['text', '/contact']], [], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::login'], [], [['text', '/admin-data-dev']], [], [], []],
     'dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::dashboard'], [], [['text', '/dashboard']], [], [], []],
