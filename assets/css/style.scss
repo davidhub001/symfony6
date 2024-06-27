@@ -6,6 +6,10 @@
 }
 @import url('bootstrap/bootstrap.min.css');
 @import url('bootstrap-icons/font/bootstrap-icons.min.css');
+$col1:#162e44;
+$col2:#11263a;
+$col3:#01b3a7;
+
 .animate_opacity{
     opacity: 0;
 }
@@ -117,17 +121,23 @@ section {
         margin-bottom: 5px;
     }
 } 
-footer{
-    background-color: #222831;
+.footer{
+    background-color: $col1;
     color: white;
-    height: 300px;
+    height: 20ex;
     i {
         font-size: 30px;
         padding: 20px;
+        color: $col3;
     }
     .copyright{
         font-size: 10px;
     }
+    
+}
+.footer2{
+    background-color: $col2;
+    color: white;
 }
 #nav{
     position: fixed;
@@ -135,6 +145,15 @@ footer{
     width: 100%;
     a{
         font-weight: bold;
+    }
+    .nav-bar-colorer{
+        background-color: #162e44;
+        *{
+            color: white;
+        }
+    }
+    .nav-link{
+        letter-spacing: .05em;
     }
 }
 .image-scale {
