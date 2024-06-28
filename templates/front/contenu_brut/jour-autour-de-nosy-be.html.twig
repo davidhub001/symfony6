@@ -5,9 +5,16 @@
 
 {% block title %} {% endblock %}
 {% block content %}
+  {% include 'front/modele/band-hero.html.twig' with {
+                'image':'slide1.jpg',
+                'titre':'Pêche autour de Nosy Be ',
+                'url':'#',
+                'bouton':false,
+                'class':'pt-5 mb-5',
+                'description':"Tarif journée: 440 € ou 2 000 000 AR",
+                
+    }%}
 <div class="container">
-
-<h2>Tarif journée de pêche autour de Nosy Be : 440 € ou 2 000 000 AR</h2>
 <h3>4 pécheurs maximum (accompagnant-e bienvenu avec supplément repas)</h3>
 <span>
 prix pour la journée de pêche dans la zone 1, soit 5 miles dans la baie de Nosy Be, prix à 
