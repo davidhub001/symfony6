@@ -27,6 +27,9 @@ accueil_index:
 5content_index:
     path: /sejour-avec-hotel-peche-mitsio-8jours
     controller: App\Controller\FrontController::content5
+6content_index:
+    path: /sejour-avec-hotel-Nosy-Be-iles-et-activite-8-jours
+    controller: App\Controller\FrontController::content6
 contact:
     path: /contact
     controller: App\Controller\FrontController::contact

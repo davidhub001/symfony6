@@ -11,9 +11,23 @@
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{asset('accueil')}}">Accueil</a>
         </li>
+        {% set array = ['1content_index',
+                        '2content_index',
+                        '3content_index',
+                        '4content_index',
+                        '5content_index',
+                        '6content_index'] %}
+
+        {% for key,url in array %}
+        <li class="nav-item">
+            <a href="{{ path(url) }}" class="nav-link" aria-current="page"> Page {{ key+1}}</a>
+        </li>
+        {% endfor %}
+        
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{asset('contact')}}">Contact</a>
         </li>
+
         {# <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
         </li>

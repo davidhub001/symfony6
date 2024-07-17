@@ -36,4 +36,7 @@ class FrontController extends AbstractController
     public function content5():Response{
         return $this->render('front/contenu_brut/sejour-avec-hotel-peche-mitsio-8jours.html.twig');
     }
+    public function content6():Response{
+        return $this->render('front/contenu_brut/sejour-avec-hotel-Nosy-Be-iles-et-activitée-8-jours.html.twig');
+    }
 }

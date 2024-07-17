@@ -1,6 +1,12 @@
 @font-face {
     font-family: 'MaPolice'; /* Nom de la police */
-    src: url('font/DMSerifDisplay-Regular.ttf') format('truetype');/* Format WOFF2 */
+    src: url('font/dmserif/DMSerifDisplay-Regular.ttf') format('truetype');/* Format WOFF2 */
+    font-weight: normal; /* Poids de la police */
+    font-style: normal; /* Style de la police */
+}
+@font-face {
+    font-family: 'MaPolice2-rubick'; /* Nom de la police */
+    src: url('font/rubick/Rubik-VariableFont_wght.ttf') format('truetype');/* Format WOFF2 */
     font-weight: normal; /* Poids de la police */
     font-style: normal; /* Style de la police */
 }
@@ -10,6 +16,23 @@ $col1:#162e44;
 $col2:#11263a;
 $col3:#01b3a7;
 
+.font-dm{
+    font-family: MaPolice!important;
+}
+
+.font-rubick{
+    font-family: MaPolice2-rubick!important;
+}
+*{
+    font-family: MaPolice2-rubick!important;
+}
+// Définition de la boucle for
+@for $i from 1 through 50 {
+    .font-size-#{$i} {
+      font-size: 1px*$i; // Exemple de style dynamique basé sur la variable $i
+    }
+}
+  
 .animate_opacity{
     opacity: 0;
 }

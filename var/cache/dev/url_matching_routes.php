@@ -15,6 +15,7 @@ return [
         '/peche-autour-de-nosy-be' => [[['_route' => '3content_index', '_controller' => 'App\\Controller\\FrontController::content3'], null, null, null, false, false, null]],
         '/peche-jour-mitsio' => [[['_route' => '4content_index', '_controller' => 'App\\Controller\\FrontController::content4'], null, null, null, false, false, null]],
         '/sejour-avec-hotel-peche-mitsio-8jours' => [[['_route' => '5content_index', '_controller' => 'App\\Controller\\FrontController::content5'], null, null, null, false, false, null]],
+        '/sejour-avec-hotel-Nosy-Be-iles-et-activite-8-jours' => [[['_route' => '6content_index', '_controller' => 'App\\Controller\\FrontController::content6'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\FrontController::contact'], null, null, null, false, false, null]],
         '/admin-data-dev' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::login'], null, null, null, false, false, null]],
         '/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\AdminController::dashboard'], null, null, null, false, false, null]],
