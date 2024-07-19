@@ -55,3 +55,50 @@ function Ajax_editimage(id, url){
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    function animate(target_, class_, animationClass_) {
+      // Sélectionner les éléments correspondant au sélecteur
+      const targetElements = document.querySelectorAll(target_);
+  
+      // Vérifier s'il y a des éléments à observer
+      if (targetElements.length === 0) {
+        console.error(`No elements found for selector: ${target_}`);
+        return;
+      }
+  
+      // Options de l'observer
+      const options = {
+        root: null, // par défaut c'est le viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Seuil de visibilité
+      };
+  
+      // Fonction de callback
+      const callback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(class_);
+            // Retirer la classe après l'animation pour permettre de rejouer l'animation
+            setTimeout(() => {
+              entry.target.classList.remove(class_);
+            }, 5000); // Correspond à la durée de votre animation (ajustez en fonction)
+          } else {
+            // Rien à faire ici pour garder l'animation prête pour la prochaine entrée
+          }
+        });
+      };
+  
+      // Créer une instance d'IntersectionObserver avec le callback et les options
+      const observer = new IntersectionObserver(callback, options);
+  
+      // Surveiller chaque élément correspondant au sélecteur
+      targetElements.forEach(element => observer.observe(element));
+    }
+  
+    animate('.animate_bh', 'animation_bas_haut');
+    animate('.animate_hb', 'animation_haut_bas');
+    animate('.animate_gd', 'animation_gauche_droite');
+    animate('.animate_dg', 'animation_droite_gauche');
+  });
+  

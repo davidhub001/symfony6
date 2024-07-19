@@ -8,13 +8,28 @@
     font-family: 'MaPolice2-rubick'; /* Nom de la police */
     src: url('font/rubick/Rubik-VariableFont_wght.ttf') format('truetype');/* Format WOFF2 */
     font-weight: normal; /* Poids de la police */
-    font-style: normal; /* Style de la police */
+    font-style: normal; /* Style de la police fdc*/
 }
 @import url('bootstrap/bootstrap.min.css');
 @import url('bootstrap-icons/font/bootstrap-icons.min.css');
+
+$color: #01b3a7;
+$light: lighten($color,15%);
+$dark: darken($color,15%);
+$lighter: lighten($color,30%);
+$darker: darken($color,30%);
+$white: #fff;
+
 $col1:#162e44;
 $col2:#11263a;
 $col3:#01b3a7;
+
+
+// $col1:$dark;
+// $col2:$light;
+// $col3:$color;
+
+@import 'animation';
 
 .font-dm{
     font-family: MaPolice!important;
@@ -54,7 +69,7 @@ $col3:#01b3a7;
         z-index: 10;
         padding-top: 20px;
         padding-bottom: 20px;
-        color: #fff;
+        color: $white;
         text-align: center;
         h1{
             font-weight: bold;
@@ -70,7 +85,7 @@ $col3:#01b3a7;
         width: 93%;
         height: 67%;
         margin: 50px;
-        color: white;
+        color: $white;
         font-weight: bold;
         text-align: center;
         padding-top: 13%;
@@ -103,7 +118,7 @@ section {
     .php-email-form {
         width: 100%;
         height: 100%;
-        background: #fff;
+        background: $white;
         box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
         padding: 30px;
         border-radius: 0 10px 10px 0;
@@ -121,10 +136,10 @@ section {
         margin-bottom: 20px;
         padding: 20px;
         border-radius: 10px;
-        color: #fff;
+        color:$white;
        i {
             font-size: 20px;
-            color: #fff;
+            color: $white;
             float: left;
             width: 44px;
             height: 44px;
@@ -146,7 +161,7 @@ section {
 } 
 .footer{
     background-color: $col1;
-    color: white;
+    color: $white;
     height: 20ex;
     i {
         font-size: 30px;
@@ -160,7 +175,7 @@ section {
 }
 .footer2{
     background-color: $col2;
-    color: white;
+    color: $white;
 }
 #nav{
     position: fixed;
@@ -170,9 +185,9 @@ section {
         font-weight: bold;
     }
     .nav-bar-colorer{
-        background-color: #162e44;
+        background-color: $col1;
         *{
-            color: white;
+            color: $white;
         }
     }
     .nav-link{
@@ -183,7 +198,7 @@ section {
 .nav-tabs {
     .nav-link.active{
         background-color: $col3;
-        color: white;
+        color: $white;
     }
 }
 .image-scale {
@@ -279,7 +294,7 @@ section {
     .tour-price {
         position: relative;
         background-color: #20c997;
-        color: white;
+        color: $white;
         padding: 10px 20px;
         border-radius: 0 0 0 8px;
         font-size: 1.25rem;
@@ -311,7 +326,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: $white;
     &.content {
         max-width: 600px;
         padding: 20px;
@@ -326,7 +341,7 @@ section {
     .btn-custom {
         background-color: #17a2b8;
         border: none;
-        color: white;
+        color: $white;
         padding: 10px 20px;
         text-decoration: none;
         font-size: 16px;
@@ -366,7 +381,7 @@ section {
         top: 50%;
         transform: translateY(-50%);
         background-color: rgba(0, 0, 0, 0.5);
-        color: white;
+        color: $white;
         border: none;
         font-size: 24px;
         padding: 10px;
@@ -410,7 +425,7 @@ section {
         position: relative;
         top: -150px;
         font-size: 45px;
-        color: white;
+        color: $white;
         font-weight: bold;
         padding: 5px;
     }
@@ -420,9 +435,9 @@ section {
     width: 100%;
     .sidebar{
         background-color: #343a40;
-        color: white;
+        color: $white;
         a{
-            color: #fff;
+            color: $white;
             @media (max-width: 576px) {
                 span{
                     display: none;
