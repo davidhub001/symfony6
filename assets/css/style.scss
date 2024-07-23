@@ -42,9 +42,34 @@ $col3:#01b3a7;
     font-family: MaPolice2-rubick!important;
 }
 // Définition de la boucle for
-@for $i from 1 through 50 {
+@for $i from 1 through 500 {
     .font-size-#{$i} {
       font-size: 1px*$i; // Exemple de style dynamique basé sur la variable $i
+    }
+    .margin-top-#{$i}{
+        margin-top: 1px*$i;
+    }
+    .margin-bottom-#{$i}{
+        margin-bottom: 1px*$i;
+    }
+    .margin-left-#{$i}{
+        margin-left: 1px*$i;
+    }
+    .margin-right-#{$i}{
+        margin-right: 1px*$i;
+    }
+
+    .padding-top-#{$i}{
+        padding-top: 1px*$i;
+    }
+    .padding-bottom-#{$i}{
+        padding-bottom: 1px*$i;
+    }
+    .padding-left-#{$i}{
+        padding-left: 1px*$i;
+    }
+    .padding-right-#{$i}{
+        padding-right: 1px*$i;
     }
 }
   
