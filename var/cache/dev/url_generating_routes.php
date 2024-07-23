@@ -9,7 +9,7 @@ return [
     '1content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content1'], [], [['text', '/tout-sur-la-peche']], [], [], []],
     '2content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content2'], [], [['text', '/infos-nosy-be']], [], [], []],
     '3content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content3'], [], [['text', '/peche-autour-de-nosy-be']], [], [], []],
-    '4content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content4'], [], [['text', '/peche-jour-mitsio']], [], [], []],
+    '4content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content4'], [], [['text', '/jour-peche-mitsio']], [], [], []],
     '5content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content5'], [], [['text', '/sejour-avec-hotel-peche-mitsio-8jours']], [], [], []],
     '6content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content6'], [], [['text', '/sejour-avec-hotel-Nosy-Be-iles-et-activite-8-jours']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\FrontController::contact'], [], [['text', '/contact']], [], [], []],

@@ -22,7 +22,7 @@ accueil_index:
     path: /peche-autour-de-nosy-be
     controller: App\Controller\FrontController::content3
 4content_index:
-    path: /peche-jour-mitsio
+    path: /jour-peche-mitsio
     controller: App\Controller\FrontController::content4
 5content_index:
     path: /sejour-avec-hotel-peche-mitsio-8jours

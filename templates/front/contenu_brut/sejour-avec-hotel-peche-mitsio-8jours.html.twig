@@ -5,6 +5,16 @@
 
 {% block title %} {% endblock %}
 {% block content %}
+
+{% include 'front/modele/band-hero.html.twig' with {
+                'image':'slide1.jpg',
+                'titre':'',
+                'url':'#',
+                'bouton':false,
+                'class':'pt-5 mb-5',
+                'description':"",
+                
+    }%}
     <div class="container">
     <p>
         Au-delà de la Pêche et des Poissons
