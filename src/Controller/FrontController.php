@@ -39,4 +39,7 @@ class FrontController extends AbstractController
     public function content6():Response{
         return $this->render('front/contenu_brut/sejour-avec-hotel-Nosy-Be-iles-et-activitée-8-jours.html.twig');
     }
+    public function content7():Response{
+        return $this->render('front/contenu_brut/chronologie-histoire-de-madagascar.html.twig');
+    }
 }

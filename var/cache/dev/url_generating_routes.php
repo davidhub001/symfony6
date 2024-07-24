@@ -12,6 +12,7 @@ return [
     '4content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content4'], [], [['text', '/jour-peche-mitsio']], [], [], []],
     '5content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content5'], [], [['text', '/sejour-avec-hotel-peche-mitsio-8jours']], [], [], []],
     '6content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content6'], [], [['text', '/sejour-avec-hotel-Nosy-Be-iles-et-activite-8-jours']], [], [], []],
+    '7content_index' => [[], ['_controller' => 'App\\Controller\\FrontController::content7'], [], [['text', '/chronologie-histoire-de-madagascar']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\FrontController::contact'], [], [['text', '/contact']], [], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\AdminController::login'], [], [['text', '/admin-data-dev']], [], [], []],
     'dashboard' => [[], ['_controller' => 'App\\Controller\\AdminController::dashboard'], [], [['text', '/dashboard']], [], [], []],

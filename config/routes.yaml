@@ -30,6 +30,10 @@ accueil_index:
 6content_index:
     path: /sejour-avec-hotel-Nosy-Be-iles-et-activite-8-jours
     controller: App\Controller\FrontController::content6
+7content_index:
+    path: /chronologie-histoire-de-madagascar
+    controller: App\Controller\FrontController::content7
+
 contact:
     path: /contact
     controller: App\Controller\FrontController::contact

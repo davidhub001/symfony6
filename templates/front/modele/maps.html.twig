@@ -1,0 +1,25 @@
+<div class="ma_maps">
+    <div id="map" style="height: {{height}};width: {{width}};"></div> <!-- Conteneur pour la carte -->
+</div>
+<!-- Inclure le JavaScript de Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([{{coordo}}], {{zoom}}); // Coordonées de Nosy Be et zoom
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+
+    {% for marker in markers %}
+        L.marker([{{ marker.coordo}}], {
+                icon: L.icon({
+                    iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+            })
+        }).addTo(map)
+        .bindPopup("{{ marker.text|escape('js') }}")
+        .openPopup();
+    {% endfor %}
+</script>

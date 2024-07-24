@@ -13,21 +13,15 @@
 @import url('bootstrap/bootstrap.min.css');
 @import url('bootstrap-icons/font/bootstrap-icons.min.css');
 
-$color: #01b3a7;
-$light: lighten($color,15%);
-$dark: darken($color,15%);
-$lighter: lighten($color,30%);
-$darker: darken($color,30%);
 $white: #fff;
-
 $col1:#162e44;
 $col2:#11263a;
 $col3:#01b3a7;
+$col3:#043d39;
 
-
-// $col1:$dark;
-// $col2:$light;
-// $col3:$color;
+.ma_maps{
+    @import 'css.map';
+}
 
 @import 'animation';
 
@@ -157,7 +151,7 @@ section {
     }
     .info-item {
         width: 100%;
-        background-color: #009282;
+        background-color: $col3;//#009282;
         margin-bottom: 20px;
         padding: 20px;
         border-radius: 10px;
@@ -191,7 +185,7 @@ section {
     i {
         font-size: 30px;
         padding: 20px;
-        color: $col3;
+        color: $white;
     }
     .copyright{
         font-size: 10px;
