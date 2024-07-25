@@ -5,49 +5,55 @@
 
 {% block title %} {% endblock %}
 {% block content %}
-  {% include 'front/modele/band-hero.html.twig' with {
-                'image':'slide1.jpg',
-                'titre':'Pêche autour de Nosy Be ',
-                'url':'#',
-                'bouton':false,
-                'class':'pt-5 mb-5',
-                'description':"Tarif journée: 440 € ou 2 000 000 AR",
-                
-    }%}
-<div class="container">
-<h3>4 pécheurs maximum (accompagnant-e bienvenu avec supplément repas)</h3>
-<p>
-prix pour la journée de pêche dans la zone 1, soit 5 miles dans la baie de Nosy Be, prix à 
-diviser entre eux par le nombre de participants: 1, 2, 3, ou 4 personnes
-</p>
-<b>Comprend :</b>
-<p>
-Le - ZEUS - Coque Open de 8 m de long et 2.80 m de large propulsé par un moteur SUSUKI 
-de 150 CV toujours entretenu au top et parfaitement équipé, sondeur Huminbird Helix 10, 
-sonde Chirp, GPS, gilets de sauvetage, radio, trousse de soins d’urgence, pour profiter au 
-mieux de votre sortie, et ce en toute sécurité.
-Son équipage composé d’1 Skipper et d’1 marin tous deux rompus à toutes les techniques de 
-pêche des eaux de Madagascar.
-100 L de carburant pour une sortie d’un jour de pêche dans la baie avec départ 
-d’Ambatoloaka à 8 h et retour à 17 h
-</p>
-<b>Ne comprend pas :</b>
-<p>
-les pourboires au personnel de bord, Le matériel de pêche, Le déjeuner. 
-</p>
-<b>Supplément repas 15 € par personne :</b>
-<p>1 bouteille d’eau minérale, un déjeuner servi à bord en pique-nique, fruits du moment</p>
-<h3>Location de matériel de pêche au tarif de 20 € jour (avec caution) :</h3>
-<b>Comprend :</b>
-<p>
-cannes et moulinets pour traine, jig, lancer, palangrotte un set par personne.
-les plombs et appâts pour la pêche à la palangrotte sont fournis
-</p>
-<b>Ne comprend pas :</b>
-<p>
-les petits matériels (hameçons, émerillons, bas de ligne, leurres…)
-leur achat est possible à Nosy Be - Ambatoloaka
-</p>
-<b>Contact infos et réservations : thellier31@gmail.com</b>
+  {% include 'front/modele/image.html.twig' with {
+                    'src':'zeus.jpg',
+                    'class':'img-fluid col-12',
+                    'titre':"test",
+                    
+        }%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 content-section ">
+            <div class="price">
+                Tarif journée de pêche autour de Nosy Be : 440 € ou 2 000 000 AR
+            </div>
+            <p>4 pécheurs maximum (accompagnant-e bienvenu avec supplément repas)</p>
+            <p>
+                Prix pour la journée de pêche dans la zone 1, soit 5 miles dans la baie de Nosy Be, prix à 
+                diviser entre eux par le nombre de participants: 1, 2, 3, ou 4 personnes
+            </p>
+            <div class="section-title">Comprend :</div>
+            <p>
+                Le - ZEUS - Coque Open de 8 m de long et 2.80 m de large propulsé par un moteur SUSUKI 
+                de 150 CV toujours entretenu au top et parfaitement équipé, sondeur Huminbird Helix 10, 
+                sonde Chirp, GPS, gilets de sauvetage, radio, trousse de soins d’urgence, pour profiter au 
+                mieux de votre sortie, et ce en toute sécurité. Son équipage composé d’1 Skipper et d’1 marin 
+                tous deux rompus à toutes les techniques de pêche des eaux de Madagascar.
+                100 L de carburant pour une sortie d’un jour de pêche dans la baie avec départ 
+                d’Ambatoloaka à 8 h et retour à 17 h
+            </p>
+            <div class="section-title">Ne comprend pas :</div>
+            <p>Les pourboires au personnel de bord, le matériel de pêche, le déjeuner.</p>
+            <div class="section-title">Supplément repas 15 € par personne :</div>
+            <p>1 bouteille d’eau minérale, un déjeuner servi à bord en pique-nique, fruits du moment</p>
+        </div>
+        
+        <div class="col-lg-6 content-section ">
+            <div class="price">
+                Location de matériel de pêche : 20 € jour (avec caution)
+            </div>
+            <div class="section-title">Comprend :</div>
+            <p>
+                Cannes et moulinets pour traine, jig, lancer, palangrotte un set par personne.
+                Les plombs et appâts pour la pêche à la palangrotte sont fournis
+            </p>
+            <div class="section-title">Ne comprend pas :</div>
+            <p>
+                Les petits matériels (hameçons, émerillons, bas de ligne, leurres…)
+                Leur achat est possible à Nosy Be - Ambatoloaka
+            </p>
+            <div class="contact-info">Contact infos et réservations : thellier31@gmail.com</div>
+        </div>
+    </div>
 </div>
 {% endblock %}

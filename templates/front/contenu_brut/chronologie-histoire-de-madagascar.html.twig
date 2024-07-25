@@ -6,36 +6,53 @@
 {% block title %} {% endblock %}
 {% block content %}
 
+
 <div class="container padding-top-100">
 <h1>
 CHRONOLOGIE. HISTOIRE DE MADAGASCAR  
 </h1>
-<p>
-« La division de l'île entre des peuples divers ne connaissant du passé que leurs propres ancêtres, et 
-surtout le souci prédominant des Européens de retracer leurs propres aventures ont empêché 
-longtemps  la  conception  d'une  histoire  totale,  que  semblait  cependant  imposer  l'unité  géographique, 
-linguistique, voire même ethnographique, de ce petit continent si original » écrit Hubert Deschamps en 
-1960. Nos connaissances se sont précisées depuis, notamment sur les « temps obscurs » des débuts 
-de l’histoire de la Grande Île. 
- </p><p>
-Origine  austronésienne  et  immigrations  de  la  fin  du  premier  millénaire  et  du 
-début du second   
-L'histoire du peuplement de Madagascar est celle de la synthèse entre les premiers migrants 
-austronésiens sur qui nous savons très peu de chose, et les flux indo-mélanésien et bantou, 
-secondairement indien et arabe, qui se sont installés dans l'île à partir du Ier millénaire et jusqu'au XVe 
-ou  XVIe  s.  La  population  est  restée  jusque-là  clairsemée  en  petits  établissements.  Ces  origines 
-multiples  se  lisent  encore  dans  des  traits  culturels  complexes  d'un  ensemble  malgache  qui  présente 
-une grande unité linguistique et culturelle.  
- </p><p>
-Début de notre ère : Arrivés de pionniers navigateurs austronésiens probablement sur la côte Ouest de 
-Madagascar  en  canoé  à  balancier  (waka)  au  début  de  notre  ère  -  voire  300  ans  avant  selon  les 
-archéologues  et  peut-être  encore  plus  tôt  selon  certaines  hypothèses  des  généticiens.  Ce  peuple 
-originel (vahoaka ntaolo en malgache) est à l'origine de la langue malgache commune à toute l'île et de 
-tout le fonds culturel malgache commun à tous les autronésiens, des îles du Pacifique à l'Indonésie, en 
-passant  par  la  Nouvelle-Zélande  et  les  Philippines.  Il  se  subdivisa  en  deux  grands  groupes  :  les 
-Vazimba  qui  s'installèrent  dans  les  forêts  des  hauts  plateaux  centraux  de  la  grande  île  et  celles  de  la 
-côte Est et Sud-Est et les Vezo qui restèrent sur la côte Ouest et Sud. 
- </p><p>
+<div class="row">
+    <div class="col-lg-4">
+        {% include 'front/modele/maps.html.twig' with {
+            'coordo' :'-17,47',
+            'zoom' : '5.49348',
+            'markers': [
+                {'coordo' :'-18.4120, 46.2664', 'text':'MADAGASCAR'},
+            ],
+            'height':'550px',
+            'width':'100%'
+        }%}
+    </div>
+    <div class="col-lg-8">
+        <p>
+        « La division de l'île entre des peuples divers ne connaissant du passé que leurs propres ancêtres, et 
+        surtout le souci prédominant des Européens de retracer leurs propres aventures ont empêché 
+        longtemps  la  conception  d'une  histoire  totale,  que  semblait  cependant  imposer  l'unité  géographique, 
+        linguistique, voire même ethnographique, de ce petit continent si original » écrit Hubert Deschamps en 
+        1960. Nos connaissances se sont précisées depuis, notamment sur les « temps obscurs » des débuts 
+        de l’histoire de la Grande Île. 
+        </p><p>
+        Origine  austronésienne  et  immigrations  de  la  fin  du  premier  millénaire  et  du 
+        début du second   
+        L'histoire du peuplement de Madagascar est celle de la synthèse entre les premiers migrants 
+        austronésiens sur qui nous savons très peu de chose, et les flux indo-mélanésien et bantou, 
+        secondairement indien et arabe, qui se sont installés dans l'île à partir du Ier millénaire et jusqu'au XVe 
+        ou  XVIe  s.  La  population  est  restée  jusque-là  clairsemée  en  petits  établissements.  Ces  origines 
+        multiples  se  lisent  encore  dans  des  traits  culturels  complexes  d'un  ensemble  malgache  qui  présente 
+        une grande unité linguistique et culturelle.  
+        </p><p>
+        Début de notre ère : Arrivés de pionniers navigateurs austronésiens probablement sur la côte Ouest de 
+        Madagascar  en  canoé  à  balancier  (waka)  au  début  de  notre  ère  -  voire  300  ans  avant  selon  les 
+        archéologues  et  peut-être  encore  plus  tôt  selon  certaines  hypothèses  des  généticiens.  Ce  peuple 
+        originel (vahoaka ntaolo en malgache) est à l'origine de la langue malgache commune à toute l'île et de 
+        tout le fonds culturel malgache commun à tous les autronésiens, des îles du Pacifique à l'Indonésie, en 
+        passant  par  la  Nouvelle-Zélande  et  les  Philippines.  Il  se  subdivisa  en  deux  grands  groupes  :  les 
+        Vazimba  qui  s'installèrent  dans  les  forêts  des  hauts  plateaux  centraux  de  la  grande  île  et  celles  de  la 
+        côte Est et Sud-Est et les Vezo qui restèrent sur la côte Ouest et Sud. 
+        </p>
+    </div>
+</div>
+ <p>
 700  –  1500 :  arrivée  de  nouveaux  clans  immigrants  :  moyen-orientaux  (Perses  Shirazi,  Arabes 
 Omanites, Juifs arabisés), est-africains (Bantus) et orientaux (Indiens Gujarati, Malais, Javanais, Bugis) 
 qui s'intégrèrent et s'acculturèrent à la société Vezo et Vazimba. 

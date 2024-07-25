@@ -35,8 +35,94 @@ $col3:#043d39;
 *{
     font-family: MaPolice2-rubick!important;
 }
+
+.price { 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #e74c3c; 
+}
+.section-title { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    margin-top: 20px; 
+}
+.content-section { 
+    margin-bottom: 20px; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+}
+.contact-info { 
+    font-size: 1em; 
+    font-weight: bold; 
+    margin-top: 20px; 
+}
+//
+
+
+.content-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+.contact-info, .booking-conditions {
+    margin-top: 30px;
+}
+.remark {
+    font-weight: bold;
+    color: #2c3e50;
+}
+.day-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    flex: 48%;
+    margin: 5px;
+}
+.day-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.section-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 // Définition de la boucle for
+@for $i from 1 through 100 {
+    .width-#{$i}{
+        width: 1%*$i;
+    }
+    .max-width-#{$i}{
+        max-width: 1%*$i;
+    }
+    .height-#{$i}{
+        height: 1%*$i;
+    }
+    .max-height-#{$i}{
+        max-height: 1%*$i;
+    }
+}
 @for $i from 1 through 500 {
+    .height-img-#{$i}{
+        height: 1px*$i;
+    }
     .font-size-#{$i} {
       font-size: 1px*$i; // Exemple de style dynamique basé sur la variable $i
     }
@@ -64,6 +150,9 @@ $col3:#043d39;
     }
     .padding-right-#{$i}{
         padding-right: 1px*$i;
+    }
+    .margin-#{$i}{
+        margin:1px*$i;
     }
 }
   
