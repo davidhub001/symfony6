@@ -19,6 +19,14 @@ $col2:#11263a;
 $col3:#01b3a7;
 $col3:#043d39;
 
+// Variables
+$primary-color: #e74c3c;
+$secondary-color: #2c3e50;
+$background-color: #f9f9f9;
+$light-background-color: #ffffff;
+$border-color: #ddd;
+$default-font-weight: bold;
+
 .ma_maps{
     @import 'css.map';
 }
@@ -35,75 +43,75 @@ $col3:#043d39;
 *{
     font-family: MaPolice2-rubick!important;
 }
-
-.price { 
-    font-size: 1.5em; 
-    font-weight: bold; 
-    color: #e74c3c; 
-}
-.section-title { 
-    font-size: 1.2em; 
-    font-weight: bold; 
-    margin-top: 20px; 
-}
-.content-section { 
-    margin-bottom: 20px; 
-    padding: 20px; 
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
-    background-color: #f9f9f9; 
-}
-.contact-info { 
-    font-size: 1em; 
-    font-weight: bold; 
-    margin-top: 20px; 
-}
-//
-
-
-.content-section {
-    margin-bottom: 30px;
+// Mixin pour les sections avec bordure et arrière-plan
+@mixin bordered-section($background-color, $border-color) {
+    margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid $border-color;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: $background-color;
 }
-.section-title {
-    font-size: 1.5em;
-    font-weight: bold;
+
+// Styles communs pour les titres
+@mixin section-title {
+    font-size: 1.2em;
+    font-weight: $default-font-weight;
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+// Utilisation des mixins et des variables
 .price {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #e74c3c;
+    font-size: 1.5em;
+    color: $primary-color;
+    font-weight: $default-font-weight;
 }
+
+.section-title {
+    @include section-title;
+}
+
+.content-section {
+    @include bordered-section($background-color, $border-color);
+}
+
 .contact-info, .booking-conditions {
-    margin-top: 30px;
+    @include section-title;
 }
+
 .remark {
-    font-weight: bold;
-    color: #2c3e50;
+    font-weight: $default-font-weight;
+    color: $secondary-color;
 }
+
 .day-section {
-    margin-bottom: 20px;
+    @include bordered-section($light-background-color, lighten($border-color, 10%));
     padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #ffffff;
     flex: 48%;
     margin: 5px;
 }
+
 .day-title {
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: $default-font-weight;
 }
-.section-flex{
+
+.section-flex {
     display: flex;
     flex-wrap: wrap;
 }
 
+.chrono-mada {
+    p {
+        background: #f9f2e7;
+        padding: 18px;
+    }
+}
+.acceuil{
+    img{
+        height: 800px;
+    }
+}
 // Définition de la boucle for
 @for $i from 1 through 100 {
     .width-#{$i}{

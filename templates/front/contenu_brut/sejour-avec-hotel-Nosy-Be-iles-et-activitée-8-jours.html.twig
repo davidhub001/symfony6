@@ -17,15 +17,24 @@
                 ",
                 
     }%} 
-<div class="container-fluid mt-5">
+<div class="container mt-5">
     <div>
         <div class="section-flex">
         <div class="day-section">
             <p class="day-title">Jour 1 :</p>
             <p>Accueil à l’aéroport de Nosy Be et transfert directement vers le village d’Ambatoloaka, installation dans votre hôtel.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour1.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
-                {% include 'front/modele/image.html.twig' with {'src':'sejour2.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour1.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {% include 'front/modele/image.html.twig' with {'src':'sejour2.jpg', 'class':'width-40 margin-left-5', 'titre':""} %} #}
+                {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour1.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour2.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
             </div>
         </div>
 
@@ -33,10 +42,21 @@
             <p class="day-title">Jour 2 :</p>
             <p>Découverte de Nosy Be en voiture : visite du marché couvert de Hell-ville, le Lemuria Land, baignade à Andilana Beach, les lacs sacrés, et coucher de soleil au Mont Passot. Déjeuner à Andilana non compris.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour3.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour3.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
                 {% include 'front/modele/image.html.twig' with {'src':'sejour4.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
                 {% include 'front/modele/image.html.twig' with {'src':'sejour5.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
-                {% include 'front/modele/image.html.twig' with {'src':'sejour6.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
+                {% include 'front/modele/image.html.twig' with {'src':'sejour6.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %} #}
+                 {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour3.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour4.jpg','titre':'', 'description':'','active':''},
+                                {'image':'sejour5.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
+
             </div>
         </div>
 
@@ -44,8 +64,17 @@
             <p class="day-title">Jour 3 :</p>
             <p>Sortie bateau à Nosy Iranja, déjeuner sur l'île, visite du village, baignade, retour à l'hôtel en fin de journée.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour8.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
-                {% include 'front/modele/image.html.twig' with {'src':'sejour9.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour8.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {% include 'front/modele/image.html.twig' with {'src':'sejour9.jpg', 'class':'width-40 margin-left-5', 'titre':""} %} #}
+                {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour8.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour9.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
             </div>
         </div>
 
@@ -53,8 +82,18 @@
             <p class="day-title">Jour 4 :</p>
             <p>Excursion à Nosy Komba et Nosy Tanikely : visite des lémuriens, shopping, baignade, repas typique, retour en fin d'après-midi.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour10.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour10.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
                 {% include 'front/modele/image.html.twig' with {'src':'sejour11.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                 #}
+                {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour10.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour11.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
             </div>
         </div>
 
@@ -62,8 +101,17 @@
             <p class="day-title">Jour 5 :</p>
             <p>Excursion à Nosy Sakatia : rencontre avec les tortues marines, visite du village, déjeuner malgache, détente sur la plage.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour12.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
-                {% include 'front/modele/image.html.twig' with {'src':'sejour13.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour12.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {% include 'front/modele/image.html.twig' with {'src':'sejour13.jpg', 'class':'width-40 margin-left-5', 'titre':""} %} #}
+                {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour12.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour13.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
             </div>
         </div>
 
@@ -71,10 +119,22 @@
             <p class="day-title">Jour 6 :</p>
             <p>Réserve naturelle de Lokobe : visite de la forêt, découverte de la faune et la flore endémiques, déjeuner au village.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour14.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour14.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
                 {% include 'front/modele/image.html.twig' with {'src':'sejour15.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
                 {% include 'front/modele/image.html.twig' with {'src':'sejour16.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
-                {% include 'front/modele/image.html.twig' with {'src':'sejour17.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %}
+                {% include 'front/modele/image.html.twig' with {'src':'sejour17.jpg', 'class':'width-40 margin-left-5 margin-top-5', 'titre':""} %} #}
+                
+                {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour14.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour15.jpg','titre':'', 'description':'','active':''},
+                                {'image':'sejour16.jpg','titre':'', 'description':'','active':''},
+                                {'image':'sejour17.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
             </div>
         </div>
 
@@ -82,8 +142,18 @@
             <p class="day-title">Jour 7 :</p>
             <p>Repos, détente et plage à Ambatoloaka.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour18.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {# {% include 'front/modele/image.html.twig' with {'src':'sejour18.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
                 {% include 'front/modele/image.html.twig' with {'src':'sejour19.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                 #}
+                {% include 'front/modele/carousel.html.twig' with {
+                        'data':[
+                                {'image':'sejour18.jpg','titre':'', 'description':'','active':'active'},
+                                {'image':'sejour19.jpg','titre':'', 'description':'','active':''},
+                        ],
+                        'text_fixe': '',
+                        'text_description' : '',
+                        'class':'col-lg-12'
+                } %}
             </div>
         </div>
 

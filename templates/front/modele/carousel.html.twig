@@ -1,6 +1,6 @@
 
 
-<div id="carouselExampleIndicators" class="carousel slide height500 {{class}}" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide  {{class}}" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -9,7 +9,7 @@
     <div class="carousel-inner">
             {% for carousel in data %}
                 <div class="carousel-item {{carousel.active}}">
-                    <img class="d-block w-100 height500" src="{{ asset('assets/images/') }}{{carousel.image}}" alt="First slide">
+                    <img class="d-block w-100" src="{{ asset('assets/images/') }}{{carousel.image}}" alt="First slide">
                     <div class="carousel-text">
                         <h1>{{carousel.titre}}</h1>
                         <p>{{carousel.description}}</p>
