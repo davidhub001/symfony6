@@ -39,11 +39,18 @@
     poissons pris et qui ne peuvent pas être relâchés ne sont pas perdus, nous conservons le
     nécessaire à notre alimentation et le reste est redistribué
     </p>
-    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio2.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
+    {# {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio2.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
     {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio3.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
     {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio4.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
-    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio5.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
+    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio5.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %} #}
 
+    {% include 'front/modele/gallery.html.twig' with {'data': [
+            {'image': 'sejour_mitsio2.jpg'},
+            {'image': 'sejour_mitsio3.jpg'},
+            {'image': 'sejour_mitsio4.jpg'},
+            {'image': 'sejour_mitsio5.jpg'},
+    ]} %}
+        
     <p>
         Cette formule spéciale MITSIO au prix de 1560.00 € ttc par personne est calculée en
     prenant le tarif individuel du séjour sur une base de 4 participants pour un séjour de 8

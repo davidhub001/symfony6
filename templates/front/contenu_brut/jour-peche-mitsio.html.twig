@@ -23,12 +23,18 @@
     Pour les amateurs d’exotisme et de sensations fortes, la Pêche à Nosy Be, c’est la pêche
     en no kill dans le célèbre archipel des Mitsio au départ de la plage d Ambatoloaka.
     </p>
-
+{# 
     {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio2.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
     {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio3.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
     {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio4.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
-    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio5.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %}
+    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio5.jpg', 'class':'width-48 height-img-350 margin-5', 'titre':""} %} #}
 
+    {% include 'front/modele/gallery.html.twig' with {'data': [
+            {'image': 'sejour_mitsio2.jpg'},
+            {'image': 'sejour_mitsio3.jpg'},
+            {'image': 'sejour_mitsio4.jpg'},
+            {'image': 'sejour_mitsio5.jpg'},
+    ]} %}
         <p>Pour des raisons de sécurité et confort de pêche nous n'acceptons que 4 pêcheurs maximum à bord du bateau, le matériel de pêche n’est pas fourni.</p>
 
         <p>Cette formule spéciale au départ de Nosy Be de 5 jours et 4 nuits MITSIO au prix de 800.00 € ttc par personne est calculée en prenant le tarif individuel du séjour sur une base de 4 participants. Cette opération permet de diviser le coût total du bateau, du carburant et de l’intendance par le nombre de participants et limite de ce fait le coût individuel. Cette formule peut aussi être pratiquée au prix de 980.00 € ttc par personne sur une base de 3 pêcheurs ou au prix de 1380.00 € ttc par personne sur une base de 2 pêcheurs pour un séjour de 5 jours et 4 nuits ou encore au prix de 2580 € ttc pour seul pêcheur.</p>
