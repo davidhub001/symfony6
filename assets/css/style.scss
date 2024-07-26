@@ -18,7 +18,6 @@ $col1:#162e44;
 $col2:#11263a;
 $col3:#01b3a7;
 $col3:#043d39;
-
 // Variables
 $primary-color: #e74c3c;
 $secondary-color: #2c3e50;
@@ -26,6 +25,11 @@ $background-color: #f9f9f9;
 $light-background-color: #ffffff;
 $border-color: #ddd;
 $default-font-weight: bold;
+
+.important-note {
+    color: #dc3545;
+    font-weight: bold;
+}
 
 .ma_maps{
     @import 'css.map';
@@ -112,10 +116,17 @@ $default-font-weight: bold;
         height: 800px;
     }
 }
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
 // Définition de la boucle for
 @for $i from 1 through 100 {
     .width-#{$i}{
         width: 1%*$i;
+        @media(max-width:1125px){
+            width: 100%;
+        }
     }
     .max-width-#{$i}{
         max-width: 1%*$i;
