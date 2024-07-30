@@ -86,6 +86,7 @@
     <h2>
         TOUS NOS TARIFS S'ENTENDENT HORS TRANSPORTS AÉRIENS
     </h2>
+
 <div class="content-section">
     <h2 class="text-center">Formule Pêche aux Mitsio - Détails</h2>
     <div class="day-section">
@@ -123,38 +124,46 @@
 
     </div>
 </div>
-<div class="section-flex">
-    <div class="content-section width-49 margin-5">
-        <h3>Prestations inclues :</h3>
-        <p>
-            Transfert de l’aéroport à l’hôtel, Bateau rapide avec skipper et marin pour les sorties pêche
-        2 nuitées en hôtel ***, 5 nuitées en bungalow individuel sur nosy Mitsio, les diners sur nosy
-        Mitsio, tous les petits déjeuners, les guides, les déjeuners pour toutes les sorties, 1 bouteille
-        d’eau par jour et par personne, deux diners en restaurant à Nosy Be
-        </p>
 
+    <div class="d-flex gap-30 max-flex-1200">
+        <div class="content-section flex-40">
+            <h3>Prestations inclues :</h3>
+            <p>
+                Transfert de l’aéroport à l’hôtel, Bateau rapide avec skipper et marin pour les sorties pêche
+            2 nuitées en hôtel ***, 5 nuitées en bungalow individuel sur nosy Mitsio, les diners sur nosy
+            Mitsio, tous les petits déjeuners, les guides, les déjeuners pour toutes les sorties, 1 bouteille
+            d’eau par jour et par personne, deux diners en restaurant à Nosy Be
+            </p>
+
+        </div>
+        <div class="content-section flex-60">
+
+            <h3>Services non inclus :</h3>
+            <p>
+                Besoins personnels, vols internationaux, pourboires aux personnels.
+            jus et boissons alcoolisées.
+            </p>
+
+
+            <p>
+                Comme dans tout établissement hôtelier un passeport en cours de validité devra
+            être présenté à votre arrivé et sera conservé en sécurité au coffre jusqu’au moment de votre
+            départ et du règlement, le cas échéant, de tous les suppléments consommés.
+            (bar, restauration, lingerie, room service et toute prestation non inclue aux forfaits).
+            </p>
+        </div>
     </div>
-    <div class="content-section width-49 margin-5">
 
-        <h3>Services non inclus :</h3>
-        <p>
-            Besoins personnels, vols internationaux, pourboires aux personnels.
-        jus et boissons alcoolisées.
-        </p>
-
-
-        <p>
-            Comme dans tout établissement hôtelier un passeport en cours de validité devra
-        être présenté à votre arrivé et sera conservé en sécurité au coffre jusqu’au moment de votre
-        départ et du règlement, le cas échéant, de tous les suppléments consommés.
-        (bar, restauration, lingerie, room service et toute prestation non inclue aux forfaits).
-        </p>
+    <div class="d-flex gap-20 max-flex-500">
+        <div class="flex-45">
+            {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio6.jpg', 'class':'width-100 height-img-350', 'titre':""} %}
+        </div>
+        <div class="flex-55">
+            {% include 'front/modele/image.html.twig' with {'src':'merou.jpg', 'class':'width-100 height-img-350', 'titre':""} %}
+        </div>
     </div>
 
-    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio6.jpg', 'class':'width-40 margin-left-5 height-img-350', 'titre':""} %}
-    {% include 'front/modele/image.html.twig' with {'src':'merou.jpg', 'class':'width-59 margin-left-5 height-img-350', 'titre':""} %}
 
-</div>
 
     <div class="content-section width-99 margin-5">
         <h3>LA PECHE</h3>
@@ -167,9 +176,11 @@
             </p>
     </div>
     
+
+
     <h3>Le matériel indispensable à prévoir :</h3>
-<div class="section-flex">
-    <div class="card mb-4 width-10">
+<div class="d-flex flex-column">
+    <div class="card mb-5">
         <div class="card-header">
             1. Matériel de Pêche Personnel
         </div>
@@ -179,8 +190,8 @@
             </p>
         </div>
     </div>
-
-    <div class="card mb-4">
+<div class="d-flex gap-30 max-flex-1000 mb-5">
+    <div class="card flex-50">
         <div class="card-header">
             2. Petit Matériel Commun à Toutes les Techniques de Pêche
         </div>
@@ -196,7 +207,7 @@
         </ul>
     </div>
 
-    <div class="card mb-4">
+    <div class="card flex-50">
         <div class="card-header">
             3. Équipements de Sécurité et Confort
         </div>
@@ -209,8 +220,9 @@
             <li class="list-group-item">Chaussures légères adhérentes couvrant le coup de pied</li>
         </ul>
     </div>
+</div>
 
-    <div class="card mb-4">
+    <div class="card mb-5">
         <div class="card-header">
             4. Articles de Première Nécessité
         </div>
@@ -223,7 +235,7 @@
         </ul>
     </div>
 
-    <div class="card mb-4">
+    <div class="card mb-5">
         <div class="card-header">
             5. Éléments Supplémentaires
         </div>
@@ -235,78 +247,116 @@
     </div>
 </div>
 
-    {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio7.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+<div class="d-flex mb-5 gap-30 max-flex-1000">
+    <div class="flex-60">
+        {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio7.jpg', 'class':'width-100 height-img-350', 'titre':""} %}
+    </div>
+    <div class="flex-30">
+        {% include 'front/modele/image.html.twig' with {'src':'sejour_mitsio8.jpg', 'class':'width-100 height-img-350', 'titre':""} %}
+    </div>
+</div>
+    
+    <div class="card mb-5">
+            <div class="card-header"><h3>Location de matériel de pêche au tarif de 20 € jour (avec caution)</h3> </div>
+            <div class="card-body">
+                <b>Elle comprend :</b>
+                <p>cannes et moulinets pour traine, jig, lancer, palangrotte un set par personne. les plombs pour la pêche à la palangrotte sont fournis</p>
+                <b>Elle ne comprend pas :</b>
+                <p>les petits matériels (hameçons, émerillons, bas de ligne, leurres…). Leur achat est possible à Nosy Be – Ambatoloaka, avant le départ.</p>
+            </div>
+        </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2 class="my-4">
+                La Journée de Pêche
+            </h2>
+        </div>
+        <div class="card-body">
+            <p>La journée de pêche sportive débute à 8h et se termine vers 17h. À bord, un skipper et un marin expérimentés attendent les pêcheurs pour les guider en toute sécurité vers les meilleures zones de pêche de la région. Ces professionnels, parfaitement familiers avec les lieux et experts en techniques de pêche locales, assurent une expérience de pêche enrichissante et sécurisée.</p>
+            <p>La journée se conclut par un retour au lodge, offrant aux participants un moment de détente après une journée remplie d'aventures marines.</p>
+        </div>
+    </div>
 
-    <h3>Location de matériel de pêche au tarif de 20 € jour (avec caution)</h3>
-    <p>
-        Comprend :
-    cannes et moulinets pour traine, jig, lancer, palangrotte un set par personne.
-    les plombs pour la pêche à la palangrotte sont fournis
-    </p>
-    <p>
-        Ne comprend pas :
-    les petits matériels (hameçons, émerillons, bas de ligne, leurres…)
-    leur achat est possible à Nosy Be – Ambatoalka
-    </p>
-    <h3>La journée de pêche</h3>
-    <p>
-        La journée de pêche sportive démarre à 8 H pour se terminer vers 17 H.
-    Un skipper et un marin attendent à bord les pêcheurs. Ils les dirigeront en sécurité sur les
-    zones de pêche de cette région de Madagascar, ils connaissant parfaitement les lieux de pêche
-    et sont rompus aux techniques de pêche locales . La journée s’achèvera au lodge
-    </p>
-    <h3>
-        Les saisons et les poissons
-    </h3>
-    <p>
-        La pêche au gros peut se pratiquer en toute saison, sauf en février, saison des pluies et à risque
-    cyclonique. Les espèces varient en fonction des mois. Tous les poissons de l’Océan Indien
-    sillonnent la mer : carangues, espadon voiliers, thons jaune, thon dent de chien, vivaneaux,
-    carpes rouges, mérous, coryphènes, marlin noire etc. Sur un séjour vous pourrez pêcher plus
-    de 40 variétés de poisson différentes, c’est entre autres pour cela que la zone est réputée.
-    </p>
-    <h3>Pêchez comme vous aimez !</h3>
-    <p>
-        La pêche, à la traîne, à la palangrotte, au lancer se pratique sur les hauts fonds, le long des
-    tombants et dans les embouchures de rivières, dans des zones totalement vierges de pêche
-    industrielle, à quelques miles du lodge. Les eaux de Nosy Be sont idéales pour la pratique de
-    presque toutes les techniques de pêche : lancer popper, traîne, jigging, palangrotte et dérive. Il
-    arrive souvent à Nosy Be que l’on pratique ces différentes techniques de pêche au cours d’une
-    même journée selon les conditions rencontrées. Une journée de pêche à Nosy Be commence
-    traditionnellement par la pêche des bonites nombreuses à Nosy Be, que nous utiliserons soit
-    vivante en traîne lente (Catalina) à la recherche du Marlin ou en dérive pour tous les
-    prédateurs pélagiques, soit morte, entière ou en morceaux en pêche de fond (palangrotte) pour
-    les mérous et toutes espèce benthique.
-    </p>
-    <h3>Conditions de réservation et de paiement :</h3>
-    <p>
-        Un acompte de 50% du montant de la prestation est à payer d'avance avant votre départ
-    par virement bancaire. Dès réception de celui-ci, votre réservation est activée et votre contrat
-    ainsi qu’un reçu d’acompte est édité et envoyé par mail.
-    </p>
-    <p>
-        Le solde sera à verser, avant l'embarquement sur le bateau, sur place dès votre arrivée, en
-    euros ou Ariarys.
-    En cas d'annulation 2 mois avant l'arrivée au lodge, 50% de l'acompte sera remboursé.
-    1 mois avant l'embarquement, 25% de l'acompte sera remboursé.
-    En cas de non-présentation sans motif valable ni prévenir, la totalité de l’acompte sera
-    conservée sans aucun recours possible.
-    En aucun cas la société ne pourra être tenue responsable de la perte, la détérioration, la casse
-    du matériel des clients à terre ou à bord des bateaux ainsi que toute blessure subit par un
-    client. Bien entendu toutes les mesures possibles seront prises pour en limiter les
-    conséquences au mieux possible.
-    En cas de litige, seul le Tribunal de Nosy Be, Madagascar serait compétent. Nous restons à
-    votre disposition pour étudier avec vous un programme pêche ou loisirs sur mesure et vous
-    établir un devis personnalisé si besoin.
-    comme dans tout établissement hôtelier un passeport en cours de validité devra être
-    présenté à votre arrivé et sera conservé en sécurité jusqu’au moment de votre départ et du
-    règlement, le cas échéant, de tous les suppléments consommés.
-    (bar, restauration, lingerie, room service et toute prestation non inclue aux forfaits).
-    </p>
-    <h3>santé et hygiène</h3>
-    <p>
-        Savon, shampoing et 1 serviette de toilette seront à prévoir pour le séjour dans l’archipel
-    des Mitsio.
-    </p>
+<div class="d-flex gap-20 mb-5 max-flex-1000">
+   <div class="card flex-50">
+        <div class="card-header">
+            <h2 class="my-4">
+            Les Saisons et les Poissons
+            </h2>
+        </div>
+        <div class="card-body">
+            <p>La pêche au gros à Nosy Be est une activité qui peut être pratiquée toute l'année, à l'exception du mois de février, qui est la saison des pluies et présente un risque cyclonique. La diversité des espèces de poissons varie selon les mois, offrant ainsi une expérience de pêche unique à chaque saison.</p>
+            <p>Les eaux de l'Océan Indien autour de Nosy Be sont riches en espèces variées, parmi lesquelles :</p>
+            <ul class="list-group">
+                <li class="list-group-item">Carangues</li>
+                <li class="list-group-item">Espadon voiliers</li>
+                <li class="list-group-item">Thons jaunes</li>
+                <li class="list-group-item">Thon dent de chien</li>
+                <li class="list-group-item">Vivaneaux</li>
+                <li class="list-group-item">Carpes rouges</li>
+                <li class="list-group-item">Mérous</li>
+                <li class="list-group-item">Coryphènes</li>
+                <li class="list-group-item">Marlin noir</li>
+            </ul>
+            <p>Au cours d'un séjour de pêche, il est possible de capturer plus de 40 variétés de poissons différentes, ce qui contribue à la réputation de cette zone comme l'une des meilleures destinations de pêche au monde.</p>
+        </div>
+    </div>
+    <div class="card  flex-50">
+        <div class="card-header">
+        <h2 class="my-4">
+            Pêchez comme vous aimez !
+        </h2>
+        </div>
+        <div class="card-body">
+            <p>À Nosy Be, la pêche est une aventure passionnante qui peut être pratiquée de multiples façons : à la traîne, à la palangrotte, au lancer, et plus encore. Les eaux environnantes sont riches et variées, offrant des conditions idéales pour presque toutes les techniques de pêche :</p>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Lancer popper</strong></li>
+                <li class="list-group-item"><strong>Traîne</strong></li>
+                <li class="list-group-item"><strong>Jigging</strong></li>
+                <li class="list-group-item"><strong>Palangrotte</strong></li>
+                <li class="list-group-item"><strong>Dérive</strong></li>
+            </ul>
+            <p>La diversité des techniques utilisées dépend des conditions du jour. Une journée typique de pêche commence souvent par la capture de bonites, abondantes dans la région. Celles-ci sont ensuite utilisées comme appâts, soit vivantes en traîne lente (technique Catalina) pour cibler le Marlin et autres grands prédateurs, soit mortes, entières ou en morceaux pour la pêche de fond, visant notamment les mérous et autres espèces benthiques.</p>
+            <p>Les zones de pêche, situées à quelques miles du lodge, sont vierges de toute activité de pêche industrielle, ce qui garantit une expérience authentique et respectueuse de l'écosystème local.</p>
+        </div>
+    </div>
+
+</div>
+
+    <div class="card">
+        <div class="card-header"><h2 class="my-4">Conditions de Réservation et de Paiement</h2></div>
+        <div class="card-body">  
+            <h5 class="text-primary">Acompte et Réservation</h5>
+                <p>Un acompte de <strong>50% du montant de la prestation</strong> est requis pour confirmer votre réservation. Le paiement peut être effectué par virement bancaire. Une fois l'acompte reçu, votre réservation est confirmée et un contrat ainsi qu'un reçu de l'acompte vous seront envoyés par e-mail.</p>
+            <h5 class="text-primary">Solde et Paiement Final</h5>
+                <p>Le solde restant est à régler <strong>avant l'embarquement sur le bateau</strong>, en espèces ou par virement bancaire, en euros ou Ariary. Le paiement peut être effectué dès votre arrivée sur place.</p>
+
+            <h5 class="text-primary">Politique d'Annulation</h5>
+                <div class="card-body">
+                    <p>En cas d'annulation :</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">Jusqu'à <strong>2 mois avant l'arrivée</strong> : remboursement de 50% de l'acompte.</li>
+                        <li class="list-group-item">Jusqu'à <strong>1 mois avant l'embarquement</strong> : remboursement de 25% de l'acompte.</li>
+                        <li class="list-group-item important-note">En cas de non-présentation sans motif valable ni préavis, l'acompte sera entièrement conservé.</li>
+                    </ul>
+                </div>
+            <h5 class="text-primary">Responsabilité et Litiges</h5>
+                <p>La société décline toute responsabilité en cas de perte, détérioration ou casse du matériel des clients, ainsi que pour toute blessure subie par un client. Toutes les mesures possibles seront prises pour limiter les conséquences des incidents. En cas de litige, seul le Tribunal de Nosy Be, Madagascar, sera compétent.</p>
+            <h5 class="text-primary">Information Supplémentaire</h5>
+                <p>Un passeport valide est requis à l'arrivée et sera conservé en sécurité jusqu'au départ, pour garantir le paiement de tous les suppléments (bar, restauration, lingerie, room service, etc.) non inclus dans les forfaits.</p>
+                <p>Nous sommes à votre disposition pour organiser un programme sur mesure et fournir un devis personnalisé si nécessaire.</p>
+        </div>
+    </div>
+    
+    <div class="card mb-5 mt-5">
+        <div class="card-header"><h3>Santé et hygiène</h3> </div>
+        <div class="card-body">
+                <p>
+                Savon, shampoing et 1 serviette de toilette seront à prévoir pour le séjour dans l’archipel
+            des Mitsio.
+            </p>
+        </div>
+    </div>
+    
 </div>
 {% endblock %}

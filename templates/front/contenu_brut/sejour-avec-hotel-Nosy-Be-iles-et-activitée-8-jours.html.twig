@@ -161,26 +161,37 @@
             <p class="day-title">Jour 8 :</p>
             <p>Petit déjeuner, transfert, départ aéroport.</p>
             <div class="row">
-                {% include 'front/modele/image.html.twig' with {'src':'sejour20.jpg', 'class':'width-40 margin-left-5', 'titre':""} %}
+                {% include 'front/modele/image.html.twig' with {'src':'sejour20.jpg', 'class':'width-95 margin-left-5', 'titre':""} %}
             </div>
         </div>
 
-        <div class="price">
-            Ce séjour exceptionnel personnalisé vous est proposé au prix exceptionnel de 1249,00 € par personne.
+        <div class="card price-card mb-4">
+            <div class="card-header price-card-header d-flex">
+                <h2>Séjour Exceptionnel</h2>
+                <div class="price padding-left-10">1249,00 € <small>par personne</small></div>
+            </div>
+            <div class="card-body">
+                <p>Ce séjour personnalisé est proposé à un prix exceptionnel de 1249,00 € par personne.</p>
+                <p>Il peut également être réservé pour :</p>
+                <ul>
+                    <li>1380,00 € TTC par personne pour 3 participants (8 jours et 7 nuits)</li>
+                    <li>1100,00 € TTC par personne pour 4 participants (8 jours et 7 nuits)</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <h2>Conditions de Réservation</h2>
+
+                <p>Pour réserver, un acompte de 30% est requis. Le solde doit être réglé 30 jours avant le départ. En cas d'annulation, l'acompte n'est pas remboursable.</p>
+                <p>Notre priorité est de vous offrir des vacances inoubliables dans les meilleures conditions possibles.</p>
+                <h2>Contactez-nous</h2>
+
+                <p>Pour plus d'informations ou pour réserver, contactez-nous :</p>
+                <p>Téléphone : <a href="tel:0340213402">034 02 134 02</a></p>
+                <p>Email : <a href="mailto:info@ecopechemada.com">info@ecopechemada.com</a></p>
+            </div>
         </div>
-        <p>Cette formule peut aussi être pratiquée au prix de 1380.00 € ttc par personne sur une base de 3 participants pour un séjour de 8 jours et 7 nuits. Ou au prix de 1100.00 € ttc par personne sur une base de 4 participants pour un séjour de 8 jours et 7 nuits.</p>
+
         
-        <div class="booking-conditions">
-            <p class="section-title">Conditions de réservation :</p>
-            <p>Pour toute réservation, un acompte de 30% est demandé. Le solde est à régler 30 jours avant le départ. En cas d’annulation de votre part, l’acompte ne sera pas remboursé.</p>
-            <p class="remark">Le plus important pour nous est que vous puissiez passer de bonnes vacances dans notre établissement, et dans les meilleures conditions.</p>
-        </div>
-        
-        <div class="contact-info">
-            <p class="section-title">Contactez-nous :</p>
-            <p>Pour toutes informations ou demandes de réservation, contactez-nous par téléphone au 034 02 134 02 ou par email à info@ecopechemada.com.</p>
-        </div>
-        </div>
     </div>
 </div>
 {% endblock %}
