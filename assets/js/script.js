@@ -79,12 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add(class_);
-            // Retirer la classe après l'animation pour permettre de rejouer l'animation
-            setTimeout(() => {
-              entry.target.classList.remove(class_);
-            }, 5000); // Correspond à la durée de votre animation (ajustez en fonction)
-          } else {
-            // Rien à faire ici pour garder l'animation prête pour la prochaine entrée
           }
         });
       };

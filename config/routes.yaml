@@ -33,6 +33,9 @@ accueil_index:
 7content_index:
     path: /chronologie-histoire-de-madagascar
     controller: App\Controller\FrontController::content7
+8content_index:
+    path: /sejour-avec-hotel-peche-autour-de-nosy-be-8jours
+    controller: App\Controller\FrontController::content8
 
 contact:
     path: /contact

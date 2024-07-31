@@ -203,14 +203,10 @@ $default-font-weight: bold;
     }
     .carousel-text{
         position: absolute;
-        right: 100%;
         bottom: 176px;
-        left: 15%;
+        left: 10%;
         z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 20px;
         color: $white;
-        text-align: center;
         h1{
             font-weight: bold;
         }
@@ -562,8 +558,6 @@ section {
         margin-bottom: -170px;
     }
     .titre{
-        position: relative;
-        top: -150px;
         font-size: 45px;
         color: $white;
         font-weight: bold;

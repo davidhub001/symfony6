@@ -42,4 +42,8 @@ class FrontController extends AbstractController
     public function content7():Response{
         return $this->render('front/contenu_brut/chronologie-histoire-de-madagascar.html.twig');
     }
+
+    public function content8():Response{
+        return $this->render('front/contenu_brut/sejour-avec-hotel-peche-autour-de-nosy-be-8jours.html.twig');
+    }
 }

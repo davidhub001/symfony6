@@ -5,22 +5,31 @@
 {% block content %}
     {% include 'front/modele/carousel.html.twig' with {
             'data':[
-                    {'image':'slide1.jpg','titre':'', 'description':'','active':'active'},
-                    {'image':'slide2.jpg','titre':'', 'description':'','active':''},
-                    {'image':'slide3.jpg','titre':'', 'description':'','active':''},
+                    {'image':'slide1.jpg',
+                        'titre':'Séjour de Pêche au Paradis : MITSIO - 8 Jours', 
+                        'description':"Plongez dans une aventure de pêche inoubliable avec un hébergement de charme sur l'île MITSIO. Profitez d'un cadre idyllique et d'une expérience de pêche exceptionnelle.",
+                        'active':'active'},
+                    {'image':'slide2.jpg',
+                        'titre':'Aventure de Pêche à Nosy Be : 8 Jours Tout Compris', 
+                        'description':"Découvrez les eaux riches autour de Nosy Be avec notre séjour tout compris. Profitez de journées de pêche palpitantes et de soirées relaxantes dans un hôtel confortable.",
+                        'active':''},
+                    {'image':'slide3.jpg',
+                        'titre':'Évasion Tropicale à Nosy Be : Îles et Activités - 8 Jours', 
+                        'description':'Explorez Nosy Be et ses îles environnantes lors de ce séjour de 8 jours. Combinez détente, activités nautiques et découvertes culturelles pour une expérience complète.',
+                        'active':''},
             ],
-            'text_fixe': 'ecopechemada',
-            'text_description' : 'test',
-            'class':'height500 animate_hb acceuil'
+            'text_fixe': 'eco peche Mada',
+            'text_description' : '',
+            'class':'animate_hb acceuil'
     } %}
 
     {% include 'front/modele/card1.html.twig' with {
         'top':'-100px',
         'class': 'animate_bh',
         'data': [
-                {'image':'merou.jpg', 'titre':'Expertise Locale'},
-                {'image':'image_card.jpg', 'titre':'Engagement Écologique'},
-                {'image':'image_card_2.jpg', 'titre':'Expériences Personnalisées'},
+                {'image':'image_card.jpg', 'titre':'Séjour de Pêche à MITSIO - 8 Jours'},
+                {'image':'merou.jpg', 'titre':'Pêche à Nosy Be - 8 Jours Tout Compris'},
+                {'image':'image_card_2.jpg', 'titre':'Évasion à Nosy Be : Îles & Activités - 8 Jours'},
         ]
     } %}
 

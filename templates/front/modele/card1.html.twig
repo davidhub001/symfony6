@@ -1,8 +1,7 @@
-<div class="container card1 pause_top {{class}}" style="top:{{top}}">
-    <div class="row animate_opacity">
+<div class="container card1 pause_top {{class}} mb-5" style="top:{{top}}">
+    <div class="animate_opacity d-flex gap-5 max-flex-1000">
         {% for card in data %}
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5 pr-2 pl-2">
-                <img src="{{ asset('assets/images/') }}{{card.image}}"/>
+            <div class="flex-33 p-3" style="background-image:url('{{ asset('assets/images/') }}{{card.image}}');background-size:cover;">
                 <span class="titre">{{card.titre}}</span>
             </div>
         {% endfor %}
