@@ -1,16 +1,16 @@
 <div class="container {{class}}">
-    <div class="row">
+    <div class="d-flex gap-10">
         {% for card in data_card %}
-            <div class="card col-lg-3 col-md-4 col-sm-4 col-xs-2 p-0 mr-3 mb-1">
+            <div class="card flex-25">
                 <div class="image-scale">
                     <img class="card-img-top" src="{{ asset('assets/images/') }}{{card.image}}" alt="Card image cap">
                 </div>
                 <div class="card-body pl-2 pr-2">
                     <h5 class="card-title">{{card.titre}}</h5>
                     <p class="card-text">{{card.description}}</p>
-                    {% if bouton %}
-                        <a href="{{card.url}}" class="btn btn-primary">Go somewhere</a>
-                    {% endif %}
+                    {# {% if bouton %} #}
+                        <a href="{{path(card.url)}}" class="btn btn-primary width-100">Voir plus</a>
+                    {# {% endif %} #}
                 </div>
             </div>
         {% endfor %}
