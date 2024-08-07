@@ -12,27 +12,27 @@ function sendMail($to, $subject, $message, $from) {
 
     // Send mail
     if(mail($to, $subject, $message, $headers)) {
-        echo "Email sent successfully to $to";
+        header('location:contact?status=oui');
     } else {
-        echo "Failed to send email";
+        header('location:contact?status=non');
+
     }
 }
 
 // Example usage
 $to = 'contact@echopechemada.mg';
-$subject = 'Test Email';
+$subject = 'Contact ';
 $message = '
 <html>
 <head>
-    <title>Test Email</title>
+    <title>Contact</title>
 </head>
 <body>
-    <h1>This is a test email</h1>
-    <p>This email was sent using PHP\'s <code>mail()</code> function with proper headers.</p>
+'.$_POST["name"].'</br>'.$_POST["message"].'
 </body>
 </html>
 ';
-$from = 'david@example.com';
+$from = $_POST["email"];
 
 sendMail($to, $subject, $message, $from);
 

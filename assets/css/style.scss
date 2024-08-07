@@ -25,7 +25,9 @@ $background-color: #f9f9f9;
 $light-background-color: #ffffff;
 $border-color: #ddd;
 $default-font-weight: bold;
-
+.color-white{
+    color: #fff;
+}
 .hover-color{
     &:hover{
         background-color: $col3;
