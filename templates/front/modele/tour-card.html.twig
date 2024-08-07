@@ -1,23 +1,23 @@
 <div class="container {{class}}">
 	{# <h2 class="my-5 text-center">Hot Tours</h2> #}
 	
-	<div class="tour-card font-rubick">
+	<div class="tour-card font-rubick d-noflex-800">
 		{% if position_img == 'gauche' %}
-			<img src="{{ asset('assets/images/') }}{{image}}" alt="Tour Image">
+			<img class="nomaxwidth-800" src="{{ asset('assets/images/') }}{{image}}" alt="Tour Image">
 		{% endif %}
-		<div class="tour-card-body">
+		<div class="tour-card-body dcenter-800">
 			<div>
 				<h3 class="tour-title">{{titre}}</h3>
-				<p class="tour-description">{{description}}</p>
+				<p class="tour-description d-none-800">{{description}}</p>
 			</div>
 			{% if bouton %}
 				<div>
-					<a href="{{path(bouton)}}" class="btn btn-outline-primary">Voir</a>
+					<a href="{{path(bouton)}}" class="btn btn-outline-primary">Voir plus <i class="bi bi-chevron-double-right"></i></a>
 				</div>
 			{% endif %}
 		</div>
 		{% if position_img == 'droite' %}
-			<img src="{{ asset('assets/images/') }}{{image}}" alt="Tour Image">
+			<img class="nomaxwidth-800" src="{{ asset('assets/images/') }}{{image}}" alt="Tour Image">
 		{% endif %}
 		{% if bouton %}
 			<div class="tour-price">

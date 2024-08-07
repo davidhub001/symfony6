@@ -1,7 +1,7 @@
 <div class="container {{class}}">
-    <div class="d-flex gap-10">
+    <div class="d-flex gap-10 flex-wrap-800">
         {% for card in data_card %}
-            <div class="card flex-25">
+            <div class="card flex-25 flex-25-800">
                 <div class="image-scale">
                     <img class="card-img-top" src="{{ asset('assets/images/') }}{{card.image}}" alt="Card image cap">
                 </div>
@@ -9,7 +9,7 @@
                     <h5 class="card-title">{{card.titre}}</h5>
                     <p class="card-text">{{card.description}}</p>
                     {# {% if bouton %} #}
-                        <a href="{{path(card.url)}}" class="btn btn-primary width-100">Voir plus</a>
+                        <a href="{{path(card.url)}}" class="btn btn-primary width-100">Voir plus <i class="bi bi-chevron-double-right"></i></a>
                     {# {% endif %} #}
                 </div>
             </div>

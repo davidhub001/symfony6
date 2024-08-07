@@ -564,6 +564,7 @@ section {
         color: $white;
         font-weight: bold;
         padding: 5px;
+        text-shadow: 2px  2px 2px black;
     }
 }
 .dashboard{
@@ -587,4 +588,41 @@ section {
        
     }
     
+}
+
+@for $i from 300 through 1000 {
+    @media (min-width:#{$i*1px}){
+        .d-none-max-#{$i}{
+            display: none;
+        }
+    }
+    @media (max-width:#{$i*1px}){
+        .d-none-#{$i}{
+            display: none;
+        }
+        .d-noflex-#{$i}{
+            display: block;
+        }
+        .nomaxwidth-#{$i}{
+            max-width: none!important;
+        }
+        .dcenter-#{$i}{
+            text-align: center;
+        }
+        .flex-25-#{$i}{
+            flex:49%;
+        }
+        .flex-wrap-#{$i}{
+            flex-wrap: wrap;
+        }
+        .init-top-#{$i}{
+            top: initial!important;
+        }
+    }
+    
+}
+.padding-top-70-800{
+    @media (max-width:800px) {
+        padding-top: 70px;
+    }
 }
