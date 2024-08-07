@@ -28,7 +28,7 @@ $message = '
     <title>Contact</title>
 </head>
 <body>
-'.$_POST["name"].'</br>'.$_POST["message"].'
+<h1>'.$_POST["name"].'</h1><div>'.$_POST["message"].'</div>
 </body>
 </html>
 ';
